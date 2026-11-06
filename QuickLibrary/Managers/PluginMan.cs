@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Text.Json;
 
 namespace QuickLibrary
 {
@@ -42,8 +43,15 @@ namespace QuickLibrary
 				{
 					if (Path.GetExtension(files[i].Name) == ".json")
 					{
-						PluginInfo pi = PluginInfo.FromJson(File.ReadAllText(Path.Combine(di.FullName, files[i].Name)));
-						if (pi.apiVer == apiVer && pi.inputType == inputType) plugins.Add(pi);
+						try
+						{
+							PluginInfo pi = PluginInfo.FromJson(File.ReadAllText(Path.Combine(di.FullName, files[i].Name)));
+							if (pi != null && pi.apiVer == apiVer && pi.inputType == inputType) plugins.Add(pi);
+						}
+						catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException || ex is JsonException)
+						{
+							// Unreadable or invalid manifest: skip it so other plugins still load.
+						}
 					}
 					files[i] = null;
 				}
