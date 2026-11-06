@@ -55,7 +55,7 @@ Not verified: no successful `dotnet build` on net8 yet.
 Next:
 1. Green net8 build: csproj cleanup (ClickOnce/Bootstrapper/manifest-signing leftovers, `Microsoft.AspNetCore.SystemWebAdapters`, Octokit 0.50 vs 9.0 mismatch, `UseWPF` check), `App.config` .NET Framework leftovers, libwebp DLLs copied to output, resx binary resources check.
 2. Remove plugin system (`PluginMan`, `PluginManForm`, `PluginsCache` setting, BinaryFormatter in `SerializeMan`).
-3. Rebrand to PicPic: namespace `quick_picture_viewer` → `PicPic`, exe `PicPic.exe`, folder/sln/csproj names, AssemblyInfo, registry keys `QuickPictureViewer` → `PicPic`, strings in code + 14 resx, About form, logo assets. Remove update checker fully.
+3. Rebrand to PicPic: namespace `quick_picture_viewer` → `PicPic`, exe `PicPic.exe`, folder/sln/csproj names, AssemblyInfo, registry keys `QuickPictureViewer` → `PicPic`, strings in code + 14 resx, About form, logo assets. Rename `QuickLibrary` → picpic-library (code-safe name TBD). Remove update checker fully.
 4. CI (GitHub Actions publish win-x64) + releases.
 5. UI: DWM dark title bar (attr 20), Zen HUD (auto-hiding floating dock + info chip, toolbar/statusbar hidden).
 6. Codecs: centralize extensions, update libwebp, AVIF/HEIC/JXL via WIC.
