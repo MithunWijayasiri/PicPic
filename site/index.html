@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PicPic</title>
+  <meta name="description" content="PicPic is a fast, minimal image viewer for Windows. In early development.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#12122A">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="picpic-favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Unbounded:wght@600&display=swap" rel="stylesheet">
+  <style>
+    @property --dx { syntax: '<length>'; inherits: true; initial-value: 0px; }
+    @property --dy { syntax: '<length>'; inherits: true; initial-value: 0px; }
+
+    :root {
+      --navy: #12122A;
+      --pink: #FF3D6E;
+      --cyan: #22D3FF;
+      --yellow: #FFE14D;
+      --text: #EEEDF7;
+      --muted: #9C9BC0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--navy);
+      color: var(--text);
+      font: 400 18px/1.6 'Figtree', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--text); text-decoration-color: var(--pink); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+    a:hover { color: var(--pink); }
+    a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; border-radius: 2px; }
+
+    .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+    .page { max-width: 640px; margin: 0 auto; padding: 96px 24px 48px; }
+
+    /* Hero: the icon, drawn large. Cyan sits under pink; the yellow overlap is a copy of cyan clipped by pink. */
+    .mark {
+      --s: clamp(136px, 34vw, 232px);
+      --o: calc(var(--s) * 0.443);
+      --r: calc(var(--s) * 0.24);
+      position: relative;
+      width: calc(var(--s) + var(--o));
+      height: calc(var(--s) + var(--o));
+      margin-bottom: 64px;
+      font: 600 calc(var(--s) * 0.2)/1 'Unbounded', sans-serif;
+      color: var(--navy);
+      user-select: none;
+      animation: settle 1.1s cubic-bezier(.2, .9, .25, 1.15) .2s both;
+    }
+    @keyframes settle { from { --dx: calc(var(--s) * 0.55); --dy: calc(var(--s) * 0.35); } }
+    .sq {
+      position: absolute;
+      width: var(--s); height: var(--s);
+      border-radius: var(--r);
+    }
+    .a { left: 0; top: 0; background: var(--pink); overflow: hidden; z-index: 1; }
+    .b, .overlap { left: var(--o); top: var(--o); translate: var(--dx) var(--dy); }
+    .b { background: var(--cyan); cursor: grab; touch-action: none; }
+    .overlap {
+      background: var(--yellow);
+      box-shadow: inset 0 0 0 calc(var(--s) * 0.035) var(--navy);
+      cursor: grab; touch-action: none;
+    }
+    .mark.dragging .b, .mark.dragging .overlap { cursor: grabbing; }
+    .word { position: absolute; }
+    .a .word { left: 14%; top: 16%; }
+    .b .word { right: 14%; bottom: 16%; }
+
+    .lead { font-size: 26px; line-height: 1.35; font-weight: 500; max-width: 22ch; margin-bottom: 20px; }
+    .status { color: var(--muted); margin-bottom: 56px; }
+
+    h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; }
+    ul { list-style: none; color: var(--muted); }
+    li { padding-left: 22px; position: relative; margin-bottom: 10px; }
+    li::before {
+      content: ''; position: absolute; left: 0; top: .62em;
+      width: 9px; height: 9px; border-radius: 3px; background: var(--cyan);
+    }
+    li:nth-child(2)::before { background: var(--pink); }
+    li:nth-child(3)::before { background: var(--yellow); }
+
+    footer { max-width: 640px; margin: 0 auto; padding: 32px 24px 56px; color: var(--muted); font-size: 15px; }
+
+    @media (prefers-reduced-motion: reduce) { .mark { animation: none; } }
+    @media (max-width: 480px) {
+      .page { padding-top: 64px; }
+      .lead { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="page">
+    <h1 class="mark">
+      <span class="sr">PicPic</span>
+      <span class="sq b" aria-hidden="true"><span class="word">Pic</span></span>
+      <span class="sq a" aria-hidden="true">
+        <span class="word">Pic</span>
+        <span class="sq overlap"></span>
+      </span>
+    </h1>
+
+    <p class="lead">A fast, minimal image viewer for Windows.</p>
+    <p class="status">In early development. There’s nothing to download yet. Follow along on <a href="https://github.com/MithunWijayasiri/PicPic">GitHub</a>.</p>
+
+    <h2>What it will do</h2>
+    <ul>
+      <li>Show the picture edge to edge. Controls appear when you move the mouse and fade when you stop.</li>
+      <li>Open PNG, JPEG, GIF, BMP, TIFF, ICO, WebP, SVG, PSD, DDS, TGA and Canon RAW. AVIF, HEIC and JPEG XL are planned.</li>
+      <li>Run as a single portable app, with an optional installer for file associations.</li>
+    </ul>
+  </main>
+
+  <footer>
+    Based on <a href="https://github.com/ModuleArt/quick-picture-viewer">Quick Picture Viewer</a> by Module Art. Free and open source under GPL-3.0.
+  </footer>
+
+  <script>
+    (() => {
+      const mark = document.querySelector('.mark');
+      let start = null;
+      const down = e => {
+        const cs = getComputedStyle(mark);
+        start = { x: e.clientX, y: e.clientY, dx: parseFloat(cs.getPropertyValue('--dx')), dy: parseFloat(cs.getPropertyValue('--dy')) };
+        mark.style.animation = 'none';
+        mark.classList.add('dragging');
+        e.currentTarget.setPointerCapture(e.pointerId);
+      };
+      const move = e => {
+        if (!start) return;
+        const lim = mark.querySelector('.a').offsetWidth * 0.9;
+        const clamp = v => Math.max(-lim, Math.min(lim, v));
+        mark.style.setProperty('--dx', clamp(start.dx + e.clientX - start.x) + 'px');
+        mark.style.setProperty('--dy', clamp(start.dy + e.clientY - start.y) + 'px');
+      };
+      const up = () => { start = null; mark.classList.remove('dragging'); };
+      for (const el of mark.querySelectorAll('.b, .overlap')) {
+        el.addEventListener('pointerdown', down);
+        el.addEventListener('pointermove', move);
+        el.addEventListener('pointerup', up);
+        el.addEventListener('pointercancel', up);
+      }
+    })();
+  </script>
+
+</body>
+</html>

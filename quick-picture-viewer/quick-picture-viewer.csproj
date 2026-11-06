@@ -24,7 +24,7 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>resources\imgs\picture.ico</ApplicationIcon>
+    <ApplicationIcon>..\assets\picpic.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>quick_picture_viewer.Program</StartupObject>
@@ -74,7 +74,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="resources\imgs\picture.ico" />
+    <Content Include="..\assets\picpic.ico" Link="picpic.ico" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Fizzler" Version="1.3.0" />
