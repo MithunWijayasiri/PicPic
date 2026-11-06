@@ -46,14 +46,14 @@ dotnet run --project quick-picture-viewer
 
 Done (branch `chore/initial-cleanup`, not yet merged):
 - Removed upstream funding files, Chocolatey package, MSIX packages, committed installer.
-- Update checker disabled (startup check + About button removed). `CheckForUpdates`/`SkippedVersion` settings and Settings checkbox still present, unused.
+- Update checker disabled (startup check + About button removed). `CheckForUpdates`/`SkippedVersion` settings still present, unused; Settings checkbox disabled.
 - New README and `docs/index.html`.
-- quick-library vendored into `QuickLibrary/`; submodules and `.gitmodules` removed.
+- quick-library vendored into `QuickLibrary/`; submodules and `.gitmodules` removed. App's direct Octokit 0.50 reference dropped (only `QuickLibrary` uses Octokit, 9.0.0).
 
 Not verified: no successful `dotnet build` on net8 yet.
 
 Next:
-1. Green net8 build: csproj cleanup (ClickOnce/Bootstrapper/manifest-signing leftovers, `Microsoft.AspNetCore.SystemWebAdapters`, Octokit 0.50 vs 9.0 mismatch, `UseWPF` check), `App.config` .NET Framework leftovers, libwebp DLLs copied to output, resx binary resources check.
+1. Green net8 build: csproj cleanup (ClickOnce/Bootstrapper/manifest-signing leftovers, `Microsoft.AspNetCore.SystemWebAdapters`, `UseWPF` check), `App.config` .NET Framework leftovers, libwebp DLLs copied to output, resx binary resources check.
 2. Remove plugin system (`PluginMan`, `PluginManForm`, `PluginsCache` setting, BinaryFormatter in `SerializeMan`).
 3. Rebrand to PicPic: namespace `quick_picture_viewer` → `PicPic`, exe `PicPic.exe`, folder/sln/csproj names, AssemblyInfo, registry keys `QuickPictureViewer` → `PicPic`, strings in code + 14 resx, About form, logo assets. Rename `QuickLibrary` → picpic-library (code-safe name TBD). Remove update checker fully.
 4. CI (GitHub Actions publish win-x64) + releases.
@@ -69,3 +69,6 @@ Next:
 - libwebp DLLs not copied by `dotnet build` → WebP fails to open.
 - In-app "Open with" registry writes target HKCR (needs admin) and hardcode `quick-picture-viewer.exe`.
 - First-run language detect never matches Chinese (`zh` vs `cn`) or Ukrainian (`uk` vs `ua`).
+- `QlibComboBox` owner-draw uses `e.Index * ItemHeight` instead of `e.Bounds` → items past the scroll point not drawn (language list has 14 items).
+- `FileMan.MoveFileOrFolderToRecycleBin` ignores `SHFileOperation` result / `fAnyOperationsAborted` → failed delete reported as success.
+- `ThemeMan.ApplyDarkTitlebar` passes an uninitialized buffer to `SetWindowCompositionAttribute` → replaced by DWM attr 20 in UI phase.

@@ -493,6 +493,7 @@
 			this.updatesCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.updatesCheckBox.Size = new System.Drawing.Size(372, 32);
 			this.updatesCheckBox.TabIndex = 0;
+			this.updatesCheckBox.Enabled = false;
 			this.updatesCheckBox.Text = "check for app updates";
 			this.updatesCheckBox.UseMnemonic = false;
 			this.updatesCheckBox.UseVisualStyleBackColor = true;
