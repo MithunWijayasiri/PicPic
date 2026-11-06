@@ -21,7 +21,9 @@ Architecture only: project structure, build/run commands, dependencies, conventi
 | `libs/SimplePsd.dll` | PSD decoder (HintPath reference). |
 | `inno-setup/` | QPV-era Inno Setup installer script (hardcoded local paths; not used by any build). |
 | `site/` | Website (GitHub Pages "coming soon" page). Deployed by `.github/workflows/pages.yml` on push to `master`; the workflow copies favicons from `assets/` into the build. |
-| `.github/` | Workflows: `ci.yml` (build on PR + push to `master`, `windows-latest`), `pr-title.yml` (Conventional Commits PR title), `codeql.yml` (C# CodeQL: PR, push to `master`, weekly), `pages.yml` (site). `dependabot.yml`: weekly `nuget` + `github-actions`. |
+| `.editorconfig` | Tabs, size 4 (`*.cs`). Checked by `dotnet format whitespace`. |
+| `.git-blame-ignore-revs` | One-time reformat commit(s); skipped by `git blame` (`git config blame.ignoreRevsFile .git-blame-ignore-revs`). |
+| `.github/` | Workflows: `ci.yml` (build + `dotnet format whitespace --verify-no-changes` on PR + push to `master`, `windows-latest`), `pr-title.yml` (Conventional Commits PR title), `codeql.yml` (C# CodeQL: PR, push to `master`, weekly), `pages.yml` (site). `dependabot.yml`: weekly `nuget` + `github-actions`. |
 
 ## Build
 
@@ -39,6 +41,7 @@ Warnings are errors (`TreatWarningsAsErrors` in both csproj). Existing warnings 
 
 - Version starts at `0.1.0` (beta). Tags `v0.1.0`.
 - UI layout in `*.Designer.cs`, logic in code-behind. Edit Designer files by hand; no Visual Studio required.
+- Formatting: run `dotnet format whitespace` before pushing; CI fails on diffs. Reformat-only commits → add SHA to `.git-blame-ignore-revs`.
 - Don't enable `Nullable`/`ImplicitUsings` project-wide (legacy code floods warnings).
 - Formats: decoder per type wrapper registered in `FileTypeMan`. Extension list currently duplicated in `MainForm.cs` (`GetCurrentFiles`, open-dialog filter, save switches) → keep in sync until centralized.
 - New user-visible strings → add key to every `languages/lang_*.resx` (English text as fallback).
