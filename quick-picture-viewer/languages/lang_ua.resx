@@ -891,15 +891,15 @@
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-install-warning" xml:space="preserve">
-    <value>Plugins run code with your permissions. Only install plugins you trust. Continue?</value>
+    <value>Plugins run code with your permissions. Only install plugins you trust.</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-invalid" xml:space="preserve">
     <value>This file is not a valid plugin.</value>
     <comment>Plugin manager</comment>
   </data>
-  <data name="plugin-replace-warning" xml:space="preserve">
-    <value>A plugin with this name is already installed and will be replaced.</value>
+  <data name="replace-plugin" xml:space="preserve">
+    <value>Replace plugin</value>
     <comment>Plugin manager</comment>
   </data>
 </root>

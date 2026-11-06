@@ -614,7 +614,7 @@
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-install-warning" xml:space="preserve">
-    <value>Plugins run code with your permissions. Only install plugins you trust. Continue?</value>
+    <value>Plugins run code with your permissions. Only install plugins you trust.</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-invalid" xml:space="preserve">
@@ -627,10 +627,6 @@
   </data>
   <data name="plugin-not-found" xml:space="preserve">
     <value>Nie znaleziono katalogu wtyczek</value>
-    <comment>Plugin manager</comment>
-  </data>
-  <data name="plugin-replace-warning" xml:space="preserve">
-    <value>A plugin with this name is already installed and will be replaced.</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-website" xml:space="preserve">
@@ -683,6 +679,10 @@
   </data>
   <data name="reload-plugins" xml:space="preserve">
     <value>Wczytaj ponownie listę wtyczek</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="replace-plugin" xml:space="preserve">
+    <value>Replace plugin</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="resize-svg" xml:space="preserve">

@@ -178,15 +178,11 @@ namespace quick_picture_viewer
 			string manifestPath = pluginFolder + ".json";
 			bool exists = File.Exists(manifestPath) || Directory.Exists(pluginFolder);
 
-			string warning = LangMan.Get("plugin-install-warning");
-			if (exists) warning = LangMan.Get("plugin-replace-warning") + "\n\n" + warning;
 			DialogResult window = DialogMan.ShowConfirm(
 				this,
-				warning,
+				LangMan.Get("plugin-install-warning"),
 				windowTitle: LangMan.Get("warning"),
-				yesBtnText: LangMan.Get("install-plugin"),
-				showNoBtn: true,
-				noBtnText: NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCANCEL),
+				yesBtnText: LangMan.Get(exists ? "replace-plugin" : "install-plugin"),
 				darkMode: DarkMode,
 				topMost: TopMost
 			);
