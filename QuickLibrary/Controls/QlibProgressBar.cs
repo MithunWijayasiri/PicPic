@@ -40,7 +40,7 @@ namespace QuickLibrary
 			{
 				ProgressBarRenderer.DrawHorizontalBar(e.Graphics, e.ClipRectangle);
 			}
-				
+
 			rec.Height = rec.Height;
 
 			if (DarkMode)

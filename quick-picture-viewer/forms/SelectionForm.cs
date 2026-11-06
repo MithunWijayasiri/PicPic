@@ -217,7 +217,7 @@ namespace quick_picture_viewer
 		{
 			if (newX < picturePanel.Location.X) newX = picturePanel.Location.X;
 			if (newY < picturePanel.Location.Y) newY = picturePanel.Location.Y;
-			if (newX > picturePanel.Location.X + picturePanel.Width - Width) 
+			if (newX > picturePanel.Location.X + picturePanel.Width - Width)
 			{
 				if (collapse) SetSize(picturePanel.Width - newX + picturePanel.Location.X, Height);
 				newX = picturePanel.Location.X + picturePanel.Width - Width;

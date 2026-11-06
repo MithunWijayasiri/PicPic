@@ -20,7 +20,7 @@ namespace quick_picture_viewer
 			this.directoryName = directoryName;
 
 			InitializeComponent();
-			SetDraggableControls(new List<Control>() { 
+			SetDraggableControls(new List<Control>() {
 				fileNameLabel, folderLabel, fullPathLabel, compressionLabel, extensionLabel, createdLabel, modifiedLabel,
 				sizeLabel, megapixelsLabel, resolutionLabel, inchesLabel, cmLabel, diskSizeLabel, ratioLabel
 			});

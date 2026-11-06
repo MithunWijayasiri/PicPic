@@ -6,7 +6,7 @@ using System.Windows.Forms;
 namespace quick_picture_viewer
 {
 	internal class QuickPictureBox : PictureBox
-	{ 
+	{
 		private InterpolationMode interpolationMode = InterpolationMode.Default;
 
 		/// <summary>

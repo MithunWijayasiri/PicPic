@@ -145,7 +145,7 @@ namespace quick_picture_viewer
 			{
 				listView1.Items[numberInList].Remove();
 				imageList1.Images[numberInList].Dispose();
-				
+
 				string pluginFolder = Path.Combine(PluginMan.pluginsFolder, codenames[numberInList]);
 				if (File.Exists(pluginFolder))
 				{

@@ -15,7 +15,7 @@ namespace quick_picture_viewer
 				VScroll = true;
 			}
 			else if (
-				(VScroll && (ModifierKeys & Keys.Control) == Keys.Control) || 
+				(VScroll && (ModifierKeys & Keys.Control) == Keys.Control) ||
 				Properties.Settings.Default.MouseWheelScrollAction == 1 ||
 				Properties.Settings.Default.MouseWheelScrollAction == 2
 			)

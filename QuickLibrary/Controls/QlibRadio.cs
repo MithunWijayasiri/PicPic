@@ -35,7 +35,7 @@ namespace QuickLibrary
 		public new ImageLayout BackgroundImageLayout { get { return base.BackgroundImageLayout; } set { } }
 
 		[Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
-		public new ContentAlignment CheckAlign { get { return base.CheckAlign; } set {  } }
+		public new ContentAlignment CheckAlign { get { return base.CheckAlign; } set { } }
 
 		[Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
 		public new Image Image { get { return base.Image; } set { } }
@@ -47,7 +47,7 @@ namespace QuickLibrary
 		public new FlatStyle FlatStyle { get { return base.FlatStyle; } set { } }
 
 		[Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
-		public new ContentAlignment ImageAlign { get { return base.ImageAlign; } set {  } }
+		public new ContentAlignment ImageAlign { get { return base.ImageAlign; } set { } }
 
 		[Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
 		public new int ImageIndex { get { return base.ImageIndex; } set { } }
@@ -71,7 +71,7 @@ namespace QuickLibrary
 		public new Size MinimumSize { get { return base.MinimumSize; } set { } }
 
 		[Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
-		public new Size MaximumSize{ get { return base.MaximumSize; } set { } }
+		public new Size MaximumSize { get { return base.MaximumSize; } set { } }
 
 		[Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
 		public new bool AutoCheck { get { return base.AutoCheck; } set { } }

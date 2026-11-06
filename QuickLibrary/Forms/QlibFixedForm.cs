@@ -102,10 +102,10 @@ namespace QuickLibrary
 		#region PUBLIC PROPS
 
 		[Category("Qlib props"), Browsable(true), Description("Custom back color")]
-		public Color CustomBackColor 
+		public Color CustomBackColor
 		{
 			get { return customBackColor; }
-			set 
+			set
 			{
 				customBackColor = value;
 				base.BackColor = value;
@@ -126,8 +126,8 @@ namespace QuickLibrary
 		}
 
 		[Category("Qlib props"), Browsable(true), Description("Close button")]
-		public Button CloseButton 
-		{ 
+		public Button CloseButton
+		{
 			get { return closeBtn; }
 			set { SetCloseButton(value); }
 		}

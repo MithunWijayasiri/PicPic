@@ -168,7 +168,7 @@ namespace QuickLibrary
 			SizeChanged += QlibNumericBox_SizeChanged;
 			GotFocus += QlibNumericBox_GotFocus;
 			Click += QlibNumericBox_Click;
-			
+
 			numeric.ValueChanged += Numeric_ValueChanged;
 		}
 
