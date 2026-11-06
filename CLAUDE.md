@@ -10,7 +10,7 @@ Architecture only: project structure, build/run commands, dependencies, conventi
 
 | Path | What |
 |:--|:--|
-| `quick-picture-viewer/` | App project (`quick-picture-viewer.csproj`, WinExe). Renamed to `PicPic/` in rebrand. |
+| `quick-picture-viewer/` | App project (`quick-picture-viewer.csproj`, WinExe). |
 | `quick-picture-viewer/forms/` | Forms: `MainForm` (viewer), `SettingsForm`, `AboutForm`, `InfoForm`, `MiniViewForm`, `PrintForm`, `PluginManForm`, … |
 | `quick-picture-viewer/typewrappers/` | Format decoders/encoders. Dispatch in `system/FileTypeMan.cs` (switch on extension). |
 | `quick-picture-viewer/typewrappers/engines/` | In-repo engines: `WebpEngine.cs` (libwebp P/Invoke), `IcoEngine.cs`. |
@@ -19,7 +19,7 @@ Architecture only: project structure, build/run commands, dependencies, conventi
 | `QuickLibrary/` | Vendored from ModuleArt/quick-library @ `ffe09a3` (GPL-3). Custom `Qlib*` controls, `ThemeMan`, `LangMan`, `NativeMan`, `UpdateMan`, `PluginMan`, `SerializeMan`. Owned code now — edit freely. |
 | `assets/` | Brand icon pack (source of truth): SVGs, `png/`, `favicon.ico`, `picpic.ico` (app icon, 16–256). |
 | `libs/SimplePsd.dll` | PSD decoder (HintPath reference). |
-| `inno-setup/` | Old QPV installer script; to be rewritten. |
+| `inno-setup/` | QPV-era Inno Setup installer script (hardcoded local paths; not used by any build). |
 | `site/` | Website (GitHub Pages "coming soon" page). Deployed by `.github/workflows/pages.yml` on push to `master`; the workflow copies favicons from `assets/` into the build. |
 
 ## Build
