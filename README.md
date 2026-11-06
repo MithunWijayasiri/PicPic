@@ -24,18 +24,10 @@ PicPic is a fork of [Quick Picture Viewer](https://github.com/ModuleArt/quick-pi
 
 Requires Windows and the [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0).
 
-Clone with submodules:
-
 ```powershell
-git clone --recurse-submodules https://github.com/MithunWijayasiri/PicPic
+git clone https://github.com/MithunWijayasiri/PicPic
 cd PicPic
 dotnet build
-```
-
-Already cloned without submodules? Run:
-
-```powershell
-git submodule update --init --recursive
 ```
 
 ## Bug reports
