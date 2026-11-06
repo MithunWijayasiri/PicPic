@@ -17,9 +17,10 @@ Architecture only: project structure, build/run commands, dependencies, conventi
 | `quick-picture-viewer/languages/` | `lang_<code>.resx` UI strings (14 languages), read via `LangMan.Get(key)`. |
 | `quick-picture-viewer/resources/` | Icons, images, `dlls/` (libwebp x86/x64, SimplePsd). |
 | `QuickLibrary/` | Vendored from ModuleArt/quick-library @ `ffe09a3` (GPL-3). Custom `Qlib*` controls, `ThemeMan`, `LangMan`, `NativeMan`, `UpdateMan`, `PluginMan`, `SerializeMan`. Owned code now — edit freely. |
+| `assets/` | Brand icon pack (source of truth): SVGs, `png/`, `favicon.ico`, `picpic.ico` (app icon, 16–256). |
 | `libs/SimplePsd.dll` | PSD decoder (HintPath reference). |
 | `inno-setup/` | Old QPV installer script; to be rewritten. |
-| `docs/index.html` | GitHub Pages "coming soon" page. |
+| `docs/index.html` | GitHub Pages "coming soon" page. `docs/favicon.ico`, `picpic-favicon.svg`, `apple-touch-icon.png` = copies from `assets/` (Pages serves only `docs/`). |
 
 ## Build
 
@@ -40,5 +41,5 @@ dotnet run --project quick-picture-viewer
 - New user-visible strings → add key to every `languages/lang_*.resx` (English text as fallback).
 - No network calls to ModuleArt endpoints. No new heavy runtimes (Chromium, WebView2, Magick.NET).
 - Keep GPL-3 and Module Art copyright notices; add PicPic notices alongside.
+- Icon change → update `assets/` first, regenerate `assets/picpic.ico`, then sync: `$this.Icon` in every form `.resx`, `logoPictureBox.Image` in `AboutForm.resx`, `docs/` favicon copies. Exe icon + output `picpic.ico` come from `assets/picpic.ico` via csproj.
 - One phase per branch + PR.
-

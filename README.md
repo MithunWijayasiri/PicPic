@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/picpic-icon.svg" width="96" height="96" alt="">
+</p>
+
 <h1 align="center">PicPic</h1>
 
 <p align="center">

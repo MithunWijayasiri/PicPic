@@ -396,7 +396,7 @@ namespace quick_picture_viewer
 					if (openWithCheckBox.Checked)
 					{
 						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer", "", "Open with Quick Picture Viewer");
-						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer", "Icon", string.Format("\"{0}picture.ico\"", AppDomain.CurrentDomain.BaseDirectory));
+						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer", "Icon", string.Format("\"{0}picpic.ico\"", AppDomain.CurrentDomain.BaseDirectory));
 						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer\\command", "", string.Format("\"{0}quick-picture-viewer.exe\" \"%V\"", AppDomain.CurrentDomain.BaseDirectory));
 					}
 					else
@@ -430,11 +430,11 @@ namespace quick_picture_viewer
 					if (browseWithCheckBox.Checked)
 					{
 						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer", "", "Browse folder with Quick Picture Viewer");
-						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer", "Icon", string.Format("\"{0}picture.ico\"", AppDomain.CurrentDomain.BaseDirectory));
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer", "Icon", string.Format("\"{0}picpic.ico\"", AppDomain.CurrentDomain.BaseDirectory));
 						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer\\command", "", string.Format("\"{0}quick-picture-viewer.exe\" \"%V\"", AppDomain.CurrentDomain.BaseDirectory));
 
 						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer", "", "Browse folder with Quick Picture Viewer");
-						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer", "Icon", string.Format("\"{0}picture.ico\"", AppDomain.CurrentDomain.BaseDirectory));
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer", "Icon", string.Format("\"{0}picpic.ico\"", AppDomain.CurrentDomain.BaseDirectory));
 						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer\\command", "", string.Format("\"{0}quick-picture-viewer.exe\" \"%V\"", AppDomain.CurrentDomain.BaseDirectory));
 					}
 					else

@@ -1,8 +1,8 @@
 <Application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<VisualElements
-		BackgroundColor="#F1CD7E"
+		BackgroundColor="#12122A"
 		ShowNameOnSquare150x150Logo="on"
-		ForegroundText="dark" 
+		ForegroundText="light" 
 		DisplayName="Picture Viewer"
 	/>
 </Application>

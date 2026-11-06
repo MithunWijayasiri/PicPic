@@ -19,7 +19,7 @@ LicenseFile=D:\Projects\quick-picture-viewer\LICENSE
 ;PrivilegesRequired=lowest
 OutputDir=D:\Projects\quick-picture-viewer\inno-setup
 OutputBaseFilename=QuickPictureViewer-Setup
-SetupIconFile=D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\picture.ico
+SetupIconFile=D:\Projects\quick-picture-viewer\assets\picpic.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -55,7 +55,7 @@ Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\Quick
 Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.pdb"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\quick-picture-viewer.VisualElementsManifest.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\picture.ico"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\assets\picpic.ico"; DestDir: "{app}"; Flags: ignoreversion
 ; Local libraries
 Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\dlls\libwebp_x64.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\dlls\libwebp_x86.dll"; DestDir: "{app}"; Flags: ignoreversion
@@ -107,14 +107,14 @@ Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChang
 Root: HKCU; Subkey: "Software\RegisteredApplications"; ValueType: string; ValueName: "QuickPictureViewer"; ValueData: "Software\Clients\StartMenuInternet\QuickPictureViewer\Capabilities"; Flags: uninsdeletekey
 ; Open with QuickPictureViewer
 Root: HKCR; Subkey: "*\shell\QuickPictureViewer"; ValueType: string; ValueName: ""; ValueData: "Open with {#MyAppName}"; Flags: uninsdeletekey; Tasks: "openwith"
-Root: HKCR; Subkey: "*\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picture.ico"""; Flags: uninsdeletekey; Tasks: "openwith"
+Root: HKCR; Subkey: "*\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picpic.ico"""; Flags: uninsdeletekey; Tasks: "openwith"
 Root: HKCR; Subkey: "*\shell\QuickPictureViewer\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%V"""; Flags: uninsdeletekey; Tasks: "openwith"
 ; Browse folder with QuickPictureViewer
 Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer"; ValueType: string; ValueName: ""; ValueData: "Browse folder with {#MyAppName}"; Flags: uninsdeletekey; Tasks: "browsefolder"
-Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picture.ico"""; Flags: uninsdeletekey; Tasks: "browsefolder"
+Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picpic.ico"""; Flags: uninsdeletekey; Tasks: "browsefolder"
 Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%V"""; Flags: uninsdeletekey; Tasks: "browsefolder"
 Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer"; ValueType: string; ValueName: ""; ValueData: "Browse folder with {#MyAppName}"; Flags: uninsdeletekey; Tasks: "browsefolder"
-Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picture.ico"""; Flags: uninsdeletekey; Tasks: "browsefolder"
+Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picpic.ico"""; Flags: uninsdeletekey; Tasks: "browsefolder"
 Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%V"""; Flags: uninsdeletekey; Tasks: "browsefolder"
 ; BMP
 Root: HKCR; Subkey: ".bmp"; ValueType: string; ValueName: ""; ValueData: "BmpImg"; Flags: uninsdeletekey
