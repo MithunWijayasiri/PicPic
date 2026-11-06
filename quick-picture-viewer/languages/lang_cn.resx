@@ -366,6 +366,10 @@
     <value>双线性</value>
     <comment>Menu</comment>
   </data>
+  <data name="install-plugin" xml:space="preserve">
+    <value>Install plugin</value>
+    <comment>Plugin manager</comment>
+  </data>
   <data name="nearest-neighbor" xml:space="preserve">
     <value>最近邻</value>
     <comment>Menu</comment>
@@ -626,12 +630,28 @@
     <value>插件</value>
     <comment>Plugin manager</comment>
   </data>
+  <data name="plugin-incompatible" xml:space="preserve">
+    <value>This plugin is not compatible with this version of PicPic.</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-install-warning" xml:space="preserve">
+    <value>Plugins run code with your permissions. Only install plugins you trust. Continue?</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-invalid" xml:space="preserve">
+    <value>This file is not a valid plugin.</value>
+    <comment>Plugin manager</comment>
+  </data>
   <data name="plugin-manager" xml:space="preserve">
     <value>插件管理</value>
     <comment>Menu, Plugin manager</comment>
   </data>
   <data name="plugin-not-found" xml:space="preserve">
     <value>未发现插件文件夹</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-replace-warning" xml:space="preserve">
+    <value>A plugin with this name is already installed and will be replaced.</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-website" xml:space="preserve">

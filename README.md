@@ -24,6 +24,10 @@ PicPic is a fork of [Quick Picture Viewer](https://github.com/ModuleArt/quick-pi
 - Image details view
 - Dark mode
 
+## Plugins
+
+PicPic loads plugins compatible with Quick Picture Viewer, such as [qpv-plugins](https://github.com/ModuleArt/qpv-plugins). See the [plugin guide](docs/plugins.md) to install or write one.
+
 ## Building
 
 Requires Windows and the [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0).
