@@ -21,6 +21,7 @@ Architecture only: project structure, build/run commands, dependencies, conventi
 | `libs/SimplePsd.dll` | PSD decoder (HintPath reference). |
 | `inno-setup/` | QPV-era Inno Setup installer script (hardcoded local paths; not used by any build). |
 | `site/` | Website (GitHub Pages "coming soon" page). Deployed by `.github/workflows/pages.yml` on push to `master`; the workflow copies favicons from `assets/` into the build. |
+| `.github/` | Workflows: `ci.yml` (build on PR + push to `master`, `windows-latest`), `pr-title.yml` (Conventional Commits PR title), `codeql.yml` (C# CodeQL: PR, push to `master`, weekly), `pages.yml` (site). `dependabot.yml`: weekly `nuget` + `github-actions`. |
 
 ## Build
 
@@ -32,6 +33,8 @@ dotnet build
 dotnet run --project quick-picture-viewer
 ```
 
+Warnings are errors (`TreatWarningsAsErrors` in both csproj). Existing warnings listed per project in `WarningsNotAsErrors`; new warnings fail the build.
+
 ## Conventions
 
 - Version starts at `0.1.0` (beta). Tags `v0.1.0`.
@@ -42,4 +45,5 @@ dotnet run --project quick-picture-viewer
 - No network calls to ModuleArt endpoints. No new heavy runtimes (Chromium, WebView2, Magick.NET).
 - Keep GPL-3 and Module Art copyright notices; add PicPic notices alongside.
 - Icon change → update `assets/` first, regenerate `assets/picpic.ico`, then sync: `$this.Icon` in every form `.resx`, `logoPictureBox.Image` in `AboutForm.resx`. Exe icon + output `picpic.ico` come from `assets/picpic.ico` via csproj.
+- PR titles follow Conventional Commits (squash merge uses PR title); checked by `pr-title.yml`.
 - One phase per branch + PR.
