@@ -7,6 +7,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsNotAsErrors>WFAC010;SYSLIB0010;CS8073;CS0672</WarningsNotAsErrors>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>..\assets\picpic.ico</ApplicationIcon>
