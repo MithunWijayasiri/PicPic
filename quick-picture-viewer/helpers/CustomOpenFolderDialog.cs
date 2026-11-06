@@ -1,4 +1,4 @@
-﻿using Microsoft.WindowsAPICodePack.Dialogs;
+﻿using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
@@ -6,16 +6,10 @@ namespace quick_picture_viewer
 	{
 		public static string GetFolder(string title)
 		{
-			CommonOpenFileDialog dialog = new CommonOpenFileDialog();
-			dialog.IsFolderPicker = true;
-			dialog.Title = title;
-			if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
-			{
-				string p = dialog.FileName;
-				dialog.Dispose();
-				return p;
-			}
-			return null;
+			using FolderBrowserDialog dialog = new FolderBrowserDialog();
+			dialog.Description = title;
+			dialog.UseDescriptionForTitle = true;
+			return dialog.ShowDialog() == DialogResult.OK ? dialog.SelectedPath : null;
 		}
 	}
 }
