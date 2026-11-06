@@ -45,7 +45,6 @@ namespace quick_picture_viewer
 		private void InitLanguage()
 		{
 			Text = LangMan.Get("about");
-			updatesBtn.Text = " " + LangMan.Get("check-for-app-updates");
 			descTextBox.Text = LangMan.Get("app-description");
 			makeDefaultBtn.Text = LangMan.Get("set-as-default-image-viewer");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
@@ -58,12 +57,6 @@ namespace quick_picture_viewer
 				UseShellExecute = true,
 				FileName = "ms-settings:defaultapps"
 			});
-		}
-
-		private void updatesBtn_Click(object sender, EventArgs e)
-		{
-			UpdateMan.CheckForUpdates(true, TopMost, Owner.Handle);
-			Close();
 		}
 
 		private void button1_Click(object sender, EventArgs e)

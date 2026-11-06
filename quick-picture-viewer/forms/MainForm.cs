@@ -328,45 +328,9 @@ namespace quick_picture_viewer
 				picturePanel.BackColor = Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.BackColor));
 			}
 
-			UpdateMan.Init("ModuleArt", "quick-picture-viewer", "QuickPictureViewer-Setup.exe", darkMode, Properties.Settings.Default.SkippedVersion);
-			UpdateMan.InitLang(
-				LangMan.Get("new-version-available"),
-				LangMan.Get("update-text"),
-				LangMan.Get("install-now"),
-				LangMan.Get("skip-this-version"),
-				LangMan.Get("whats-new"),
-
-				LangMan.Get("updating-qpv"),
-				LangMan.Get("downloading-update"),
-				LangMan.Get("ready-to-install"),
-				LangMan.Get("update-failed")
-			);
-			UpdateMan.UpdateFailed += UpdateMan_UpdateFailed;
-			UpdateMan.IsUpToDate += UpdateMan_IsUpToDate;
-			UpdateMan.UpdateSkipped += UpdateMan_UpdateSkipped;
-			if (Properties.Settings.Default.CheckForUpdates) UpdateMan.CheckForUpdates(false, TopMost, Handle);
-
 			ReloadPlugins();
 
 			base.OnLoad(e);
-		}
-
-		private void UpdateMan_UpdateSkipped(object sender, UpdateSkippedEventArgs e)
-		{
-			Properties.Settings.Default.SkippedVersion = e.SkippedVersion;
-		}
-
-		private void UpdateMan_IsUpToDate(object sender, EventArgs e)
-		{
-			showSuggestion(LangMan.Get("app-is-up-to-date"), SuggestionIcon.Check);
-		}
-
-		private void UpdateMan_UpdateFailed(object sender, UpdateFailedEventArgs e)
-		{
-			showSuggestion(
-				LangMan.Get("update-failed") + ": " + (e.Exception.Message.Length > 64 ? e.Exception.Message.Substring(0, 64) + "..." : e.Exception.Message), 
-				SuggestionIcon.Warning
-			);
 		}
 
 		private void showTypeOpsButton(bool show, string type = null)

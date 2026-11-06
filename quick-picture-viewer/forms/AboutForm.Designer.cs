@@ -38,7 +38,6 @@
 			descTextBox = new System.Windows.Forms.TextBox();
 			makeDefaultBtn = new System.Windows.Forms.Button();
 			copyrightLabel = new System.Windows.Forms.Label();
-			updatesBtn = new System.Windows.Forms.Button();
 			logoPictureBox = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)logoPictureBox).BeginInit();
 			SuspendLayout();
@@ -96,7 +95,7 @@
 			developerBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(193, 164, 101);
 			developerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			developerBtn.Image = (System.Drawing.Image)resources.GetObject("developerBtn.Image");
-			developerBtn.Location = new System.Drawing.Point(155, 376);
+			developerBtn.Location = new System.Drawing.Point(155, 334);
 			developerBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			developerBtn.Name = "developerBtn";
 			developerBtn.Size = new System.Drawing.Size(135, 32);
@@ -116,7 +115,7 @@
 			githubBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(193, 164, 101);
 			githubBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			githubBtn.Image = (System.Drawing.Image)resources.GetObject("githubBtn.Image");
-			githubBtn.Location = new System.Drawing.Point(10, 376);
+			githubBtn.Location = new System.Drawing.Point(10, 334);
 			githubBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			githubBtn.Name = "githubBtn";
 			githubBtn.Size = new System.Drawing.Size(135, 32);
@@ -150,7 +149,7 @@
 			makeDefaultBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(170, 144, 88);
 			makeDefaultBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(193, 164, 101);
 			makeDefaultBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			makeDefaultBtn.Location = new System.Drawing.Point(10, 418);
+			makeDefaultBtn.Location = new System.Drawing.Point(10, 376);
 			makeDefaultBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			makeDefaultBtn.Name = "makeDefaultBtn";
 			makeDefaultBtn.Size = new System.Drawing.Size(280, 32);
@@ -163,7 +162,7 @@
 			// 
 			copyrightLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
 			copyrightLabel.ForeColor = System.Drawing.Color.FromArgb(146, 124, 76);
-			copyrightLabel.Location = new System.Drawing.Point(10, 470);
+			copyrightLabel.Location = new System.Drawing.Point(10, 428);
 			copyrightLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			copyrightLabel.Name = "copyrightLabel";
 			copyrightLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -171,25 +170,6 @@
 			copyrightLabel.TabIndex = 44;
 			copyrightLabel.Text = "Copyright © 2023 Module Art";
 			copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// updatesBtn
-			// 
-			updatesBtn.BackColor = System.Drawing.Color.FromArgb(217, 184, 113);
-			updatesBtn.FlatAppearance.BorderSize = 0;
-			updatesBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(170, 144, 88);
-			updatesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(193, 164, 101);
-			updatesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			updatesBtn.Image = Properties.Resources.black_sync;
-			updatesBtn.Location = new System.Drawing.Point(10, 334);
-			updatesBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			updatesBtn.Name = "updatesBtn";
-			updatesBtn.Size = new System.Drawing.Size(280, 32);
-			updatesBtn.TabIndex = 0;
-			updatesBtn.Text = " check for updates";
-			updatesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			updatesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			updatesBtn.UseVisualStyleBackColor = false;
-			updatesBtn.Click += updatesBtn_Click;
 			// 
 			// logoPictureBox
 			// 
@@ -205,11 +185,10 @@
 			// AboutForm
 			// 
 			AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			ClientSize = new System.Drawing.Size(300, 509);
+			ClientSize = new System.Drawing.Size(300, 467);
 			Controls.Add(closeBtn);
 			Controls.Add(developerBtn);
 			Controls.Add(githubBtn);
-			Controls.Add(updatesBtn);
 			Controls.Add(copyrightLabel);
 			Controls.Add(makeDefaultBtn);
 			Controls.Add(descTextBox);
@@ -243,7 +222,6 @@
 		private System.Windows.Forms.TextBox descTextBox;
 		private System.Windows.Forms.Button makeDefaultBtn;
 		private System.Windows.Forms.Label copyrightLabel;
-		private System.Windows.Forms.Button updatesBtn;
 		private System.Windows.Forms.Button githubBtn;
 		private System.Windows.Forms.Button developerBtn;
 	}
