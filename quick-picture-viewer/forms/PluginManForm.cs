@@ -51,10 +51,9 @@ namespace quick_picture_viewer
 			if (listView1.Items != null && listView1.Items.Count > 0) listView1.Items.Clear();
 			if (imageList1.Images != null && imageList1.Images.Count > 0) imageList1.Images.Clear();
 
-			PluginMan.pluginsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins");
 			PluginMan.inputType = "bitmap";
 
-			PluginInfo[] plugins = PluginMan.GetPluginsCache(Properties.Settings.Default.PluginsCache);
+			PluginInfo[] plugins = PluginMan.GetPlugins();
 			codenames = new string[plugins.Length];
 			pluginsLinks = new string[plugins.Length];
 			for (int i = 0; i < plugins.Length; i++)
@@ -219,8 +218,6 @@ namespace quick_picture_viewer
 
 		private void refreshBtn_Click(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.PluginsCache = PluginMan.GenerateCacheStr();
-			Properties.Settings.Default.Save();
 			RefreshPluginsList();
 			(Owner as MainForm).ReloadPlugins();
 		}

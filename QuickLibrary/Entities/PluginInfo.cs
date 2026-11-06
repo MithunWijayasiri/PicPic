@@ -3,19 +3,16 @@ using Utf8Json;
 
 namespace QuickLibrary
 {
-	[Serializable]
 	public class PluginInfo
 	{
 		#region STRUCTS
 
-		[Serializable]
 		public struct Author
 		{
 			public string name;
 			public string link;
 		}
 
-		[Serializable]
 		public struct MultilangString
 		{
 			public string en;
@@ -53,7 +50,6 @@ namespace QuickLibrary
 			}
 		}
 
-		[Serializable]
 		public struct Hotkey
 		{
 			public bool ctrl;
@@ -62,7 +58,6 @@ namespace QuickLibrary
 			public int key;
 		}
 
-		[Serializable]
 		public struct Function
 		{
 			public string name;

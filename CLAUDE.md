@@ -16,7 +16,7 @@ Architecture only: project structure, build/run commands, dependencies, conventi
 | `quick-picture-viewer/typewrappers/engines/` | In-repo engines: `WebpEngine.cs` (libwebp P/Invoke), `IcoEngine.cs`. |
 | `quick-picture-viewer/languages/` | `lang_<code>.resx` UI strings (14 languages), read via `LangMan.Get(key)`. |
 | `quick-picture-viewer/resources/` | Icons, images, `dlls/` (libwebp x86/x64, SimplePsd). |
-| `QuickLibrary/` | Vendored from ModuleArt/quick-library @ `ffe09a3` (GPL-3). Custom `Qlib*` controls, `ThemeMan`, `LangMan`, `NativeMan`, `UpdateMan`, `PluginMan`, `SerializeMan`. Owned code now — edit freely. |
+| `QuickLibrary/` | Vendored from ModuleArt/quick-library @ `ffe09a3` (GPL-3). Custom `Qlib*` controls, `ThemeMan`, `LangMan`, `NativeMan`, `UpdateMan`, `PluginMan` (plugins in `%LOCALAPPDATA%\PicPic\plugins`, scanned from disk). Owned code now — edit freely. |
 | `assets/` | Brand icon pack (source of truth): SVGs, `png/`, `favicon.ico`, `picpic.ico` (app icon, 16–256). |
 | `libs/SimplePsd.dll` | PSD decoder (HintPath reference). |
 | `inno-setup/` | QPV-era Inno Setup installer script (hardcoded local paths; not used by any build). |
