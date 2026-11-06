@@ -8,7 +8,7 @@ namespace quick_picture_viewer
 {
 	public class SvgWrapper : TypeWrapper
 	{
-		public SvgWrapper() 
+		public SvgWrapper()
 		{
 			TypeName = "SVG";
 			ShowTypeOps = true;

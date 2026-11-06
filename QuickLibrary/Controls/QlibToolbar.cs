@@ -106,7 +106,7 @@ namespace QuickLibrary
 
 		#region CONSTRUCTOR
 
-		public QlibToolbar() 
+		public QlibToolbar()
 		{
 			base.ForeColor = Color.Black;
 			base.BackColor = ThemeMan.LightBackColor;
@@ -282,7 +282,7 @@ namespace QuickLibrary
 			Rectangle rec = new Rectangle
 			{
 				X = 1,
-				Y = 0, 
+				Y = 0,
 				Width = 23,
 				Height = 23
 			};
@@ -330,7 +330,7 @@ namespace QuickLibrary
 				e.Graphics.DrawRectangle(new Pen(ThemeMan.AccentColor), new Rectangle(0, 0, e.Item.Width - 1, e.Item.Height - 2));
 			}
 		}
-		
+
 	}
 
 	#endregion

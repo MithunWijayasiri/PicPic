@@ -24,7 +24,7 @@ namespace QuickLibrary
 			public string hu;
 			public string ru;
 			public string es;
-			
+
 			public string Get(string langCode)
 			{
 				string value;
@@ -67,7 +67,7 @@ namespace QuickLibrary
 		{
 			public string name;
 			public MultilangString title;
-			public string type; 
+			public string type;
 			public bool inputRequired;
 			public bool dialog;
 			public bool hideMainForm;
@@ -84,9 +84,9 @@ namespace QuickLibrary
 		public MultilangString description;
 		public string link;
 		public Author[] authors;
-		public int apiVer; 
-		public string inputType; 
-		public string dllType; 
+		public int apiVer;
+		public string inputType;
+		public string dllType;
 		public Function[] functions;
 
 		#endregion

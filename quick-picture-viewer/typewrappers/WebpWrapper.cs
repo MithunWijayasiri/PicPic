@@ -6,7 +6,7 @@ namespace quick_picture_viewer
 {
 	public class WebpWrapper : TypeWrapper
 	{
-		public WebpWrapper() 
+		public WebpWrapper()
 		{
 			TypeName = "WEBP";
 			ShowTypeOps = false;
@@ -22,7 +22,7 @@ namespace quick_picture_viewer
 					WebPDecoderOptions decoderOptions = new WebPDecoderOptions();
 					decoderOptions.use_threads = 1;
 					decoderOptions.alpha_dithering_strength = 100;
-					return new FileTypeMan.OpenResult 
+					return new FileTypeMan.OpenResult
 					{
 						Bmp = webp.Decode(rawWebP, decoderOptions)
 					};

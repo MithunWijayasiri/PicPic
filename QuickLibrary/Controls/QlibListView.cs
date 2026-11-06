@@ -16,7 +16,7 @@ namespace QuickLibrary
 
 		private Color headerColor = ThemeMan.LightSecondColor;
 
-		public QlibListView() 
+		public QlibListView()
 		{
 			base.OwnerDraw = true;
 		}

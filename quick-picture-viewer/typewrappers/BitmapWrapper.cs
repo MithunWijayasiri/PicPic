@@ -6,7 +6,7 @@ namespace quick_picture_viewer
 {
 	public class BitmapWrapper : TypeWrapper
 	{
-		public BitmapWrapper() 
+		public BitmapWrapper()
 		{
 			ShowTypeOps = false;
 		}

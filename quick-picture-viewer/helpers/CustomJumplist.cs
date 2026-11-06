@@ -3,22 +3,22 @@ using System.Windows.Shell;
 
 namespace quick_picture_viewer
 {
-    public class CustomJumplist
-    {
-        private JumpList list;
+	public class CustomJumplist
+	{
+		private JumpList list;
 
-        public CustomJumplist(string newWindowTitle, string newWindowDesc)
-        {
-            JumpItem[] jumpItems = { new JumpTask() {
-                Title = newWindowTitle,
-                Description = newWindowDesc,
-                ApplicationPath = Assembly.GetEntryAssembly().Location,
-                Arguments = "-1",
-                IconResourcePath = "quick-picture-viewer.exe"
-            } };
+		public CustomJumplist(string newWindowTitle, string newWindowDesc)
+		{
+			JumpItem[] jumpItems = { new JumpTask() {
+				Title = newWindowTitle,
+				Description = newWindowDesc,
+				ApplicationPath = Assembly.GetEntryAssembly().Location,
+				Arguments = "-1",
+				IconResourcePath = "quick-picture-viewer.exe"
+			} };
 
-            list = new JumpList(jumpItems, true, true);
-            list.Apply();
-        }
-    }
+			list = new JumpList(jumpItems, true, true);
+			list.Apply();
+		}
+	}
 }

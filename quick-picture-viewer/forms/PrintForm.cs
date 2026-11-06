@@ -13,8 +13,8 @@ namespace quick_picture_viewer
 		public PrintForm(PrintDocument pd, string docTitle)
 		{
 			InitializeComponent();
-			SetDraggableControls(new List<Control>() { 
-				printPreviewControl1, 
+			SetDraggableControls(new List<Control>() {
+				printPreviewControl1,
 				documentLabel, marginsLabel, leftLabel, rightLabel, topLabel, bottomLabel
 			});
 

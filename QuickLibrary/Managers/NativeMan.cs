@@ -31,7 +31,7 @@ namespace QuickLibrary
 		public const int SEE_MASK_INVOKEIDLIST = 12;
 		public const int WS_EX_TRANSPARENT = 0x20;
 		public const int FO_DELETE = 0x0003;
-		public const int FOF_ALLOWUNDO = 0x0040;          
+		public const int FOF_ALLOWUNDO = 0x0040;
 		public const int FOF_NOCONFIRMATION = 0x0010;
 
 		// ENUMS
@@ -149,7 +149,7 @@ namespace QuickLibrary
 		// KERNEL32 METHODS
 
 		[DllImport("kernel32", SetLastError = true, CharSet = CharSet.Ansi)]
-		public static extern IntPtr LoadLibrary([MarshalAs(UnmanagedType.LPStr)]string lpFileName);
+		public static extern IntPtr LoadLibrary([MarshalAs(UnmanagedType.LPStr)] string lpFileName);
 
 		[DllImport("kernel32", SetLastError = true, EntryPoint = "GetProcAddress")]
 		public static extern IntPtr GetProcAddressOrdinal(IntPtr hModule, string procName);
@@ -239,5 +239,5 @@ namespace QuickLibrary
 			ReleaseCapture();
 			SendMessage(handle, 0xA1, 0x2, 0);
 		}
-    }
+	}
 }

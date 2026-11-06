@@ -48,7 +48,7 @@ namespace QuickLibrary
 		public bool InsideMenu
 		{
 			get { return insideMenu; }
-			set 
+			set
 			{
 				insideMenu = value;
 				if (value)
