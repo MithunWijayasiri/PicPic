@@ -1906,10 +1906,10 @@ namespace quick_picture_viewer
 			SetFramelessMode(!framelessMode);
 		}
 
+		private PluginInfo[] plugins = Array.Empty<PluginInfo>();
+
 		public void CheckPluginsEnable()
 		{
-			PluginInfo[] plugins = PluginMan.GetPluginsCache(Properties.Settings.Default.PluginsCache);
-
 			List<PluginInfo.Function> toEffects = new List<PluginInfo.Function>();
 			List<PluginInfo.Function> toTools = new List<PluginInfo.Function>();
 			for (int i = 0; i < plugins.Length; i++)
@@ -1935,10 +1935,9 @@ namespace quick_picture_viewer
 			effectsBtn.DropDownItems.Clear();
 			toolsBtn.DropDownItems.Clear();
 
-			PluginMan.pluginsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins");
 			PluginMan.inputType = "bitmap";
 
-			PluginInfo[] plugins = PluginMan.GetPluginsCache(Properties.Settings.Default.PluginsCache);
+			plugins = PluginMan.GetPlugins();
 
 			List<PluginMenuItem> toEffects = new List<PluginMenuItem>();
 			List<PluginMenuItem> toTools = new List<PluginMenuItem>();

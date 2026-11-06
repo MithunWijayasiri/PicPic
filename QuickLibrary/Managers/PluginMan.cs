@@ -7,7 +7,11 @@ namespace QuickLibrary
 {
 	public class PluginMan
 	{
-		public static string pluginsFolder = null;
+		public static string pluginsFolder = Path.Combine(
+			Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+			"PicPic",
+			"plugins"
+		);
 		public static int apiVer = 4;
 		public static string inputType = null;
 
@@ -27,19 +31,7 @@ namespace QuickLibrary
 			public object input { get; set; }
 		}
 
-		public static string GenerateCacheStr()
-		{
-			return Convert.ToBase64String(SerializeMan.ObjectToByteArray(GetPlugins()));
-		}
-
-		public static PluginInfo[] GetPluginsCache(string cacheStr)
-		{
-			return cacheStr.Length > 0 ?
-				SerializeMan.ByteArrayToObject(Convert.FromBase64String(cacheStr)) as PluginInfo[] :
-				Array.Empty<PluginInfo>();
-		}
-
-		private static PluginInfo[] GetPlugins()
+		public static PluginInfo[] GetPlugins()
 		{
 			List<PluginInfo> plugins = new List<PluginInfo>();
 			DirectoryInfo di = new DirectoryInfo(pluginsFolder);
