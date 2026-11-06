@@ -1,154 +1,75 @@
-<p align="center">
-  <img src="/quick-picture-viewer/resources/imgs/picture96.png">
-</p>
-<h1 align="center">Quick Picture Viewer</h1>
+<h1 align="center">PicPic</h1>
 
 <p align="center">
-  <a href="https://moduleart.github.io/quickpictureviewer">Quick Picture Viewer</a> is a lightweight, versatile desktop image viewer for Windows.<br>The best replacement for the default Windows photo viewer.
-  <br><br>
-  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases">
-    <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/moduleart/quick-picture-viewer?include_prereleases">
-    <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/total">
-  </a>
-  <a href="https://moduleart.github.io">
-    <img alt="Module Art website" src="https://img.shields.io/badge/www-moduleart-%2300BCD4">
-  </a>
-  <a title="Crowdin" target="_blank" href="https://crowdin.com/project/quick-picture-viewer"><img src="https://badges.crowdin.net/quick-picture-viewer/localized.svg"></a>
-  <br>
-  <a href="https://moduleart.github.io/quickpictureviewer">
-    <img src="https://moduleart.github.io/assets/images/projects/quick-picture-viewer/1.webp">
-  </a>
-  <br>
-<!--   v3.1.5  - December 21, 2023 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v3.1.5/QuickPictureViewer-Setup.exe">Download (3.4 MB)</a><br> -->
-  v3.1.4 (Stable) - May 9, 2021 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v3.1.4/QuickPictureViewer-Setup.exe">Download (3.4 MB)</a>
-  <br><br>
-  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases">Older versions and release notes</a>
+  A fast, minimal image viewer for Windows.
 </p>
 
-## 😃 Features:
+> [!IMPORTANT]
+> PicPic is in early development. There are no releases yet.
 
-- 🖼️ Supported image formats: .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif, .ico, .webp, .svg, .dds, .tga, .psd, .cr2 ...
-- ✍️ Basic image editing: Rotate, flip, crop, change file type ...
-- 🧩 Plugins ready
-- ↗️ Open image with external app or show file in explorer
-- 🖽 Picture-in-Picture mode
-- ♟️ Checkerboard background
-- 🖥️ Set image as desktop background
-- 🖨️ Print image or export to PDF
-- ℹ️ View image details
-- 🗔 Frameless mode
-- 🔝 Always on top mode
-- 🎞️ Slideshow
-- 🕶️ Dark mode
+PicPic is a fork of [Quick Picture Viewer](https://github.com/ModuleArt/quick-picture-viewer) by Module Art, which is no longer maintained. It is being modernized with a cleaner, distraction-free UI, modern .NET, and support for newer image formats.
 
-Want more? Open a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> or 👍 an <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">existing one</a> so we can talk about it.
+## Features
 
-## 🔮 Future plans:
+- Opens .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif, .ico, .webp, .svg, .dds, .tga, .psd and .cr2
+- Basic editing: rotate, flip, crop, change file type
+- Picture-in-picture, frameless and always-on-top modes
+- Slideshow and checkerboard background
+- Print or export to PDF
+- Set an image as the desktop background
+- Image details view
+- Dark mode
 
-- Enhanced zoom menu
-- Image preloader [<a href="https://github.com/ModuleArt/quick-picture-viewer/discussions/57">#57</a>]
-- Sort by menu [<a href="https://github.com/ModuleArt/quick-picture-viewer/issues/62">#62</a>]
-- Customizable keyboard shortcuts [<a href="https://github.com/ModuleArt/quick-picture-viewer/issues/69">#27</a>]
-- More wallpaper related options [<a href="https://github.com/ModuleArt/quick-picture-viewer/issues/65">#65</a>]
+## Building
 
-## 🧩 Built-in plugins:
+Requires Windows and the [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0).
 
-Effects:
-
-- <a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur or pixelate</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
-- <a href="https://github.com/ModuleArt/qpv-plugins#grayscale">Grayscale</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
-- <a href="https://github.com/ModuleArt/qpv-plugins#invert">Invert colors</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
-- <a href="https://github.com/ModuleArt/qpv-plugins#rainbow">Rainbow</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
-- Vignette - by Module Art - Soon...
-- Drop shadow - by Module Art - Soon...
-- Photo filter - by Community - Soon...
-- Hue and saturation - by Community - Soon...
-
-Tools:
-
-- <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
-- Color picker - by Module Art - Soon...
-
-## 🐞 Bug report:
-
-If you want to report a bug, first, thank you, that helps us a lot. Please open an <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">issue</a> and mention your OS, your Quick Picture Viewer version, and how to reproduce it. Adding a screenshot of the issue or screen recording is a big help too.
-
-## 💿 Another installation methods:
-
-- Using Microsoft Store:<br>
-  <a href='//www.microsoft.com/store/apps/9pjqqrxsvwr1?cid=storebadge&ocid=badge'>
-  <img src='https://github.com/ModuleArt/quick-picture-viewer/blob/master/inno-setup/MSIX/English_get-it-from-MS.png?raw=true' />
-  </a><br><br>
-
-- Using <a href="https://github.com/chocolatey/choco">Chocolatey</a>:<br>
+Clone with submodules:
 
 ```powershell
-choco install quick-picture-viewer --version 3.0.4
+git clone --recurse-submodules https://github.com/MithunWijayasiri/PicPic
+cd PicPic
+dotnet build
 ```
 
-- Using <a href="https://github.com/microsoft/winget-cli">Winget</a>:<br>
+Already cloned without submodules? Run:
 
 ```powershell
-winget install ModuleArt.QuickPictureViewer
-```
-
-- Using <a href="https://github.com/lukesampson/scoop">Scoop</a>:<br>
-
-```powershell
-scoop install mingit-busybox 7zip sudo
-scoop bucket add extras
-scoop install quick-picture-viewer
-```
-
-## 🔨 Contribution:
-
-#### Help Module Art!
-
-- Give us a star ⭐
-- Fork and Clone! Awesome
-- Select existing <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">issues</a> or create a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> and give us a PR with your bugfix or improvement after. We love it ❤
-
-#### How to clone:
-
-When cloning the repository, do **not** forget to include its submodules (`--recurse-submodules`):
-```powershell
-git clone --recurse-submodules https://github.com/ModuleArt/quick-picture-viewer
-```
-
-Otherwise, you can initialize them after cloning:
-```powershell
-git clone https://github.com/ModuleArt/quick-picture-viewer
-cd quick-picture-viewer
 git submodule update --init --recursive
 ```
 
+## Bug reports
 
-#### Code contributors:
+Open an [issue](https://github.com/MithunWijayasiri/PicPic/issues/new) with your Windows version, the PicPic version or commit, and steps to reproduce. A screenshot or screen recording helps.
 
-- <a href="https://github.com/adriengivry">adriengivry</a> - <a href="https://github.com/ModuleArt/quick-picture-viewer/pull/133">Texture filtering modes</a>
-- <a href="https://github.com/FLeXyo">FLeXyo</a> - <a href="https://github.com/ModuleArt/quick-picture-viewer/pull/50">Open folder recursively feature</a>
-- <a href="https://github.com/Beelink">Beelink</a> - Everything else 😘
+## Credits
 
-#### Translation contributors:
+PicPic is built on Quick Picture Viewer by [Module Art](https://github.com/ModuleArt) and its contributors.
 
-- Arabic: <a href="https://github.com/Jalal-Althahab">Jalal-Althahab</a>
-- Chinese: <a href="https://github.com/jiwangyihao">jiwangyihao</a>
-- Croatian: <a href="https://github.com/anotherus3r">anotherus3r</a>
-- English: <a href="https://github.com/Beelink">Beelink</a>
-- French: <a href="https://github.com/b0bdN">b0bdN</a>
-- German: <a href="https://github.com/l-33ter">l-33ter</a>, <a href="https://github.com/tomo2403">tomo2403</a>
-- Hungarian: <a href="https://github.com/KristofKekesi">KristofKekesi</a>
-- Russian: <a href="https://github.com/Beelink">Beelink</a>
-- Spanish: <a href="https://github.com/asluppiter">asluppiter</a>, <a href="https://github.com/Alplox">Alplox</a>
-- Turkish: <a href="https://github.com/ataberkcemunal">ataberkcemunal</a>
+<details>
+<summary>Quick Picture Viewer contributors</summary>
 
-<a href="https://github.com/ModuleArt/quick-picture-viewer/wiki/Help-us-translate-this-app">Help us translate this app</a>
+Code:
 
-## 📦 Related projects:
+- [Beelink](https://github.com/Beelink): original author
+- [adriengivry](https://github.com/adriengivry): texture filtering modes
+- [FLeXyo](https://github.com/FLeXyo): open folder recursively
 
-- <a href="https://github.com/ModuleArt/quick-library/">Quick Library</a> - Windows Forms Control class library for "Quick" apps (.NET Framework)<br>
-- <a href="https://github.com/ModuleArt/qpv-plugins/">QPV Plugins</a> - Set of preinstalled plugins for the <a href="https://moduleart.github.io/quickpictureviewer">Quick Picture Viewer</a>
+Translations:
 
-## 🧰 Other great apps:
+- Arabic: [Jalal-Althahab](https://github.com/Jalal-Althahab)
+- Chinese: [jiwangyihao](https://github.com/jiwangyihao)
+- Croatian: [anotherus3r](https://github.com/anotherus3r)
+- French: [b0bdN](https://github.com/b0bdN)
+- German: [l-33ter](https://github.com/l-33ter), [tomo2403](https://github.com/tomo2403)
+- Hungarian: [KristofKekesi](https://github.com/KristofKekesi)
+- Russian: [Beelink](https://github.com/Beelink)
+- Spanish: [asluppiter](https://github.com/asluppiter), [Alplox](https://github.com/Alplox)
+- Turkish: [ataberkcemunal](https://github.com/ataberkcemunal)
+- Ukrainian: [koliasa](https://github.com/koliasa)
 
-- <a href="https://github.com/ModuleArt/plain-color">PlainColor</a> - Lightweight stylish cross-platform color picker app<br>
+</details>
+
+## License
+
+[GPL-3.0](LICENSE), the same as Quick Picture Viewer.
