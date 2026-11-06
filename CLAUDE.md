@@ -20,7 +20,7 @@ Architecture only: project structure, build/run commands, dependencies, conventi
 | `assets/` | Brand icon pack (source of truth): SVGs, `png/`, `favicon.ico`, `picpic.ico` (app icon, 16–256). |
 | `libs/SimplePsd.dll` | PSD decoder (HintPath reference). |
 | `inno-setup/` | Old QPV installer script; to be rewritten. |
-| `docs/index.html` | GitHub Pages "coming soon" page. `docs/favicon.ico`, `picpic-favicon.svg`, `apple-touch-icon.png` = copies from `assets/` (Pages serves only `docs/`). |
+| `site/` | Website (GitHub Pages "coming soon" page). Deployed by `.github/workflows/pages.yml` on push to `master`; the workflow copies favicons from `assets/` into the build. |
 
 ## Build
 
@@ -41,5 +41,5 @@ dotnet run --project quick-picture-viewer
 - New user-visible strings → add key to every `languages/lang_*.resx` (English text as fallback).
 - No network calls to ModuleArt endpoints. No new heavy runtimes (Chromium, WebView2, Magick.NET).
 - Keep GPL-3 and Module Art copyright notices; add PicPic notices alongside.
-- Icon change → update `assets/` first, regenerate `assets/picpic.ico`, then sync: `$this.Icon` in every form `.resx`, `logoPictureBox.Image` in `AboutForm.resx`, `docs/` favicon copies. Exe icon + output `picpic.ico` come from `assets/picpic.ico` via csproj.
+- Icon change → update `assets/` first, regenerate `assets/picpic.ico`, then sync: `$this.Icon` in every form `.resx`, `logoPictureBox.Image` in `AboutForm.resx`. Exe icon + output `picpic.ico` come from `assets/picpic.ico` via csproj.
 - One phase per branch + PR.
