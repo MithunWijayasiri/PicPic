@@ -7,16 +7,21 @@ namespace QuickLibrary
 {
 	public static class PluginInstaller
 	{
+		/// <summary>True if the path has a <c>.zip</c> extension, case-insensitive.</summary>
 		public static bool IsZip(string pathToZip)
 		{
 			return string.Equals(Path.GetExtension(pathToZip), ".zip", StringComparison.OrdinalIgnoreCase);
 		}
 
+		/// <summary>True if the plugin targets <see cref="PluginMan.apiVer"/>, bitmap input and a <c>csharp</c> or <c>cpp</c> DLL.</summary>
 		public static bool IsCompatible(PluginInfo pi)
 		{
 			return pi.apiVer == PluginMan.apiVer && pi.inputType == "bitmap" && (pi.dllType == "csharp" || pi.dllType == "cpp");
 		}
 
+		/// <summary>Reads the root <c>&lt;name&gt;.json</c> manifest and checks the zip extracts only into <c>&lt;name&gt;/</c> under <see cref="PluginMan.pluginsFolder"/>.</summary>
+		/// <exception cref="InvalidDataException">Manifest missing, null or incomplete; invalid name; DLL missing; or an entry outside the plugin folder.</exception>
+		/// <remarks>Malformed JSON throws the parser's own exception.</remarks>
 		public static PluginInfo ReadManifest(string pathToZip)
 		{
 			using (ZipArchive zip = ZipFile.OpenRead(pathToZip))
