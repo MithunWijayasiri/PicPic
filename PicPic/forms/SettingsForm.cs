@@ -1,5 +1,5 @@
 ﻿using Microsoft.Win32;
-using QuickLibrary;
+using PicPic.Library;
 using System;
 using System.Diagnostics;
 using System.Drawing;

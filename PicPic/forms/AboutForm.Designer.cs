@@ -32,7 +32,7 @@
 			productLabel = new System.Windows.Forms.Label();
 			versionLabel = new System.Windows.Forms.Label();
 			infoTooltip = new System.Windows.Forms.ToolTip(components);
-			closeBtn = new QuickLibrary.QlibTitlebarButton();
+			closeBtn = new PicPic.Library.QlibTitlebarButton();
 			developerBtn = new System.Windows.Forms.Button();
 			githubBtn = new System.Windows.Forms.Button();
 			descTextBox = new System.Windows.Forms.TextBox();
@@ -217,7 +217,7 @@
 		private System.Windows.Forms.Label productLabel;
 		private System.Windows.Forms.Label versionLabel;
 		private System.Windows.Forms.ToolTip infoTooltip;
-		private QuickLibrary.QlibTitlebarButton closeBtn;
+		private PicPic.Library.QlibTitlebarButton closeBtn;
 		private System.Windows.Forms.PictureBox logoPictureBox;
 		private System.Windows.Forms.TextBox descTextBox;
 		private System.Windows.Forms.Button makeDefaultBtn;

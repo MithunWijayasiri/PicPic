@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using QuickLibrary;
+using PicPic.Library;
 using System.IO.Compression;
 using System.IO;
 using System.Diagnostics;

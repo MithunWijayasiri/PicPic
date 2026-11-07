@@ -1,4 +1,4 @@
-﻿using QuickLibrary;
+﻿using PicPic.Library;
 using SimplePsd;
 using System.Drawing;
 using System.IO;

@@ -30,18 +30,18 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PluginManForm));
-			this.listView1 = new QuickLibrary.QlibListView();
+			this.listView1 = new PicPic.Library.QlibListView();
 			this.pluginNameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.descColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.authorsColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.versionColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.contextMenuStrip1 = new QuickLibrary.QlibContextMenuStrip(this.components);
+			this.contextMenuStrip1 = new PicPic.Library.QlibContextMenuStrip(this.components);
 			this.pluginWebsiteBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.qlibMenuSeparator2 = new QuickLibrary.QlibToolsep();
+			this.qlibMenuSeparator2 = new PicPic.Library.QlibToolsep();
 			this.deleteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.imageList1 = new System.Windows.Forms.ImageList(this.components);
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
-			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
+			this.closeBtn = new PicPic.Library.QlibTitlebarButton();
 			this.morePluginsBtn = new System.Windows.Forms.Button();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.addPluginBtn = new System.Windows.Forms.Button();
@@ -261,21 +261,21 @@
 
 		#endregion
 
-		private QuickLibrary.QlibListView listView1;
+		private PicPic.Library.QlibListView listView1;
 		private System.Windows.Forms.ImageList imageList1;
 		private System.Windows.Forms.ColumnHeader pluginNameColumn;
 		private System.Windows.Forms.ColumnHeader descColumn;
 		private System.Windows.Forms.ToolTip infoTooltip;
-		private QuickLibrary.QlibTitlebarButton closeBtn;
+		private PicPic.Library.QlibTitlebarButton closeBtn;
 		private System.Windows.Forms.Button addPluginBtn;
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.Windows.Forms.ColumnHeader authorsColumn;
 		private System.Windows.Forms.ColumnHeader versionColumn;
-		private QuickLibrary.QlibContextMenuStrip contextMenuStrip1;
+		private PicPic.Library.QlibContextMenuStrip contextMenuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem deleteBtn;
 		private System.Windows.Forms.Button morePluginsBtn;
 		private System.Windows.Forms.ToolStripMenuItem pluginWebsiteBtn;
-		private QuickLibrary.QlibToolsep qlibMenuSeparator2;
+		private PicPic.Library.QlibToolsep qlibMenuSeparator2;
 		private System.Windows.Forms.Button refreshBtn;
 	}
 }

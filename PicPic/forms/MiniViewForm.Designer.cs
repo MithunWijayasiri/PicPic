@@ -32,18 +32,18 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MiniViewForm));
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.zoomLabel = new System.Windows.Forms.Label();
-			this.contextMenuStrip1 = new QuickLibrary.QlibContextMenuStrip(this.components);
+			this.contextMenuStrip1 = new PicPic.Library.QlibContextMenuStrip(this.components);
 			this.checkboardBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.qlibMenuSeparator2 = new QuickLibrary.QlibToolsep();
+			this.qlibMenuSeparator2 = new PicPic.Library.QlibToolsep();
 			this.newWindowBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.quitPipBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.autoZoomBtn = new QuickLibrary.QlibTitlebarButton();
-			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.resizeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.opacityBtn = new QuickLibrary.QlibTitlebarButton();
+			this.autoZoomBtn = new PicPic.Library.QlibTitlebarButton();
+			this.closeBtn = new PicPic.Library.QlibTitlebarButton();
+			this.resizeBtn = new PicPic.Library.QlibTitlebarButton();
+			this.opacityBtn = new PicPic.Library.QlibTitlebarButton();
 			this.picturePanel = new PicPic.CustomPanel();
 			this.pictureBox = new QuickPictureBox();
-			this.zoom100Btn = new QuickLibrary.QlibTitlebarButton();
+			this.zoom100Btn = new PicPic.Library.QlibTitlebarButton();
 			this.contextMenuStrip1.SuspendLayout();
 			this.picturePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -321,15 +321,15 @@
 		private System.Windows.Forms.Label zoomLabel;
 		private CustomPanel picturePanel;
 		private System.Windows.Forms.ToolTip infoTooltip;
-		private QuickLibrary.QlibTitlebarButton closeBtn;
-		private QuickLibrary.QlibTitlebarButton autoZoomBtn;
-		private QuickLibrary.QlibTitlebarButton resizeBtn;
-		private QuickLibrary.QlibContextMenuStrip contextMenuStrip1;
+		private PicPic.Library.QlibTitlebarButton closeBtn;
+		private PicPic.Library.QlibTitlebarButton autoZoomBtn;
+		private PicPic.Library.QlibTitlebarButton resizeBtn;
+		private PicPic.Library.QlibContextMenuStrip contextMenuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem checkboardBtn;
 		private System.Windows.Forms.ToolStripMenuItem newWindowBtn;
-		private QuickLibrary.QlibToolsep qlibMenuSeparator2;
-		private QuickLibrary.QlibTitlebarButton opacityBtn;
+		private PicPic.Library.QlibToolsep qlibMenuSeparator2;
+		private PicPic.Library.QlibTitlebarButton opacityBtn;
 		private System.Windows.Forms.ToolStripMenuItem quitPipBtn;
-		private QuickLibrary.QlibTitlebarButton zoom100Btn;
+		private PicPic.Library.QlibTitlebarButton zoom100Btn;
 	}
 }

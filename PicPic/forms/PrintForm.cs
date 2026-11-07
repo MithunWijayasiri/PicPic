@@ -1,4 +1,4 @@
-﻿using QuickLibrary;
+﻿using PicPic.Library;
 using System;
 using System.Collections.Generic;
 using System.Drawing.Printing;

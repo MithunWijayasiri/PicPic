@@ -33,16 +33,16 @@
 			this.okButton = new System.Windows.Forms.Button();
 			this.widthLabel = new System.Windows.Forms.Label();
 			this.heightLabel = new System.Windows.Forms.Label();
-			this.widthNumeric = new QuickLibrary.QlibNumeric();
-			this.heightNumeric = new QuickLibrary.QlibNumeric();
-			this.aspectRatioCheckbox = new QuickLibrary.QlibCheckBox();
+			this.widthNumeric = new PicPic.Library.QlibNumeric();
+			this.heightNumeric = new PicPic.Library.QlibNumeric();
+			this.aspectRatioCheckbox = new PicPic.Library.QlibCheckBox();
 			this.size128Button = new System.Windows.Forms.Button();
 			this.size64Button = new System.Windows.Forms.Button();
 			this.defaultSizeButton = new System.Windows.Forms.Button();
 			this.size256Button = new System.Windows.Forms.Button();
 			this.presetsLabel = new System.Windows.Forms.Label();
 			this.size512Button = new System.Windows.Forms.Button();
-			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
+			this.closeBtn = new PicPic.Library.QlibTitlebarButton();
 			this.size32Button = new System.Windows.Forms.Button();
 			this.size16Button = new System.Windows.Forms.Button();
 			this.autoSizeBtn = new System.Windows.Forms.Button();
@@ -360,9 +360,9 @@
 		private System.Windows.Forms.Button okButton;
 		private System.Windows.Forms.Label widthLabel;
 		private System.Windows.Forms.Label heightLabel;
-		private QuickLibrary.QlibNumeric widthNumeric;
-		private QuickLibrary.QlibNumeric heightNumeric;
-		private QuickLibrary.QlibCheckBox aspectRatioCheckbox;
+		private PicPic.Library.QlibNumeric widthNumeric;
+		private PicPic.Library.QlibNumeric heightNumeric;
+		private PicPic.Library.QlibCheckBox aspectRatioCheckbox;
 		private System.Windows.Forms.Button size512Button;
 		private System.Windows.Forms.Label presetsLabel;
 		private System.Windows.Forms.Button size256Button;
@@ -371,7 +371,7 @@
 		private System.Windows.Forms.Button size64Button;
 		private System.Windows.Forms.Button size32Button;
 		private System.Windows.Forms.Button size16Button;
-		private QuickLibrary.QlibTitlebarButton closeBtn;
+		private PicPic.Library.QlibTitlebarButton closeBtn;
 		private System.Windows.Forms.Button autoSizeBtn;
 		private System.Windows.Forms.ToolTip infoTooltip;
 	}

@@ -34,19 +34,19 @@
 			this.bottomLabel = new System.Windows.Forms.Label();
 			this.rightLabel = new System.Windows.Forms.Label();
 			this.topLabel = new System.Windows.Forms.Label();
-			this.centerCheckbox = new QuickLibrary.QlibCheckBox();
+			this.centerCheckbox = new PicPic.Library.QlibCheckBox();
 			this.leftLabel = new System.Windows.Forms.Label();
-			this.bottomMarginTextBox = new QuickLibrary.QlibNumeric();
-			this.rightMarginTextBox = new QuickLibrary.QlibNumeric();
-			this.topMarginTextBox = new QuickLibrary.QlibNumeric();
+			this.bottomMarginTextBox = new PicPic.Library.QlibNumeric();
+			this.rightMarginTextBox = new PicPic.Library.QlibNumeric();
+			this.topMarginTextBox = new PicPic.Library.QlibNumeric();
 			this.marginsLabel = new System.Windows.Forms.Label();
-			this.leftMarginTextBox = new QuickLibrary.QlibNumeric();
+			this.leftMarginTextBox = new PicPic.Library.QlibNumeric();
 			this.documentLabel = new System.Windows.Forms.Label();
-			this.titleTextBox = new QuickLibrary.QlibTextBox();
-			this.horizontalCheckBox = new QuickLibrary.QlibCheckBox();
-			this.marginsCheckBox = new QuickLibrary.QlibCheckBox();
+			this.titleTextBox = new PicPic.Library.QlibTextBox();
+			this.horizontalCheckBox = new PicPic.Library.QlibCheckBox();
+			this.marginsCheckBox = new PicPic.Library.QlibCheckBox();
 			this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
-			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
+			this.closeBtn = new PicPic.Library.QlibTitlebarButton();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.SuspendLayout();
 			// 
@@ -438,22 +438,22 @@
 		#endregion
 		private System.Windows.Forms.Button okButton;
 		private System.Windows.Forms.PrintPreviewControl printPreviewControl1;
-		private QuickLibrary.QlibCheckBox marginsCheckBox;
-		private QuickLibrary.QlibCheckBox horizontalCheckBox;
-		private QuickLibrary.QlibCheckBox centerCheckbox;
-		private QuickLibrary.QlibTextBox titleTextBox;
+		private PicPic.Library.QlibCheckBox marginsCheckBox;
+		private PicPic.Library.QlibCheckBox horizontalCheckBox;
+		private PicPic.Library.QlibCheckBox centerCheckbox;
+		private PicPic.Library.QlibTextBox titleTextBox;
 		private System.Windows.Forms.Label documentLabel;
 		private System.Windows.Forms.Label marginsLabel;
-		private QuickLibrary.QlibNumeric leftMarginTextBox;
-		private QuickLibrary.QlibNumeric bottomMarginTextBox;
-		private QuickLibrary.QlibNumeric rightMarginTextBox;
-		private QuickLibrary.QlibNumeric topMarginTextBox;
+		private PicPic.Library.QlibNumeric leftMarginTextBox;
+		private PicPic.Library.QlibNumeric bottomMarginTextBox;
+		private PicPic.Library.QlibNumeric rightMarginTextBox;
+		private PicPic.Library.QlibNumeric topMarginTextBox;
 		private System.Windows.Forms.Label leftLabel;
 		private System.Windows.Forms.Label bottomLabel;
 		private System.Windows.Forms.Label rightLabel;
 		private System.Windows.Forms.Label topLabel;
 		private System.Windows.Forms.Button setMarginsButton;
 		private System.Windows.Forms.ToolTip infoTooltip;
-		private QuickLibrary.QlibTitlebarButton closeBtn;
+		private PicPic.Library.QlibTitlebarButton closeBtn;
 	}
 }
