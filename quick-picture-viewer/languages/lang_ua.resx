@@ -286,6 +286,10 @@
     <value>Файл переміщено в кошик</value>
     <comment>Повідомлення</comment>
   </data>
+  <data name="file-move-to-trash-failed" xml:space="preserve">
+    <value>Не вдалося перемістити файл у кошик</value>
+    <comment>Підказка</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Властивості файлу</value>
     <comment>Інформація про зображення</comment>
@@ -572,6 +576,10 @@
   </data>
   <data name="plugin-not-found" xml:space="preserve">
     <value>Каталог плагінів не знайдено</value>
+    <comment>Менеджер плагінів</comment>
+  </data>
+  <data name="plugin-delete-failed" xml:space="preserve">
+    <value>Не вдалося перемістити плагін у кошик</value>
     <comment>Менеджер плагінів</comment>
   </data>
   <data name="plugin-website" xml:space="preserve">

@@ -345,6 +345,10 @@
     <value>Archivo movido a la Papelera de reciclaje</value>
     <comment>Message box</comment>
   </data>
+  <data name="file-move-to-trash-failed" xml:space="preserve">
+    <value>No se pudo mover el archivo a la Papelera de reciclaje</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Propiedades</value>
     <comment>Image info</comment>
@@ -647,6 +651,10 @@
   </data>
   <data name="plugin-not-found" xml:space="preserve">
     <value>Directorio de Plugin no encontrado</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-delete-failed" xml:space="preserve">
+    <value>No se pudo mover el plugin a la Papelera de reciclaje</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-website" xml:space="preserve">

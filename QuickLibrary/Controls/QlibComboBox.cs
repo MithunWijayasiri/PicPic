@@ -128,31 +128,32 @@ namespace QuickLibrary
 
 			if (hovered) e.Graphics.Clear(darkMode ? ThemeMan.DarkHoverColor : ThemeMan.LightHoverColor);
 
-			e.Graphics.FillPolygon(new SolidBrush(ForeColor), new PointF[]
-			{
-				new PointF(Width - 19, 14),
-				new PointF(Width - 15, 18),
-				new PointF(Width - 11, 14)
-			});
-
 			e.Graphics.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
-			e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), 12, 7);
+			using (SolidBrush brush = new SolidBrush(ForeColor))
+			{
+				e.Graphics.FillPolygon(brush, new PointF[]
+				{
+					new PointF(Width - 19, 14),
+					new PointF(Width - 15, 18),
+					new PointF(Width - 11, 14)
+				});
+				e.Graphics.DrawString(Text, Font, brush, 12, 7);
+			}
 		}
 
 		protected override void OnDrawItem(DrawItemEventArgs e)
 		{
 			e.DrawBackground();
-			if (e.Index != -1)
+			if (e.Index == -1) return;
+
+			e.Graphics.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
+
+			bool selected = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
+			Color textColor = selected ? e.ForeColor : ForeColor;
+
+			using (SolidBrush brush = new SolidBrush(textColor))
 			{
-				e.Graphics.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
-				if (!darkMode && (e.State & DrawItemState.Selected) == DrawItemState.Selected)
-				{
-					e.Graphics.DrawString(Items[e.Index].ToString(), Font, Brushes.White, 11, (e.Index * ItemHeight) + 4);
-				}
-				else
-				{
-					e.Graphics.DrawString(Items[e.Index].ToString(), Font, new SolidBrush(ForeColor), 11, (e.Index * ItemHeight) + 4);
-				}
+				e.Graphics.DrawString(GetItemText(Items[e.Index]), Font, brush, e.Bounds.Left + 11, e.Bounds.Top + 4);
 			}
 		}
 

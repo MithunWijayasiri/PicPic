@@ -345,6 +345,10 @@
     <value>A fájl áthelyezve a Lomtárba</value>
     <comment>Message box</comment>
   </data>
+  <data name="file-move-to-trash-failed" xml:space="preserve">
+    <value>Nem sikerült a fájlt a lomtárba helyezni</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Fájl tulajdonságai</value>
     <comment>Image info</comment>
@@ -647,6 +651,10 @@
   </data>
   <data name="plugin-not-found" xml:space="preserve">
     <value>Plugin könyvtára nem található</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-delete-failed" xml:space="preserve">
+    <value>Nem sikerült a bővítményt a lomtárba helyezni</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-website" xml:space="preserve">

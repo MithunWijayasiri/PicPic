@@ -341,6 +341,10 @@
     <value>Przeniesiono plik do Kosza</value>
     <comment>Message box</comment>
   </data>
+  <data name="file-move-to-trash-failed" xml:space="preserve">
+    <value>Nie udało się przenieść pliku do Kosza</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Właściwości pliku</value>
     <comment>Image info</comment>
@@ -627,6 +631,10 @@
   </data>
   <data name="plugin-not-found" xml:space="preserve">
     <value>Nie znaleziono katalogu wtyczek</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-delete-failed" xml:space="preserve">
+    <value>Nie udało się przenieść wtyczki do Kosza</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-website" xml:space="preserve">

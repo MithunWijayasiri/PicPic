@@ -345,6 +345,10 @@
     <value>Файл перемещен в корзину</value>
     <comment>Message box</comment>
   </data>
+  <data name="file-move-to-trash-failed" xml:space="preserve">
+    <value>Не удалось переместить файл в Корзину</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Свойства файла</value>
     <comment>Image info</comment>
@@ -647,6 +651,10 @@
   </data>
   <data name="plugin-not-found" xml:space="preserve">
     <value>Директория плагина не найдена</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-delete-failed" xml:space="preserve">
+    <value>Не удалось переместить плагин в Корзину</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-website" xml:space="preserve">

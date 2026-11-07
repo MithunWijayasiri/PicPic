@@ -341,6 +341,10 @@
     <value>File spostato nel Cestino</value>
     <comment>Message box</comment>
   </data>
+  <data name="file-move-to-trash-failed" xml:space="preserve">
+    <value>Impossibile spostare il file nel cestino</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Proprietà file</value>
     <comment>Image info</comment>
@@ -627,6 +631,10 @@
   </data>
   <data name="plugin-not-found" xml:space="preserve">
     <value>Cartella dei plugin non trovata</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-delete-failed" xml:space="preserve">
+    <value>Impossibile spostare il plugin nel cestino</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-website" xml:space="preserve">
