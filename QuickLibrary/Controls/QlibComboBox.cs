@@ -149,7 +149,7 @@ namespace QuickLibrary
 			e.Graphics.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
 
 			bool selected = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
-			Color textColor = !darkMode && selected ? Color.White : ForeColor;
+			Color textColor = selected ? e.ForeColor : ForeColor;
 
 			using (SolidBrush brush = new SolidBrush(textColor))
 			{
