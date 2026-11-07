@@ -410,7 +410,7 @@
     <comment>Print</comment>
   </data>
   <data name="image-copied-to-clipboard" xml:space="preserve">
-    <value>Immagine copiata dagli appunti</value>
+    <value>Immagine copiata negli appunti</value>
     <comment>Suggestion</comment>
   </data>
   <data name="image-info" xml:space="preserve">
@@ -418,7 +418,7 @@
     <comment>Menu</comment>
   </data>
   <data name="image-pasted-from-clipboard" xml:space="preserve">
-    <value>Immagine copiata dagli appunti</value>
+    <value>Immagine incollata dagli appunti</value>
     <comment>Suggestion</comment>
   </data>
   <data name="inches" xml:space="preserve">
@@ -586,11 +586,11 @@
     <comment>SVG options</comment>
   </data>
   <data name="paste-from-clipboard" xml:space="preserve">
-    <value>Copia dagli appunti</value>
+    <value>Incolla dagli appunti</value>
     <comment>Settings</comment>
   </data>
   <data name="paste-image" xml:space="preserve">
-    <value>Copia immagine</value>
+    <value>Incolla immagine</value>
     <comment>Menu</comment>
   </data>
   <data name="perm-delete" xml:space="preserve">
