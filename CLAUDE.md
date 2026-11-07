@@ -25,7 +25,7 @@ Architecture only: project structure, build/run commands, dependencies, conventi
 | `.editorconfig` | LF, final newline, trimmed trailing whitespace; tabs size 4 for `*.cs`. Checked by `dotnet format whitespace`. |
 | `.gitattributes` | `* text=auto eol=lf` (`*.sln` CRLF). |
 | `.git-blame-ignore-revs` | One-time reformat commit(s); skipped by `git blame` (`git config blame.ignoreRevsFile .git-blame-ignore-revs`). |
-| `.github/` | Workflows: `ci.yml` (build + `dotnet format whitespace --verify-no-changes` on PR + push to `master`, `windows-latest`), `pr-title.yml` (Conventional Commits PR title), `codeql.yml` (C# CodeQL: PR, push to `master`, weekly), `pages.yml` (site). `dependabot.yml`: weekly `nuget` + `github-actions`. |
+| `.github/` | Workflows: `ci.yml` (build + `dotnet format whitespace --verify-no-changes` on PR + push to `master`, `windows-latest`), `pr-title.yml` (Conventional Commits PR title), `codeql.yml` (C# CodeQL: PR, push to `master`, weekly), `pages.yml` (site). `dependabot.yml`: monthly `nuget` + `github-actions`, one grouped PR per ecosystem. |
 
 ## Build
 

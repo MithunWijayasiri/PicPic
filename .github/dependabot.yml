@@ -3,14 +3,22 @@ updates:
   - package-ecosystem: nuget
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
+    groups:
+      nuget:
+        patterns:
+          - "*"
     commit-message:
       prefix: chore
       include: scope
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
+    groups:
+      github-actions:
+        patterns:
+          - "*"
     commit-message:
       prefix: ci
       include: scope
