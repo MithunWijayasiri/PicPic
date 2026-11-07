@@ -345,6 +345,10 @@
     <value>Impossibile spostare il file nel cestino</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="file-delete-failed" xml:space="preserve">
+    <value>Impossibile eliminare il file</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Proprietà file</value>
     <comment>Image info</comment>

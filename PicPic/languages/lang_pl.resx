@@ -345,6 +345,10 @@
     <value>Nie udało się przenieść pliku do Kosza</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="file-delete-failed" xml:space="preserve">
+    <value>Nie udało się usunąć pliku</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Właściwości pliku</value>
     <comment>Image info</comment>

@@ -349,6 +349,10 @@
     <value>Datoteku nije moguće premjestiti u koš za smeće</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="file-delete-failed" xml:space="preserve">
+    <value>Datoteku nije moguće izbrisati</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Svojstva datoteke</value>
     <comment>Image info</comment>
