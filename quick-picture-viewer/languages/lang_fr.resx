@@ -345,6 +345,10 @@
     <value>Fichier déplacé vers la corbeille</value>
     <comment>Message box</comment>
   </data>
+  <data name="file-move-to-trash-failed" xml:space="preserve">
+    <value>Impossible de déplacer le fichier dans la corbeille</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Propriétés de l'image</value>
     <comment>Image info</comment>
@@ -647,6 +651,10 @@
   </data>
   <data name="plugin-not-found" xml:space="preserve">
     <value>Répertoire de plugins non trouvé</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-delete-failed" xml:space="preserve">
+    <value>Impossible de déplacer le plugin dans la corbeille</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-website" xml:space="preserve">

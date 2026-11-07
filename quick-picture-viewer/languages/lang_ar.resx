@@ -345,6 +345,10 @@
     <value>تم نقل الملف إلى سلة المحذوفات</value>
     <comment>Message box</comment>
   </data>
+  <data name="file-move-to-trash-failed" xml:space="preserve">
+    <value>فشل نقل الملف إلى سلة المحذوفات</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>خصائص الملف</value>
     <comment>Image info</comment>
@@ -635,6 +639,10 @@
   </data>
   <data name="plugin-not-found" xml:space="preserve">
     <value>دليل المكونات الأضافية غير موجود</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-delete-failed" xml:space="preserve">
+    <value>تعذر نقل المكون الإضافي إلى سلة المحذوفات</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-website" xml:space="preserve">

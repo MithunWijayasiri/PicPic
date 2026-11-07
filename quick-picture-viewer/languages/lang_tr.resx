@@ -345,6 +345,10 @@
     <value>Dosya Geri Dönüşüm Kutusu'na taşındı</value>
     <comment>Message box</comment>
   </data>
+  <data name="file-move-to-trash-failed" xml:space="preserve">
+    <value>Dosya Geri Dönüşüm Kutusu'na taşınamadı</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Dosya özellikleri</value>
     <comment>Image info</comment>
@@ -647,6 +651,10 @@
   </data>
   <data name="plugin-not-found" xml:space="preserve">
     <value>Eklenti dizini bulunamadı</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-delete-failed" xml:space="preserve">
+    <value>Eklenti Geri Dönüşüm Kutusu'na taşınamadı</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-website" xml:space="preserve">

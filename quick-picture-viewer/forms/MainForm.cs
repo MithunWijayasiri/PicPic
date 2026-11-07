@@ -1254,8 +1254,8 @@ namespace quick_picture_viewer
 				pictureBox.Image = null;
 
 				if (NextFile() <= 1) closeFile();
-				FileMan.MoveFileOrFolderToRecycleBin(path);
-				showSuggestion(LangMan.Get("file-moved-to-trash") + ": " + Path.GetFileName(path), SuggestionIcon.Trash);
+				if (FileMan.MoveFileOrFolderToRecycleBin(path)) showSuggestion(LangMan.Get("file-moved-to-trash") + ": " + Path.GetFileName(path), SuggestionIcon.Trash);
+				else showSuggestion(LangMan.Get("file-move-to-trash-failed") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 			}
 			else
 			{

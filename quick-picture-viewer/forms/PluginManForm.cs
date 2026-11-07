@@ -198,8 +198,18 @@ namespace quick_picture_viewer
 				string manifestPath = pluginFolder + ".json";
 				if (File.Exists(manifestPath))
 				{
-					FileMan.MoveFileOrFolderToRecycleBin(manifestPath);
-					if (Directory.Exists(pluginFolder)) FileMan.MoveFileOrFolderToRecycleBin(pluginFolder);
+					bool manifestMoved = FileMan.MoveFileOrFolderToRecycleBin(manifestPath);
+					bool folderMoved = !Directory.Exists(pluginFolder) || FileMan.MoveFileOrFolderToRecycleBin(pluginFolder);
+					if (!manifestMoved || !folderMoved)
+					{
+						DialogMan.ShowInfo(
+							this,
+							LangMan.Get("plugin-delete-failed"),
+							LangMan.Get("error"),
+							DarkMode,
+							TopMost
+						);
+					}
 				}
 				else
 				{

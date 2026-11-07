@@ -22,13 +22,14 @@ namespace QuickLibrary
 			return String.Format("{0:0.##} {1}", fileLength, sizes[order]);
 		}
 
-		public static void MoveFileOrFolderToRecycleBin(string path)
+		public static bool MoveFileOrFolderToRecycleBin(string path)
 		{
 			NativeMan.SHFILEOPSTRUCT fileop = new NativeMan.SHFILEOPSTRUCT();
 			fileop.wFunc = NativeMan.FO_DELETE;
 			fileop.pFrom = path + '\0' + '\0';
 			fileop.fFlags = NativeMan.FOF_ALLOWUNDO | NativeMan.FOF_NOCONFIRMATION;
-			NativeMan.SHFileOperation(ref fileop);
+			int result = NativeMan.SHFileOperation(ref fileop);
+			return result == 0 && !fileop.fAnyOperationsAborted;
 		}
 	}
 }

@@ -341,6 +341,10 @@
     <value>ファイルがごみ箱に移動されました</value>
     <comment>Message box</comment>
   </data>
+  <data name="file-move-to-trash-failed" xml:space="preserve">
+    <value>ファイルをごみ箱に移動できませんでした</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>ファイルのプロパティ</value>
     <comment>Image info</comment>
@@ -627,6 +631,10 @@
   </data>
   <data name="plugin-not-found" xml:space="preserve">
     <value>プラグインディレクトリが見つかりません</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-delete-failed" xml:space="preserve">
+    <value>プラグインをごみ箱に移動できませんでした</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-website" xml:space="preserve">
