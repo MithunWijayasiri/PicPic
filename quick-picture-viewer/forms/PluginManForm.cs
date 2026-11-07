@@ -131,6 +131,7 @@ namespace quick_picture_viewer
 					pi = PluginInfo.FromJson(reader.ReadToEnd());
 				}
 
+				if (pi == null) throw new InvalidDataException("Manifest is null.");
 				if (string.IsNullOrEmpty(pi.name) || pi.name != Path.GetFileName(pi.name) || pi.name.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0)
 					throw new InvalidDataException("Invalid plugin name.");
 				string root = Path.TrimEndingDirectorySeparator(Path.GetFullPath(PluginMan.pluginsFolder));
