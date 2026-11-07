@@ -40,32 +40,31 @@
 			copyrightLabel = new System.Windows.Forms.Label();
 			moduleArtLabel = new System.Windows.Forms.Label();
 			logoPictureBox = new System.Windows.Forms.PictureBox();
+			dividerPanel = new System.Windows.Forms.Panel();
 			((System.ComponentModel.ISupportInitialize)logoPictureBox).BeginInit();
 			SuspendLayout();
 			// 
 			// productLabel
 			// 
 			productLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
-			productLabel.Location = new System.Drawing.Point(10, 170);
-			productLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+			productLabel.Location = new System.Drawing.Point(110, 38);
+			productLabel.Margin = new System.Windows.Forms.Padding(0);
 			productLabel.Name = "productLabel";
-			productLabel.Size = new System.Drawing.Size(280, 19);
+			productLabel.Size = new System.Drawing.Size(278, 24);
 			productLabel.TabIndex = 27;
 			productLabel.Text = Program.AppName;
-			productLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			productLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// versionLabel
 			// 
-			versionLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
 			versionLabel.ForeColor = System.Drawing.Color.FromArgb(106, 106, 146);
-			versionLabel.Location = new System.Drawing.Point(10, 199);
+			versionLabel.Location = new System.Drawing.Point(110, 62);
 			versionLabel.Margin = new System.Windows.Forms.Padding(0);
 			versionLabel.Name = "versionLabel";
-			versionLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			versionLabel.Size = new System.Drawing.Size(280, 19);
+			versionLabel.Size = new System.Drawing.Size(290, 19);
 			versionLabel.TabIndex = 28;
 			versionLabel.Text = "version";
-			versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// closeBtn
 			// 
@@ -79,7 +78,7 @@
 			closeBtn.Image = Properties.Resources.black_close;
 			closeBtn.IsRed = true;
 			closeBtn.LightImage = Properties.Resources.white_close;
-			closeBtn.Location = new System.Drawing.Point(268, 0);
+			closeBtn.Location = new System.Drawing.Point(388, 0);
 			closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			closeBtn.Name = "closeBtn";
 			closeBtn.Size = new System.Drawing.Size(32, 32);
@@ -96,13 +95,15 @@
 			updateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(200, 200, 232);
 			updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			updateBtn.Enabled = false;
-			updateBtn.Location = new System.Drawing.Point(115, 334);
-			updateBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			updateBtn.Image = Properties.Resources.black_sync;
+			updateBtn.Location = new System.Drawing.Point(150, 134);
+			updateBtn.Margin = new System.Windows.Forms.Padding(0);
 			updateBtn.Name = "updateBtn";
-			updateBtn.Size = new System.Drawing.Size(175, 32);
+			updateBtn.Size = new System.Drawing.Size(120, 36);
 			updateBtn.TabIndex = 2;
-			updateBtn.Text = "check for updates";
+			updateBtn.Text = " updates";
 			updateBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			updateBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			updateBtn.UseVisualStyleBackColor = false;
 			// 
 			// githubBtn
@@ -113,13 +114,13 @@
 			githubBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(200, 200, 232);
 			githubBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			githubBtn.Image = Properties.Resources.black_github;
-			githubBtn.Location = new System.Drawing.Point(10, 334);
-			githubBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			githubBtn.Location = new System.Drawing.Point(20, 134);
+			githubBtn.Margin = new System.Windows.Forms.Padding(0);
 			githubBtn.Name = "githubBtn";
-			githubBtn.Size = new System.Drawing.Size(95, 32);
+			githubBtn.Size = new System.Drawing.Size(120, 36);
 			githubBtn.TabIndex = 1;
 			githubBtn.Text = " GitHub";
-			githubBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			githubBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			githubBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			infoTooltip.SetToolTip(githubBtn, "github.com/MithunWijayasiri/PicPic");
 			githubBtn.UseVisualStyleBackColor = false;
@@ -129,15 +130,14 @@
 			// 
 			descTextBox.BackColor = System.Drawing.Color.FromArgb(236, 236, 248);
 			descTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			descTextBox.Location = new System.Drawing.Point(20, 228);
-			descTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			descTextBox.Location = new System.Drawing.Point(113, 86);
+			descTextBox.Margin = new System.Windows.Forms.Padding(0);
 			descTextBox.Multiline = true;
 			descTextBox.Name = "descTextBox";
 			descTextBox.ReadOnly = true;
-			descTextBox.Size = new System.Drawing.Size(260, 96);
+			descTextBox.Size = new System.Drawing.Size(287, 36);
 			descTextBox.TabIndex = 5;
 			descTextBox.Text = "description";
-			descTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// makeDefaultBtn
 			// 
@@ -147,61 +147,70 @@
 			makeDefaultBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(184, 184, 220);
 			makeDefaultBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(200, 200, 232);
 			makeDefaultBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			makeDefaultBtn.Location = new System.Drawing.Point(10, 376);
-			makeDefaultBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+			makeDefaultBtn.Image = Properties.Resources.black_check;
+			makeDefaultBtn.Location = new System.Drawing.Point(280, 134);
+			makeDefaultBtn.Margin = new System.Windows.Forms.Padding(0);
 			makeDefaultBtn.Name = "makeDefaultBtn";
-			makeDefaultBtn.Size = new System.Drawing.Size(280, 32);
+			makeDefaultBtn.Size = new System.Drawing.Size(120, 36);
 			makeDefaultBtn.TabIndex = 3;
-			makeDefaultBtn.Text = "set as default photo viewer";
+			makeDefaultBtn.Text = " set as default";
+			makeDefaultBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			makeDefaultBtn.UseVisualStyleBackColor = false;
 			makeDefaultBtn.Click += makeDefaultBtn_Click;
 			// 
 			// copyrightLabel
 			// 
-			copyrightLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
 			copyrightLabel.ForeColor = System.Drawing.Color.FromArgb(106, 106, 146);
-			copyrightLabel.Location = new System.Drawing.Point(10, 443);
-			copyrightLabel.Margin = new System.Windows.Forms.Padding(0, 2, 0, 10);
+			copyrightLabel.Location = new System.Drawing.Point(20, 194);
+			copyrightLabel.Margin = new System.Windows.Forms.Padding(0);
 			copyrightLabel.Name = "copyrightLabel";
-			copyrightLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			copyrightLabel.Size = new System.Drawing.Size(280, 19);
+			copyrightLabel.Size = new System.Drawing.Size(240, 19);
 			copyrightLabel.TabIndex = 44;
 			copyrightLabel.Text = "Copyright © 2026 Mithun Wijayasiri";
-			copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// moduleArtLabel
 			// 
-			moduleArtLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-			moduleArtLabel.Font = new System.Drawing.Font("Segoe UI", 7F);
+			moduleArtLabel.Font = new System.Drawing.Font("Segoe UI", 6F);
 			moduleArtLabel.ForeColor = System.Drawing.Color.FromArgb(106, 106, 146);
-			moduleArtLabel.Location = new System.Drawing.Point(10, 428);
-			moduleArtLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			moduleArtLabel.Location = new System.Drawing.Point(260, 196);
+			moduleArtLabel.Margin = new System.Windows.Forms.Padding(0);
 			moduleArtLabel.Name = "moduleArtLabel";
-			moduleArtLabel.Size = new System.Drawing.Size(280, 13);
+			moduleArtLabel.Size = new System.Drawing.Size(140, 15);
 			moduleArtLabel.TabIndex = 45;
-			moduleArtLabel.Text = "Copyright © 2023 Module Art";
-			moduleArtLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			moduleArtLabel.Text = "© 2023 Module Art";
+			moduleArtLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// dividerPanel
+			// 
+			dividerPanel.BackColor = System.Drawing.Color.FromArgb(200, 200, 230);
+			dividerPanel.Location = new System.Drawing.Point(20, 186);
+			dividerPanel.Margin = new System.Windows.Forms.Padding(0);
+			dividerPanel.Name = "dividerPanel";
+			dividerPanel.Size = new System.Drawing.Size(380, 1);
+			dividerPanel.TabIndex = 46;
 			// 
 			// logoPictureBox
 			// 
 			logoPictureBox.Image = (System.Drawing.Image)resources.GetObject("logoPictureBox.Image");
-			logoPictureBox.Location = new System.Drawing.Point(0, 32);
+			logoPictureBox.Location = new System.Drawing.Point(20, 44);
 			logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
 			logoPictureBox.Name = "logoPictureBox";
-			logoPictureBox.Size = new System.Drawing.Size(300, 128);
-			logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			logoPictureBox.Size = new System.Drawing.Size(72, 72);
+			logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			logoPictureBox.TabIndex = 41;
 			logoPictureBox.TabStop = false;
 			// 
 			// AboutForm
 			// 
 			AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			ClientSize = new System.Drawing.Size(300, 472);
+			ClientSize = new System.Drawing.Size(420, 224);
 			Controls.Add(closeBtn);
 			Controls.Add(updateBtn);
 			Controls.Add(githubBtn);
 			Controls.Add(copyrightLabel);
 			Controls.Add(moduleArtLabel);
+			Controls.Add(dividerPanel);
 			Controls.Add(makeDefaultBtn);
 			Controls.Add(descTextBox);
 			Controls.Add(logoPictureBox);
@@ -235,6 +244,7 @@
 		private System.Windows.Forms.Button makeDefaultBtn;
 		private System.Windows.Forms.Label copyrightLabel;
 		private System.Windows.Forms.Label moduleArtLabel;
+		private System.Windows.Forms.Panel dividerPanel;
 		private System.Windows.Forms.Button githubBtn;
 		private System.Windows.Forms.Button updateBtn;
 	}

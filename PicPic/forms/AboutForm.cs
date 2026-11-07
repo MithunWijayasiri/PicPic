@@ -50,6 +50,9 @@ namespace PicPic
 			CustomBackColor = back;
 			closeBtn.DarkMode = true;
 			githubBtn.Image = Properties.Resources.white_github;
+			updateBtn.Image = Properties.Resources.white_sync;
+			makeDefaultBtn.Image = Properties.Resources.white_check;
+			dividerPanel.BackColor = Color.FromArgb(46, 46, 92);
 			descTextBox.BackColor = back;
 			descTextBox.ForeColor = Color.White;
 			versionLabel.ForeColor = secondary;
@@ -68,9 +71,11 @@ namespace PicPic
 		{
 			Text = LangMan.Get("about");
 			descTextBox.Text = LangMan.Get("app-description");
-			makeDefaultBtn.Text = LangMan.Get("set-as-default-image-viewer");
+			makeDefaultBtn.Text = " " + LangMan.Get("set-as-default");
+			infoTooltip.SetToolTip(makeDefaultBtn, LangMan.Get("set-as-default-image-viewer"));
 			// TODO: enable updateBtn and wire it to UpdateMan once the first PicPic release exists.
-			updateBtn.Text = LangMan.Get("check-for-app-updates");
+			updateBtn.Text = " " + LangMan.Get("updates");
+			infoTooltip.SetToolTip(updateBtn, LangMan.Get("check-for-app-updates"));
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 

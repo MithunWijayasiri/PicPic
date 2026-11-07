@@ -753,6 +753,10 @@
     <value>選択ツール</value>
     <comment>Menu</comment>
   </data>
+  <data name="set-as-default" xml:space="preserve">
+    <value>既定に設定</value>
+    <comment>About</comment>
+  </data>
   <data name="set-as-default-image-viewer" xml:space="preserve">
     <value>既定の画像ビューアに設定</value>
     <comment>About</comment>
@@ -896,6 +900,10 @@
   <data name="update-text" xml:space="preserve">
     <value>PicPicのバージョン{0}が利用可能です、バージョン{1}を使用していますが、今すぐアップデートしますか？</value>
     <comment>Update manager</comment>
+  </data>
+  <data name="updates" xml:space="preserve">
+    <value>更新</value>
+    <comment>About</comment>
   </data>
   <data name="updating-picpic" xml:space="preserve">
     <value>PicPicをアップデート中</value>

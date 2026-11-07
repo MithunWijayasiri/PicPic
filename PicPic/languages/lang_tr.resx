@@ -777,6 +777,10 @@
     <value>Seçim aracı</value>
     <comment>Menu</comment>
   </data>
+  <data name="set-as-default" xml:space="preserve">
+    <value>Varsayılan yap</value>
+    <comment>About</comment>
+  </data>
   <data name="set-as-default-image-viewer" xml:space="preserve">
     <value>Varsayılan resim görüntüleyici olarak ayarla</value>
     <comment>About</comment>
@@ -920,6 +924,10 @@
   <data name="update-text" xml:space="preserve">
     <value>PicPic için {0} sürümü mevcut, {1} sürümünü kullanıyorsunuz, şimdi güncellensin mi?</value>
     <comment>Update manager</comment>
+  </data>
+  <data name="updates" xml:space="preserve">
+    <value>Güncellemeler</value>
+    <comment>About</comment>
   </data>
   <data name="updating-picpic" xml:space="preserve">
     <value>PicPic güncelleniyor</value>

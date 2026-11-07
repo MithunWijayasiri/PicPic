@@ -698,6 +698,10 @@
     <value>Інструмент виділення</value>
     <comment>Меню</comment>
   </data>
+  <data name="set-as-default" xml:space="preserve">
+    <value>За замовчуванням</value>
+    <comment>Про програму</comment>
+  </data>
   <data name="set-as-default-image-viewer" xml:space="preserve">
     <value>Встановити як програму перегляду зображень за замовчуванням</value>
     <comment>Про програму</comment>
@@ -842,6 +846,10 @@
     <value>Версія {0} для PicPic доступна, ви використовуєте версію {1}, оновити зараз?</value>
     <comment>Менеджер оновлень</comment>
   </data>
+  <data name="updates" xml:space="preserve">
+    <value>Оновлення</value>
+    <comment>Про програму</comment>
+  </data>
   <data name="updating-picpic" xml:space="preserve">
     <value>Оновлення PicPic</value>
     <comment>Менеджер оновлень</comment>

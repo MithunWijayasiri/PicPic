@@ -777,6 +777,10 @@
     <value>Kiválasztó eszköz</value>
     <comment>Menu</comment>
   </data>
+  <data name="set-as-default" xml:space="preserve">
+    <value>Alapértelmezett</value>
+    <comment>About</comment>
+  </data>
   <data name="set-as-default-image-viewer" xml:space="preserve">
     <value>Beállítás alapértelmezett képnézegetőként</value>
     <comment>About</comment>
@@ -920,6 +924,10 @@
   <data name="update-text" xml:space="preserve">
     <value>A PicPic {0}-os/es/ös verziója elérhető. Most a(z) {1}-os/es/ös verziót használja, frissítené?</value>
     <comment>Update manager</comment>
+  </data>
+  <data name="updates" xml:space="preserve">
+    <value>Frissítések</value>
+    <comment>About</comment>
   </data>
   <data name="updating-picpic" xml:space="preserve">
     <value>PicPic Frissítése</value>

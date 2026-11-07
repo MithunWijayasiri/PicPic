@@ -777,6 +777,10 @@
     <value>选择工具</value>
     <comment>Menu</comment>
   </data>
+  <data name="set-as-default" xml:space="preserve">
+    <value>设为默认</value>
+    <comment>About</comment>
+  </data>
   <data name="set-as-default-image-viewer" xml:space="preserve">
     <value>设置为默认图像查看器</value>
     <comment>About</comment>
@@ -920,6 +924,10 @@
   <data name="update-text" xml:space="preserve">
     <value>新版本{0}可用，当前版本{1}，立即更新？</value>
     <comment>Update manager</comment>
+  </data>
+  <data name="updates" xml:space="preserve">
+    <value>更新</value>
+    <comment>About</comment>
   </data>
   <data name="updating-picpic" xml:space="preserve">
     <value>正在更新 PicPic</value>

@@ -777,6 +777,10 @@
     <value>Alat za odabir</value>
     <comment>Menu</comment>
   </data>
+  <data name="set-as-default" xml:space="preserve">
+    <value>Postavi zadano</value>
+    <comment>About</comment>
+  </data>
   <data name="set-as-default-image-viewer" xml:space="preserve">
     <value>Postavi kao zadani preglednik slika</value>
     <comment>About</comment>
@@ -920,6 +924,10 @@
   <data name="update-text" xml:space="preserve">
     <value>Verzija {0} programa PicPic je dostupna, a koristite verziju {1}. Ažurirati sada?</value>
     <comment>Update manager</comment>
+  </data>
+  <data name="updates" xml:space="preserve">
+    <value>Ažuriranja</value>
+    <comment>About</comment>
   </data>
   <data name="updating-picpic" xml:space="preserve">
     <value>Ažuriranje programa PicPic</value>
