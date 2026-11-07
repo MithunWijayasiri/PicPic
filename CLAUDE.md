@@ -16,7 +16,8 @@ Architecture only: project structure, build/run commands, dependencies, conventi
 | `quick-picture-viewer/typewrappers/engines/` | In-repo engines: `WebpEngine.cs` (libwebp P/Invoke), `IcoEngine.cs`. |
 | `quick-picture-viewer/languages/` | `lang_<code>.resx` UI strings (14 languages), read via `LangMan.Get(key)`. |
 | `quick-picture-viewer/resources/` | Icons, images, `dlls/` (libwebp x86/x64, SimplePsd). |
-| `QuickLibrary/` | Vendored from ModuleArt/quick-library @ `ffe09a3` (GPL-3). Custom `Qlib*` controls, `ThemeMan`, `LangMan`, `NativeMan`, `UpdateMan`, `PluginMan` (plugins in `%LOCALAPPDATA%\PicPic\plugins`, scanned from disk). Owned code now — edit freely. |
+| `QuickLibrary/` | Vendored from ModuleArt/quick-library @ `ffe09a3` (GPL-3). Custom `Qlib*` controls, `ThemeMan`, `LangMan`, `NativeMan`, `UpdateMan`, `PluginMan` (plugins in `%LOCALAPPDATA%\PicPic\plugins`, scanned from disk), `PluginInstaller` (zip manifest/install validation). Owned code now — edit freely. |
+| `QuickLibrary.Tests/` | xUnit (`net8.0-windows`) logic tests for plugin manifest validation, install compatibility, folder scan, icons. Builds zips in temp dirs; no UI automation. |
 | `docs/plugins.md` | Plugin author/user guide (API v4, manifest, zip layout). |
 | `assets/` | Brand icon pack (source of truth): SVGs, `png/`, `favicon.ico`, `picpic.ico` (app icon, 16–256). |
 | `libs/SimplePsd.dll` | PSD decoder (HintPath reference). |
@@ -25,7 +26,7 @@ Architecture only: project structure, build/run commands, dependencies, conventi
 | `.editorconfig` | LF, final newline, trimmed trailing whitespace; tabs size 4 for `*.cs`. Checked by `dotnet format whitespace`. |
 | `.gitattributes` | `* text=auto eol=lf` (`*.sln` CRLF). |
 | `.git-blame-ignore-revs` | One-time reformat commit(s); skipped by `git blame` (`git config blame.ignoreRevsFile .git-blame-ignore-revs`). |
-| `.github/` | Workflows: `ci.yml` (build + `dotnet format whitespace --verify-no-changes` on PR + push to `master`, `windows-latest`), `pr-title.yml` (Conventional Commits PR title), `codeql.yml` (C# CodeQL: PR, push to `master`, weekly), `pages.yml` (site). `dependabot.yml`: monthly `nuget` + `github-actions`, one grouped PR per ecosystem. |
+| `.github/` | Workflows: `ci.yml` (build + `dotnet test` + `dotnet format whitespace --verify-no-changes` on PR + push to `master`, `windows-latest`), `pr-title.yml` (Conventional Commits PR title), `codeql.yml` (C# CodeQL: PR, push to `master`, weekly), `pages.yml` (site). `dependabot.yml`: monthly `nuget` + `github-actions`, one grouped PR per ecosystem. |
 
 ## Build
 
@@ -34,10 +35,11 @@ Requires .NET 8 SDK.
 ```bash
 dotnet restore
 dotnet build
+dotnet test
 dotnet run --project quick-picture-viewer
 ```
 
-Warnings are errors (`TreatWarningsAsErrors` in both csproj). Existing warnings listed per project in `WarningsNotAsErrors`; new warnings fail the build.
+Warnings are errors (`TreatWarningsAsErrors` in every csproj). Existing warnings listed per project in `WarningsNotAsErrors`; new warnings fail the build.
 
 ## Conventions
 
