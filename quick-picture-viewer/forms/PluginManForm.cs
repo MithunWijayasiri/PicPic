@@ -234,7 +234,6 @@ namespace quick_picture_viewer
 			if (window == DialogResult.Yes)
 			{
 				listView1.Items[numberInList].Remove();
-				imageList1.Images[numberInList].Dispose();
 
 				string pluginFolder = Path.Combine(PluginMan.pluginsFolder, codenames[numberInList]);
 				string manifestPath = pluginFolder + ".json";

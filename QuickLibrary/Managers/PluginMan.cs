@@ -45,7 +45,8 @@ namespace QuickLibrary
 						try
 						{
 							PluginInfo pi = PluginInfo.FromJson(File.ReadAllText(Path.Combine(di.FullName, files[i].Name)));
-							if (pi != null && pi.apiVer == apiVer && pi.inputType == inputType) plugins.Add(pi);
+							// Name must match the manifest file name; delete and icon lookups rely on it.
+							if (pi != null && pi.name == Path.GetFileNameWithoutExtension(files[i].Name) && pi.apiVer == apiVer && pi.inputType == inputType) plugins.Add(pi);
 						}
 						catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException || ex is Utf8Json.JsonParsingException || ex is IndexOutOfRangeException)
 						{
