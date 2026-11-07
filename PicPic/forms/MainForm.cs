@@ -459,7 +459,7 @@ namespace PicPic
 				dateCreatedLabel.Visible = directoryName != null;
 				dateModifiedLabel.Visible = directoryName != null;
 
-				Invoke((MethodInvoker)(() => Text = fileName + " - PicPic"));
+				Invoke((MethodInvoker)(() => Text = fileName + " - " + Program.AppName));
 
 				zoomInButton.Enabled = true;
 				zoomOutButton.Enabled = true;
@@ -519,7 +519,7 @@ namespace PicPic
 			imageChanged = b;
 			hasChangesLabel.Visible = b;
 
-			Text = string.IsNullOrEmpty(fakeName) ? currentFile + " - PicPic" : fakeName + " - PicPic";
+			Text = string.IsNullOrEmpty(fakeName) ? currentFile + " - " + Program.AppName : fakeName + " - " + Program.AppName;
 
 			if (b) Text = "* " + Text;
 
@@ -1323,7 +1323,7 @@ namespace PicPic
 
 			showTypeOpsButton(false);
 
-			Text = "PicPic";
+			Text = Program.AppName;
 
 			setZoomText(LangMan.Get("auto"));
 			setSlideshow(false);
@@ -1463,6 +1463,12 @@ namespace PicPic
 				copyImageBtn.Image = Properties.Resources.white_image;
 				copyFileBtn.Image = Properties.Resources.white_imgfile;
 				selectAllBtn.Image = Properties.Resources.white_selectall;
+			}
+			else
+			{
+				BackColor = ThemeMan.LightBackColor;
+				statusStrip1.BackColor = ThemeMan.LightSecondColor;
+				zoomTextBox.BackColor = ThemeMan.LightMainColor;
 			}
 
 			rmbMenu.DarkMode = dark;

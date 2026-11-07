@@ -16,11 +16,11 @@ namespace PicPic.Library
 		public static Color DarkPaleColor = Color.FromArgb(0, 58, 105);
 		public static Color DarkHoverColor = Color.FromArgb(67, 67, 67);
 
-		public static Color LightMainColor = Color.White;
-		public static Color LightBackColor = SystemColors.Control;
-		public static Color LightSecondColor = SystemColors.ControlLight;
+		public static Color LightMainColor = Color.FromArgb(236, 236, 248);
+		public static Color LightBackColor = Color.FromArgb(236, 236, 248);
+		public static Color LightSecondColor = Color.FromArgb(216, 216, 240);
 		public static Color LightPaleColor = Color.FromArgb(205, 228, 247);
-		public static Color LightHoverColor = Color.FromArgb(204, 204, 204);
+		public static Color LightHoverColor = Color.FromArgb(200, 200, 232);
 
 		public static Color BorderColor = Color.FromArgb(100, 100, 100);
 		public static Color AccentColor = Color.FromArgb(0, 120, 215);
