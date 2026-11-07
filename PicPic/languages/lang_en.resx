@@ -134,7 +134,7 @@
     <comment>Menu</comment>
   </data>
   <data name="app-description" xml:space="preserve">
-    <value>Lightweight, versatile desktop image viewer for Windows. The best replacement for the default Windows photo viewer.</value>
+    <value>A fast, lightweight image viewer for Windows.</value>
     <comment>About</comment>
   </data>
   <data name="app-is-up-to-date" xml:space="preserve">

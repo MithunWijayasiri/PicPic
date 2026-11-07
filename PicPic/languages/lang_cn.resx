@@ -134,8 +134,7 @@
     <comment>Menu</comment>
   </data>
   <data name="app-description" xml:space="preserve">
-    <value>轻量级、多功能的PC图像查看器
-替代Windows照片查看器的最佳选择</value>
+    <value>快速、轻量的 Windows 图像查看器。</value>
     <comment>About</comment>
   </data>
   <data name="app-is-up-to-date" xml:space="preserve">

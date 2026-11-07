@@ -97,7 +97,7 @@ namespace PicPic.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lightweight, versatile desktop image viewer for Windows. The best replacement for the default Windows photo viewer..
+        ///   Looks up a localized string similar to A fast, lightweight image viewer for Windows..
         /// </summary>
         public static string app_description {
             get {
