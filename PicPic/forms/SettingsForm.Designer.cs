@@ -581,7 +581,7 @@
 			this.browseWithCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.browseWithCheckBox.Size = new System.Drawing.Size(372, 32);
 			this.browseWithCheckBox.TabIndex = 2;
-			this.browseWithCheckBox.Text = "browse folder with qpv";
+			this.browseWithCheckBox.Text = "browse folder with PicPic";
 			this.browseWithCheckBox.UseMnemonic = false;
 			this.browseWithCheckBox.UseVisualStyleBackColor = true;
 			this.browseWithCheckBox.CheckedChanged += new System.EventHandler(this.browseWithCheckBox_CheckedChanged);
@@ -613,7 +613,7 @@
 			this.openWithCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.openWithCheckBox.Size = new System.Drawing.Size(372, 32);
 			this.openWithCheckBox.TabIndex = 1;
-			this.openWithCheckBox.Text = "open with qpv";
+			this.openWithCheckBox.Text = "open with PicPic";
 			this.openWithCheckBox.UseMnemonic = false;
 			this.openWithCheckBox.UseVisualStyleBackColor = true;
 			this.openWithCheckBox.CheckedChanged += new System.EventHandler(this.openWithCheckBox_CheckedChanged);

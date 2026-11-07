@@ -188,7 +188,7 @@
 			this.morePluginsBtn.Text = " more plugins";
 			this.morePluginsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.morePluginsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.infoTooltip.SetToolTip(this.morePluginsBtn, "github.com/ModuleArt/qpv-plugins");
+			this.infoTooltip.SetToolTip(this.morePluginsBtn, "github.com/MithunWijayasiri/PicPic");
 			this.morePluginsBtn.UseVisualStyleBackColor = false;
 			this.morePluginsBtn.Click += new System.EventHandler(this.morePluginsBtn_Click);
 			// 

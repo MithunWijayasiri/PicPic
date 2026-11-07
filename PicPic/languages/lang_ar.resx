@@ -173,8 +173,8 @@
     <value>تصفح</value>
     <comment>Settings</comment>
   </data>
-  <data name="browse-folder-with-qpv" xml:space="preserve">
-    <value>تصفح مع عارض الصور السريع</value>
+  <data name="browse-folder-with-picpic" xml:space="preserve">
+    <value>تصفح مع PicPic</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
@@ -585,8 +585,8 @@
     <value>فتح مع التطبيق الافتراضي</value>
     <comment>Menu</comment>
   </data>
-  <data name="open-with-qpv" xml:space="preserve">
-    <value>فتح مع عارض الصور السريع</value>
+  <data name="open-with-picpic" xml:space="preserve">
+    <value>فتح مع PicPic</value>
     <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">
@@ -906,11 +906,11 @@
     <comment>Update manager</comment>
   </data>
   <data name="update-text" xml:space="preserve">
-    <value>يتوفر الإصدار {0} من عارض الصور السريع ، هل تستخدم الإصدار {1} ، فهل تريد التحديث الآن؟</value>
+    <value>يتوفر الإصدار {0} من PicPic ، هل تستخدم الإصدار {1} ، فهل تريد التحديث الآن؟</value>
     <comment>Update manager</comment>
   </data>
-  <data name="updating-qpv" xml:space="preserve">
-    <value>تحديث عارض الصور السريع</value>
+  <data name="updating-picpic" xml:space="preserve">
+    <value>تحديث PicPic</value>
     <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">

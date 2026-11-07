@@ -187,11 +187,11 @@ namespace PicPic.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Megtekintés Quick Picture Viewer-ben.
+        ///   Looks up a localized string similar to Megtekintés PicPic-ben.
         /// </summary>
-        public static string browse_folder_with_qpv {
+        public static string browse_folder_with_picpic {
             get {
-                return ResourceManager.GetString("browse-folder-with-qpv", resourceCulture);
+                return ResourceManager.GetString("browse-folder-with-picpic", resourceCulture);
             }
         }
         
@@ -1096,11 +1096,11 @@ namespace PicPic.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Megnyitás Quick Picture Viewer-rel.
+        ///   Looks up a localized string similar to Megnyitás PicPic-cel.
         /// </summary>
-        public static string open_with_qpv {
+        public static string open_with_picpic {
             get {
-                return ResourceManager.GetString("open-with-qpv", resourceCulture);
+                return ResourceManager.GetString("open-with-picpic", resourceCulture);
             }
         }
         
@@ -1771,7 +1771,7 @@ namespace PicPic.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Quick Picture Viewer {0}-os/es/ös verziója elérhető. Most a(z) {1}-os/es/ös verziót használja, frissítené?.
+        ///   Looks up a localized string similar to A PicPic {0}-os/es/ös verziója elérhető. Most a(z) {1}-os/es/ös verziót használja, frissítené?.
         /// </summary>
         public static string update_text {
             get {
@@ -1780,11 +1780,11 @@ namespace PicPic.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quick Picture Viewer Frissítése.
+        ///   Looks up a localized string similar to PicPic Frissítése.
         /// </summary>
-        public static string updating_qpv {
+        public static string updating_picpic {
             get {
-                return ResourceManager.GetString("updating-qpv", resourceCulture);
+                return ResourceManager.GetString("updating-picpic", resourceCulture);
             }
         }
         

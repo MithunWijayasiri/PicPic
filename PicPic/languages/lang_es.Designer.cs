@@ -187,11 +187,11 @@ namespace PicPic.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Buscar con Quick Picture Viewer.
+        ///   Looks up a localized string similar to Buscar con PicPic.
         /// </summary>
-        public static string browse_folder_with_qpv {
+        public static string browse_folder_with_picpic {
             get {
-                return ResourceManager.GetString("browse-folder-with-qpv", resourceCulture);
+                return ResourceManager.GetString("browse-folder-with-picpic", resourceCulture);
             }
         }
         
@@ -700,7 +700,7 @@ namespace PicPic.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ayudanos a traducir Quick Picture Viewer.
+        ///   Looks up a localized string similar to Ayudanos a traducir PicPic.
         /// </summary>
         public static string help_us_translate_app {
             get {
@@ -1096,11 +1096,11 @@ namespace PicPic.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abrir con Quick Picture Viewer.
+        ///   Looks up a localized string similar to Abrir con PicPic.
         /// </summary>
-        public static string open_with_qpv {
+        public static string open_with_picpic {
             get {
-                return ResourceManager.GetString("open-with-qpv", resourceCulture);
+                return ResourceManager.GetString("open-with-picpic", resourceCulture);
             }
         }
         
@@ -1771,7 +1771,7 @@ namespace PicPic.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to La versión {0} de Quick Picture Viewer está disponible, estás utilizando la versión {1}, ¿actualizar ahora?.
+        ///   Looks up a localized string similar to La versión {0} de PicPic está disponible, estás utilizando la versión {1}, ¿actualizar ahora?.
         /// </summary>
         public static string update_text {
             get {
@@ -1780,11 +1780,11 @@ namespace PicPic.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Actualizando Quick Picture Viewer.
+        ///   Looks up a localized string similar to Actualizando PicPic.
         /// </summary>
-        public static string updating_qpv {
+        public static string updating_picpic {
             get {
-                return ResourceManager.GetString("updating-qpv", resourceCulture);
+                return ResourceManager.GetString("updating-picpic", resourceCulture);
             }
         }
         

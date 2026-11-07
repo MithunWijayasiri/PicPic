@@ -114,8 +114,8 @@
     <value>Огляд</value>
     <comment>Налаштування</comment>
   </data>
-  <data name="browse-folder-with-qpv" xml:space="preserve">
-    <value>Переглядати за допомогою Quick Picture Viewer</value>
+  <data name="browse-folder-with-picpic" xml:space="preserve">
+    <value>Переглядати за допомогою PicPic</value>
     <comment>Налаштування</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
@@ -534,8 +534,8 @@
     <value>Відкрити за допомогою програми за замовчуванням</value>
     <comment>Меню</comment>
   </data>
-  <data name="open-with-qpv" xml:space="preserve">
-    <value>Відкрити за допомогою Quick Picture Viewer</value>
+  <data name="open-with-picpic" xml:space="preserve">
+    <value>Відкрити за допомогою PicPic</value>
     <comment>Налаштування</comment>
   </data>
   <data name="original-size" xml:space="preserve">
@@ -839,11 +839,11 @@
     <comment>Менеджер оновлень</comment>
   </data>
   <data name="update-text" xml:space="preserve">
-    <value>Версія {0} для Quick Picture Viewer доступна, ви використовуєте версію {1}, оновити зараз?</value>
+    <value>Версія {0} для PicPic доступна, ви використовуєте версію {1}, оновити зараз?</value>
     <comment>Менеджер оновлень</comment>
   </data>
-  <data name="updating-qpv" xml:space="preserve">
-    <value>Оновлення Quick Picture Viewer</value>
+  <data name="updating-picpic" xml:space="preserve">
+    <value>Оновлення PicPic</value>
     <comment>Менеджер оновлень</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">

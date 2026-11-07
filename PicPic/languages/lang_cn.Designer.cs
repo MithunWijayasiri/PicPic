@@ -188,11 +188,11 @@ namespace PicPic.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 使用Quick Picture Viewer浏览此文件夹.
+        ///   Looks up a localized string similar to 使用PicPic浏览此文件夹.
         /// </summary>
-        public static string browse_folder_with_qpv {
+        public static string browse_folder_with_picpic {
             get {
-                return ResourceManager.GetString("browse-folder-with-qpv", resourceCulture);
+                return ResourceManager.GetString("browse-folder-with-picpic", resourceCulture);
             }
         }
         
@@ -1097,11 +1097,11 @@ namespace PicPic.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 使用Quick Picture Viewer打开.
+        ///   Looks up a localized string similar to 使用PicPic打开.
         /// </summary>
-        public static string open_with_qpv {
+        public static string open_with_picpic {
             get {
-                return ResourceManager.GetString("open-with-qpv", resourceCulture);
+                return ResourceManager.GetString("open-with-picpic", resourceCulture);
             }
         }
         
@@ -1781,11 +1781,11 @@ namespace PicPic.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 正在更新 Quick Picture Viewer.
+        ///   Looks up a localized string similar to 正在更新 PicPic.
         /// </summary>
-        public static string updating_qpv {
+        public static string updating_picpic {
             get {
-                return ResourceManager.GetString("updating-qpv", resourceCulture);
+                return ResourceManager.GetString("updating-picpic", resourceCulture);
             }
         }
         

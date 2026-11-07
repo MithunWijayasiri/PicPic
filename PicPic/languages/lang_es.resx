@@ -173,8 +173,8 @@
     <value>Buscar</value>
     <comment>Settings</comment>
   </data>
-  <data name="browse-folder-with-qpv" xml:space="preserve">
-    <value>Buscar con Quick Picture Viewer</value>
+  <data name="browse-folder-with-picpic" xml:space="preserve">
+    <value>Buscar con PicPic</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
@@ -422,7 +422,7 @@
     <comment>SVG options</comment>
   </data>
   <data name="help-us-translate-app" xml:space="preserve">
-    <value>Ayudanos a traducir Quick Picture Viewer</value>
+    <value>Ayudanos a traducir PicPic</value>
     <comment>Settings</comment>
   </data>
   <data name="image" xml:space="preserve">
@@ -597,8 +597,8 @@
     <value>Abrir con aplicación de fotos predeterminada</value>
     <comment>Menu</comment>
   </data>
-  <data name="open-with-qpv" xml:space="preserve">
-    <value>Abrir con Quick Picture Viewer</value>
+  <data name="open-with-picpic" xml:space="preserve">
+    <value>Abrir con PicPic</value>
     <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">
@@ -918,11 +918,11 @@
     <comment>Update manager</comment>
   </data>
   <data name="update-text" xml:space="preserve">
-    <value>La versión {0} de Quick Picture Viewer está disponible, estás utilizando la versión {1}, ¿actualizar ahora?</value>
+    <value>La versión {0} de PicPic está disponible, estás utilizando la versión {1}, ¿actualizar ahora?</value>
     <comment>Update manager</comment>
   </data>
-  <data name="updating-qpv" xml:space="preserve">
-    <value>Actualizando Quick Picture Viewer</value>
+  <data name="updating-picpic" xml:space="preserve">
+    <value>Actualizando PicPic</value>
     <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">

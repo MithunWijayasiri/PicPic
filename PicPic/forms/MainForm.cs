@@ -459,7 +459,7 @@ namespace PicPic
 				dateCreatedLabel.Visible = directoryName != null;
 				dateModifiedLabel.Visible = directoryName != null;
 
-				Invoke((MethodInvoker)(() => Text = fileName + " - Quick Picture Viewer"));
+				Invoke((MethodInvoker)(() => Text = fileName + " - PicPic"));
 
 				zoomInButton.Enabled = true;
 				zoomOutButton.Enabled = true;
@@ -519,7 +519,7 @@ namespace PicPic
 			imageChanged = b;
 			hasChangesLabel.Visible = b;
 
-			Text = string.IsNullOrEmpty(fakeName) ? currentFile + " - Quick Picture Viewer" : fakeName + " - Quick Picture Viewer";
+			Text = string.IsNullOrEmpty(fakeName) ? currentFile + " - PicPic" : fakeName + " - PicPic";
 
 			if (b) Text = "* " + Text;
 
@@ -1322,7 +1322,7 @@ namespace PicPic
 
 			showTypeOpsButton(false);
 
-			Text = "Quick Picture Viewer";
+			Text = "PicPic";
 
 			setZoomText(LangMan.Get("auto"));
 			setSlideshow(false);

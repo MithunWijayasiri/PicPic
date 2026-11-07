@@ -173,8 +173,8 @@
     <value>Выбрать</value>
     <comment>Settings</comment>
   </data>
-  <data name="browse-folder-with-qpv" xml:space="preserve">
-    <value>Открыть папку с помощью Quick Picture Viewer</value>
+  <data name="browse-folder-with-picpic" xml:space="preserve">
+    <value>Открыть папку с помощью PicPic</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
@@ -597,8 +597,8 @@
     <value>Открыть сторонним приложением по-умолчанию</value>
     <comment>Menu</comment>
   </data>
-  <data name="open-with-qpv" xml:space="preserve">
-    <value>Открыть с помощью Quick Picture Viewer</value>
+  <data name="open-with-picpic" xml:space="preserve">
+    <value>Открыть с помощью PicPic</value>
     <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">
@@ -918,11 +918,11 @@
     <comment>Update manager</comment>
   </data>
   <data name="update-text" xml:space="preserve">
-    <value>Доступна версия {0} для Quick Picture Viewer, вы используете версию {1}, обновить сейчас?</value>
+    <value>Доступна версия {0} для PicPic, вы используете версию {1}, обновить сейчас?</value>
     <comment>Update manager</comment>
   </data>
-  <data name="updating-qpv" xml:space="preserve">
-    <value>Обновление Quick Picture Viewer</value>
+  <data name="updating-picpic" xml:space="preserve">
+    <value>Обновление PicPic</value>
     <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">

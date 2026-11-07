@@ -173,8 +173,8 @@
     <value>Göz at</value>
     <comment>Settings</comment>
   </data>
-  <data name="browse-folder-with-qpv" xml:space="preserve">
-    <value>Quick Picture Viewer ile göz at</value>
+  <data name="browse-folder-with-picpic" xml:space="preserve">
+    <value>PicPic ile göz at</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
@@ -597,8 +597,8 @@
     <value>Varsayılan uygulamayla aç</value>
     <comment>Menu</comment>
   </data>
-  <data name="open-with-qpv" xml:space="preserve">
-    <value>Quick Picture Viewer ile aç</value>
+  <data name="open-with-picpic" xml:space="preserve">
+    <value>PicPic ile aç</value>
     <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">
@@ -918,11 +918,11 @@
     <comment>Update manager</comment>
   </data>
   <data name="update-text" xml:space="preserve">
-    <value>Quick Picture Viewer için {0} sürümü mevcut, {1} sürümünü kullanıyorsunuz, şimdi güncellensin mi?</value>
+    <value>PicPic için {0} sürümü mevcut, {1} sürümünü kullanıyorsunuz, şimdi güncellensin mi?</value>
     <comment>Update manager</comment>
   </data>
-  <data name="updating-qpv" xml:space="preserve">
-    <value>Quick Picture Viewer güncelleniyor</value>
+  <data name="updating-picpic" xml:space="preserve">
+    <value>PicPic güncelleniyor</value>
     <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">

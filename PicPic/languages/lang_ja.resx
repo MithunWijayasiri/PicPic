@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="about" xml:space="preserve">
-    <value>Quick Picture Viewerについて</value>
+    <value>PicPicについて</value>
     <comment>Menu</comment>
   </data>
   <data name="all-files" xml:space="preserve">
@@ -173,8 +173,8 @@
     <value>参照</value>
     <comment>Settings</comment>
   </data>
-  <data name="browse-folder-with-qpv" xml:space="preserve">
-    <value>QuickPictureViewerで表示</value>
+  <data name="browse-folder-with-picpic" xml:space="preserve">
+    <value>PicPicで表示</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
@@ -577,8 +577,8 @@
     <value>デフォルトのアプリで開く</value>
     <comment>Menu</comment>
   </data>
-  <data name="open-with-qpv" xml:space="preserve">
-    <value>QuickPictureViewerで表示</value>
+  <data name="open-with-picpic" xml:space="preserve">
+    <value>PicPicで表示</value>
     <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">
@@ -894,11 +894,11 @@
     <comment>Update manager</comment>
   </data>
   <data name="update-text" xml:space="preserve">
-    <value>Quick Picture Viewerのバージョン{0}が利用可能です、バージョン{1}を使用していますが、今すぐアップデートしますか？</value>
+    <value>PicPicのバージョン{0}が利用可能です、バージョン{1}を使用していますが、今すぐアップデートしますか？</value>
     <comment>Update manager</comment>
   </data>
-  <data name="updating-qpv" xml:space="preserve">
-    <value>Quick Picture Viewerをアップデート中</value>
+  <data name="updating-picpic" xml:space="preserve">
+    <value>PicPicをアップデート中</value>
     <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">

@@ -80,7 +80,7 @@ namespace PicPic
 					}
 
 					int freeIndex = 0;
-					string freePath = "qpv-cr2-";
+					string freePath = "picpic-cr2-";
 					string tempPath = Path.Combine(Path.GetTempPath(), freePath + freeIndex + ".jpg");
 					while (File.Exists(tempPath))
 					{

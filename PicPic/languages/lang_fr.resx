@@ -173,8 +173,8 @@
     <value>Parcourir</value>
     <comment>Settings</comment>
   </data>
-  <data name="browse-folder-with-qpv" xml:space="preserve">
-    <value>Naviguer avec Quick Picture Viewer</value>
+  <data name="browse-folder-with-picpic" xml:space="preserve">
+    <value>Naviguer avec PicPic</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
@@ -597,8 +597,8 @@
     <value>Ouvrir avec l'application par défaut</value>
     <comment>Menu</comment>
   </data>
-  <data name="open-with-qpv" xml:space="preserve">
-    <value>Ouvrir avec Quick Picture Viewer</value>
+  <data name="open-with-picpic" xml:space="preserve">
+    <value>Ouvrir avec PicPic</value>
     <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">
@@ -918,11 +918,11 @@
     <comment>Update manager</comment>
   </data>
   <data name="update-text" xml:space="preserve">
-    <value>La version {0} de Quick Picture Viewer est disponible, vous utilisez la version {1}, mettre à jour maintenant ?</value>
+    <value>La version {0} de PicPic est disponible, vous utilisez la version {1}, mettre à jour maintenant ?</value>
     <comment>Update manager</comment>
   </data>
-  <data name="updating-qpv" xml:space="preserve">
-    <value>Mise à jour de Quick Picture Viewer</value>
+  <data name="updating-picpic" xml:space="preserve">
+    <value>Mise à jour de PicPic</value>
     <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">

@@ -8,12 +8,12 @@ using System.Runtime.Versioning;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Quick Picture Viewer")]
-[assembly: AssemblyDescription("Lightweight, versatile desktop image viewer for Windows. The best replacement for the default Windows photo viewer.")]
+[assembly: AssemblyTitle("PicPic")]
+[assembly: AssemblyDescription("A fast, minimal image viewer for Windows.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Module Art")]
-[assembly: AssemblyProduct("Quick Picture Viewer")]
-[assembly: AssemblyCopyright("Copyright © 2023 Module Art")]
+[assembly: AssemblyCompany("PicPic")]
+[assembly: AssemblyProduct("PicPic")]
+[assembly: AssemblyCopyright("Copyright © 2023 Module Art; © 2026 Mithun Wijayasiri")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -23,7 +23,7 @@ using System.Runtime.Versioning;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("53748c49-255e-424b-b789-5919cefef473")]
+[assembly: Guid("8afd6f57-aaad-4b24-aa01-987bdb06f515")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -35,6 +35,6 @@ using System.Runtime.Versioning;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("3.1.5")]
-[assembly: AssemblyFileVersion("3.1.5")]
+[assembly: AssemblyVersion("0.1.0")]
+[assembly: AssemblyFileVersion("0.1.0")]
 [assembly: NeutralResourcesLanguage("en")]

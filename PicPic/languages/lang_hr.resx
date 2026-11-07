@@ -173,8 +173,8 @@
     <value>Pregledaj</value>
     <comment>Settings</comment>
   </data>
-  <data name="browse-folder-with-qpv" xml:space="preserve">
-    <value>Pregledaj s Quick Picture Viewerom</value>
+  <data name="browse-folder-with-picpic" xml:space="preserve">
+    <value>Pregledaj s PicPic-om</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
@@ -597,8 +597,8 @@
     <value>Otvori zadanom aplikacijom</value>
     <comment>Menu</comment>
   </data>
-  <data name="open-with-qpv" xml:space="preserve">
-    <value>Otvori s Quick Picture Viewerom</value>
+  <data name="open-with-picpic" xml:space="preserve">
+    <value>Otvori s PicPic-om</value>
     <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">
@@ -918,11 +918,11 @@
     <comment>Update manager</comment>
   </data>
   <data name="update-text" xml:space="preserve">
-    <value>Verzija {0} Quick Picture Viewera je dostupna, a koristite verziju {1}. Ažurirati sada?</value>
+    <value>Verzija {0} programa PicPic je dostupna, a koristite verziju {1}. Ažurirati sada?</value>
     <comment>Update manager</comment>
   </data>
-  <data name="updating-qpv" xml:space="preserve">
-    <value>Ažuriranje Quick Picture Viewera</value>
+  <data name="updating-picpic" xml:space="preserve">
+    <value>Ažuriranje programa PicPic</value>
     <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">

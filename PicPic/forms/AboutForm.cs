@@ -64,7 +64,7 @@ namespace PicPic
 			Process.Start(new ProcessStartInfo
 			{
 				UseShellExecute = true,
-				FileName = "https://github.com/ModuleArt/quick-picture-viewer/"
+				FileName = "https://github.com/MithunWijayasiri/PicPic"
 			});
 		}
 
@@ -73,7 +73,7 @@ namespace PicPic
 			Process.Start(new ProcessStartInfo
 			{
 				UseShellExecute = true,
-				FileName = "https://moduleart.github.io"
+				FileName = "https://github.com/MithunWijayasiri"
 			});
 		}
 	}

@@ -302,7 +302,7 @@
 			this.MinimumSize = new System.Drawing.Size(128, 128);
 			this.Name = "MiniViewForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-			this.Text = "Quick Picture Viewer";
+			this.Text = "PicPic";
 			this.TopMost = true;
 			this.Deactivate += new System.EventHandler(this.MiniViewForm_Deactivate);
 			this.Load += new System.EventHandler(this.MiniViewForm_Load);

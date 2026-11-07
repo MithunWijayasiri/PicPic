@@ -174,8 +174,8 @@
     <value>浏览</value>
     <comment>Settings</comment>
   </data>
-  <data name="browse-folder-with-qpv" xml:space="preserve">
-    <value>使用Quick Picture Viewer浏览此文件夹</value>
+  <data name="browse-folder-with-picpic" xml:space="preserve">
+    <value>使用PicPic浏览此文件夹</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
@@ -598,8 +598,8 @@
     <value>打开   使用默认应用</value>
     <comment>Menu</comment>
   </data>
-  <data name="open-with-qpv" xml:space="preserve">
-    <value>使用Quick Picture Viewer打开</value>
+  <data name="open-with-picpic" xml:space="preserve">
+    <value>使用PicPic打开</value>
     <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">
@@ -922,8 +922,8 @@
     <value>新版本{0}可用，当前版本{1}，立即更新？</value>
     <comment>Update manager</comment>
   </data>
-  <data name="updating-qpv" xml:space="preserve">
-    <value>正在更新 Quick Picture Viewer</value>
+  <data name="updating-picpic" xml:space="preserve">
+    <value>正在更新 PicPic</value>
     <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">

@@ -150,8 +150,8 @@ namespace PicPic
 			localizationRestart.Text = LangMan.Get("restart");
 			contextMenuLabel.Text = LangMan.Get("context-menu") + ":";
 			makeDefaultBtn.Text = LangMan.Get("set-as-default-image-viewer");
-			openWithCheckBox.Text = LangMan.Get("open-with-qpv");
-			browseWithCheckBox.Text = LangMan.Get("browse-folder-with-qpv");
+			openWithCheckBox.Text = LangMan.Get("open-with-picpic");
+			browseWithCheckBox.Text = LangMan.Get("browse-folder-with-picpic");
 			helpTranslateBtn.Text = LangMan.Get("help-us-translate-app");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
@@ -395,13 +395,13 @@ namespace PicPic
 				{
 					if (openWithCheckBox.Checked)
 					{
-						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer", "", "Open with Quick Picture Viewer");
-						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer", "Icon", string.Format("\"{0}picpic.ico\"", AppDomain.CurrentDomain.BaseDirectory));
-						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer\\command", "", string.Format("\"{0}\" \"%V\"", Environment.ProcessPath));
+						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\PicPic", "", "Open with PicPic");
+						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\PicPic", "Icon", string.Format("\"{0}picpic.ico\"", AppDomain.CurrentDomain.BaseDirectory));
+						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\PicPic\\command", "", string.Format("\"{0}\" \"%V\"", Environment.ProcessPath));
 					}
 					else
 					{
-						RegistryKey RegKey = Registry.ClassesRoot.OpenSubKey("*\\shell\\QuickPictureViewer", true);
+						RegistryKey RegKey = Registry.ClassesRoot.OpenSubKey("*\\shell\\PicPic", true);
 						RegKey.DeleteSubKeyTree("");
 					}
 				}
@@ -429,19 +429,19 @@ namespace PicPic
 				{
 					if (browseWithCheckBox.Checked)
 					{
-						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer", "", "Browse folder with Quick Picture Viewer");
-						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer", "Icon", string.Format("\"{0}picpic.ico\"", AppDomain.CurrentDomain.BaseDirectory));
-						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer\\command", "", string.Format("\"{0}\" \"%V\"", Environment.ProcessPath));
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\PicPic", "", "Browse folder with PicPic");
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\PicPic", "Icon", string.Format("\"{0}picpic.ico\"", AppDomain.CurrentDomain.BaseDirectory));
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\PicPic\\command", "", string.Format("\"{0}\" \"%V\"", Environment.ProcessPath));
 
-						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer", "", "Browse folder with Quick Picture Viewer");
-						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer", "Icon", string.Format("\"{0}picpic.ico\"", AppDomain.CurrentDomain.BaseDirectory));
-						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer\\command", "", string.Format("\"{0}\" \"%V\"", Environment.ProcessPath));
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\PicPic", "", "Browse folder with PicPic");
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\PicPic", "Icon", string.Format("\"{0}picpic.ico\"", AppDomain.CurrentDomain.BaseDirectory));
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\PicPic\\command", "", string.Format("\"{0}\" \"%V\"", Environment.ProcessPath));
 					}
 					else
 					{
-						RegistryKey RegKey = Registry.ClassesRoot.OpenSubKey("Directory\\Background\\shell\\QuickPictureViewer", true);
+						RegistryKey RegKey = Registry.ClassesRoot.OpenSubKey("Directory\\Background\\shell\\PicPic", true);
 						RegKey.DeleteSubKeyTree("");
-						RegistryKey RegKey2 = Registry.ClassesRoot.OpenSubKey("Directory\\shell\\QuickPictureViewer", true);
+						RegistryKey RegKey2 = Registry.ClassesRoot.OpenSubKey("Directory\\shell\\PicPic", true);
 						RegKey2.DeleteSubKeyTree("");
 					}
 				}
@@ -465,7 +465,7 @@ namespace PicPic
 		{
 			try
 			{
-				string openWithValue = (string)Registry.GetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer", string.Empty, string.Empty);
+				string openWithValue = (string)Registry.GetValue("HKEY_CLASSES_ROOT\\*\\shell\\PicPic", string.Empty, string.Empty);
 				return openWithValue.Length > 0;
 			}
 			catch
@@ -478,8 +478,8 @@ namespace PicPic
 		{
 			try
 			{
-				const string browseWithKey1 = "HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer";
-				const string browseWithKey2 = "HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer";
+				const string browseWithKey1 = "HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\PicPic";
+				const string browseWithKey2 = "HKEY_CLASSES_ROOT\\Directory\\shell\\PicPic";
 
 				string key1 = Registry.GetValue(browseWithKey1, string.Empty, string.Empty)?.ToString();
 				string key2 = Registry.GetValue(browseWithKey2, string.Empty, string.Empty)?.ToString();
@@ -510,7 +510,7 @@ namespace PicPic
 			Process.Start(new ProcessStartInfo
 			{
 				UseShellExecute = true,
-				FileName = "https://github.com/ModuleArt/quick-picture-viewer/wiki/Help-us-translate-this-app"
+				FileName = "https://github.com/MithunWijayasiri/PicPic/tree/master/PicPic/languages"
 			});
 		}
 	}

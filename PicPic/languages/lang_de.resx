@@ -173,8 +173,8 @@
     <value>Durchsuchen</value>
     <comment>Settings</comment>
   </data>
-  <data name="browse-folder-with-qpv" xml:space="preserve">
-    <value>Ordner mit QPV durchsuchen</value>
+  <data name="browse-folder-with-picpic" xml:space="preserve">
+    <value>Ordner mit PicPic durchsuchen</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
@@ -330,7 +330,7 @@
     <comment>Image info</comment>
   </data>
   <data name="fav-external-app" xml:space="preserve">
-    <value>QPV als bevorzugte Anwendung verwenden</value>
+    <value>PicPic als bevorzugte Anwendung verwenden</value>
     <comment>Settings</comment>
   </data>
   <data name="file" xml:space="preserve">
@@ -522,7 +522,7 @@
     <comment>Menu</comment>
   </data>
   <data name="new-version-available" xml:space="preserve">
-    <value>Eine neue Version von "Quick Picture Viewer" ist verfügbar.</value>
+    <value>Eine neue Version von "PicPic" ist verfügbar.</value>
     <comment>Update manager</comment>
   </data>
   <data name="new-window" xml:space="preserve">
@@ -597,8 +597,8 @@
     <value>Mit Standard-App öffnen</value>
     <comment>Menu</comment>
   </data>
-  <data name="open-with-qpv" xml:space="preserve">
-    <value>Mit Quick Picture Viewer öffnen</value>
+  <data name="open-with-picpic" xml:space="preserve">
+    <value>Mit PicPic öffnen</value>
     <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">
@@ -918,11 +918,11 @@
     <comment>Update manager</comment>
   </data>
   <data name="update-text" xml:space="preserve">
-    <value>Eine neuere Version {0} von Quick Picture Viewer ist verfügbar. Wollen Sie Ihre ältere Version {1} auf die neuste aktualisieren?</value>
+    <value>Eine neuere Version {0} von PicPic ist verfügbar. Wollen Sie Ihre ältere Version {1} auf die neuste aktualisieren?</value>
     <comment>Update manager</comment>
   </data>
-  <data name="updating-qpv" xml:space="preserve">
-    <value>Aktualisieren des Quick Picture Viewers</value>
+  <data name="updating-picpic" xml:space="preserve">
+    <value>Aktualisieren von PicPic</value>
     <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">

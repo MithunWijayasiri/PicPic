@@ -50,7 +50,7 @@
 			productLabel.Name = "productLabel";
 			productLabel.Size = new System.Drawing.Size(280, 19);
 			productLabel.TabIndex = 27;
-			productLabel.Text = "Quick Picture Viewer";
+			productLabel.Text = "PicPic";
 			productLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// versionLabel
@@ -100,10 +100,10 @@
 			developerBtn.Name = "developerBtn";
 			developerBtn.Size = new System.Drawing.Size(135, 32);
 			developerBtn.TabIndex = 2;
-			developerBtn.Text = " Module Art";
+			developerBtn.Text = " Mithun Wijayasiri";
 			developerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			developerBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			infoTooltip.SetToolTip(developerBtn, "moduleart.github.io");
+			infoTooltip.SetToolTip(developerBtn, "github.com/MithunWijayasiri");
 			developerBtn.UseVisualStyleBackColor = false;
 			developerBtn.Click += developerBtn_Click;
 			// 
@@ -123,7 +123,7 @@
 			githubBtn.Text = " GitHub";
 			githubBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			githubBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			infoTooltip.SetToolTip(githubBtn, "github.com/ModuleArt/quick-picture-viewer");
+			infoTooltip.SetToolTip(githubBtn, "github.com/MithunWijayasiri/PicPic");
 			githubBtn.UseVisualStyleBackColor = false;
 			githubBtn.Click += button1_Click;
 			// 
@@ -168,7 +168,7 @@
 			copyrightLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			copyrightLabel.Size = new System.Drawing.Size(280, 19);
 			copyrightLabel.TabIndex = 44;
-			copyrightLabel.Text = "Copyright © 2023 Module Art";
+			copyrightLabel.Text = "Copyright © 2023 Module Art; © 2026 Mithun Wijayasiri";
 			copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// logoPictureBox
