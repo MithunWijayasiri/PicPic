@@ -107,6 +107,10 @@ namespace QuickLibrary
 				};
 				OnOutput(oea);
 			}
+			else if (mainForm != null && func.hideMainForm)
+			{
+				mainForm.Show();
+			}
 		}
 
 		protected virtual void OnOutput(PluginMan.OutputEventArgs e)

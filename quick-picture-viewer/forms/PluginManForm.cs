@@ -133,15 +133,18 @@ namespace quick_picture_viewer
 
 				if (string.IsNullOrEmpty(pi.name) || pi.name != Path.GetFileName(pi.name) || pi.name.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0)
 					throw new InvalidDataException("Invalid plugin name.");
+				string root = Path.TrimEndingDirectorySeparator(Path.GetFullPath(PluginMan.pluginsFolder));
+				string folder = Path.GetFullPath(Path.Combine(root, pi.name));
+				if (Path.GetFileName(folder) != pi.name || Path.GetDirectoryName(folder) != root)
+					throw new InvalidDataException("Invalid plugin name.");
 				if (manifests[0].FullName != pi.name + ".json") throw new InvalidDataException("Manifest file name must be <name>.json.");
 				if (pi.functions == null || pi.functions.Length == 0) throw new InvalidDataException("Manifest has no functions.");
 				if (pi.authors == null) throw new InvalidDataException("Manifest has no authors.");
 
-				string prefix = pi.name + "/";
 				foreach (ZipArchiveEntry entry in zip.Entries)
 				{
-					string name = entry.FullName.Replace('\\', '/');
-					if (entry != manifests[0] && !name.StartsWith(prefix, StringComparison.Ordinal))
+					string destination = Path.GetFullPath(Path.Combine(root, entry.FullName));
+					if (entry != manifests[0] && !destination.StartsWith(folder + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase))
 						throw new InvalidDataException("Zip contains files outside the plugin folder: " + entry.FullName);
 				}
 				return pi;
@@ -155,7 +158,11 @@ namespace quick_picture_viewer
 
 		private void installZip(string pathToZip)
 		{
-			if (Path.GetExtension(pathToZip) != ".zip") return;
+			if (!string.Equals(Path.GetExtension(pathToZip), ".zip", StringComparison.OrdinalIgnoreCase))
+			{
+				ShowError(LangMan.Get("plugin-invalid"));
+				return;
+			}
 
 			PluginInfo pi;
 			try
@@ -168,7 +175,7 @@ namespace quick_picture_viewer
 				return;
 			}
 
-			if (pi.apiVer != PluginMan.apiVer || pi.inputType != "bitmap")
+			if (pi.apiVer != PluginMan.apiVer || pi.inputType != "bitmap" || (pi.dllType != "csharp" && pi.dllType != "cpp"))
 			{
 				ShowError(LangMan.Get("plugin-incompatible"));
 				return;

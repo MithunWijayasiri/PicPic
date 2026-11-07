@@ -1945,8 +1945,6 @@ namespace quick_picture_viewer
 			{
 				for (int j = 0; j < plugins[i].functions.Length; j++)
 				{
-					string path = null;
-					if (currentFile != null && currentFolder != null) path = Path.Combine(currentFolder, currentFile);
 					PluginMenuItem tsmi = new PluginMenuItem(
 						plugins[i],
 						plugins[i].functions[j],
@@ -1954,7 +1952,11 @@ namespace quick_picture_viewer
 						darkMode
 					);
 					tsmi.Output += Tsmi_Output;
-					tsmi.Click += (s, e) => tsmi.ProcessPlugin(originalImage, path, alwaysOnTop, selForm != null ? GetSelectionRect() : Rectangle.Empty, this);
+					tsmi.Click += (s, e) =>
+					{
+						string path = currentFile != null && currentFolder != null ? Path.Combine(currentFolder, currentFile) : null;
+						tsmi.ProcessPlugin(originalImage, path, alwaysOnTop, selForm != null ? GetSelectionRect() : Rectangle.Empty, this);
+					};
 
 					if (plugins[i].functions[j].type == "effect") toEffects.Add(tsmi);
 					else if (plugins[i].functions[j].type == "tool") toTools.Add(tsmi);

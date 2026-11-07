@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Text.Json;
 
 namespace QuickLibrary
 {
@@ -48,7 +47,7 @@ namespace QuickLibrary
 							PluginInfo pi = PluginInfo.FromJson(File.ReadAllText(Path.Combine(di.FullName, files[i].Name)));
 							if (pi != null && pi.apiVer == apiVer && pi.inputType == inputType) plugins.Add(pi);
 						}
-						catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException || ex is JsonException)
+						catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException || ex is Utf8Json.JsonParsingException)
 						{
 							// Unreadable or invalid manifest: skip it so other plugins still load.
 						}
@@ -59,25 +58,35 @@ namespace QuickLibrary
 			return plugins.ToArray();
 		}
 
+		// Copies the icon into memory so the file is not locked and the plugin can be replaced.
+		private static Image LoadIcon(string path)
+		{
+			using (FileStream fs = File.OpenRead(path))
+			using (Image img = Image.FromStream(fs))
+			{
+				return new Bitmap(img);
+			}
+		}
+
 		public static Image GetPluginIcon(string pluginName, string funcName, bool darkMode)
 		{
 			if (darkMode)
 			{
 				string path = Path.Combine(pluginsFolder, pluginName, funcName + ".dark.png");
-				if (File.Exists(path)) return Bitmap.FromFile(path);
+				if (File.Exists(path)) return LoadIcon(path);
 
 				path = Path.Combine(pluginsFolder, pluginName, funcName + ".png");
-				if (File.Exists(path)) return Bitmap.FromFile(path);
+				if (File.Exists(path)) return LoadIcon(path);
 
 				return null;
 			}
 			else
 			{
 				string path = Path.Combine(pluginsFolder, pluginName, funcName + ".light.png");
-				if (File.Exists(path)) return Bitmap.FromFile(path);
+				if (File.Exists(path)) return LoadIcon(path);
 
 				path = Path.Combine(pluginsFolder, pluginName, funcName + ".png");
-				if (File.Exists(path)) return Bitmap.FromFile(path);
+				if (File.Exists(path)) return LoadIcon(path);
 
 				return null;
 			}

@@ -52,8 +52,9 @@ my-plugin.zip
 |:--|:--|
 | `apiVer` | Must be `4`. |
 | `inputType` | `bitmap`. |
-| `dllType` | `csharp` or `cpp`. |
-| `title`, `description` | Per language: `en`, `cn`, `fr`, `hu`, `ru`, `es`. Other languages use `en`. |
+| `dllType` | `csharp` (`cpp` is accepted but not supported, see below). |
+| `title` | Plugin title, plain string. |
+| `description`, `functions[].title` | Per language: `en`, `cn`, `fr`, `hu`, `ru`, `es`. Missing language uses `en`. |
 | `functions[].type` | `effect` (Effects menu) or `tool` (Tools menu). |
 | `functions[].inputRequired` | Menu item disabled while no image is open. |
 | `functions[].dialog` | Appends `...` to the menu text. |
@@ -83,4 +84,4 @@ namespace my_plugin
 
 ## C++ plugin
 
-`dllType: "cpp"`: `<name>/<name>.dll` exports a function named like the manifest function, called with the arguments of `PluginMan.RunFunction` (`QuickLibrary/Managers/PluginMan.cs`).
+Not supported. `dllType: "cpp"` plugins fail at run time on .NET 8: `PluginMan.RunFunction` returns `string[]`, which the native marshaller rejects (`MarshalDirectiveException`). Use `csharp`.
