@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PicPic</RootNamespace>
+    <AssemblyName>PicPic</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsNotAsErrors>WFAC010;SYSLIB0010;CS8073;CS0672</WarningsNotAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>..\assets\picpic.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PicPic.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="controls\QuickPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="controls\CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\assets\picpic.ico" Link="picpic.ico" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="resources\dlls\libwebp_x64.dll" Link="libwebp_x64.dll" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="resources\dlls\libwebp_x86.dll" Link="libwebp_x86.dll" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Fizzler" Version="1.3.1" />
+    <PackageReference Include="Pfim" Version="0.11.4" />
+    <PackageReference Include="Svg" Version="3.4.8" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PicPic.Library\PicPic.Library.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="SimplePsd">
+      <HintPath>..\libs\SimplePsd.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+</Project>
