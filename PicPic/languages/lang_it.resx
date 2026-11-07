@@ -953,4 +953,28 @@
     <value>Zoom alla dimensione reale</value>
     <comment>Menu</comment>
   </data>
+  <data name="cut" xml:space="preserve">
+    <value>Cut</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="filtering" xml:space="preserve">
+    <value>Filtering</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="bilinear" xml:space="preserve">
+    <value>Bilinear</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="nearest-neighbor" xml:space="preserve">
+    <value>Nearest Neighbor</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-folder" xml:space="preserve">
+    <value>Open folder</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Save</value>
+    <comment>Menu</comment>
+  </data>
 </root>

@@ -13,6 +13,7 @@ namespace PicPic
 		private struct Language
 		{
 			public string Code;
+			public string Name;
 			public string[] Authors;
 		}
 
@@ -20,52 +21,86 @@ namespace PicPic
 			new Language
 			{
 				Code = "en",
+				Name = "English",
 				Authors = new string[] { "Beelink" }
 			},
 			new Language
 			{
 				Code = "ar",
+				Name = "Arabic (العربية)",
 				Authors = new string[] { "Jalal-Althahab" }
 			},
 			new Language
 			{
 				Code = "cn",
+				Name = "Chinese (中文)",
 				Authors = new string[] { "jiwangyihao" }
 			},
 			new Language
 			{
 				Code = "hr",
+				Name = "Croatian (Hrvatski)",
 				Authors = new string[] { "anotherus3r" }
 			},
 			new Language
 			{
 				Code = "fr",
+				Name = "French (Français)",
 				Authors = new string[] { "b0bdN" }
 			},
 			new Language
 			{
 				Code = "de",
+				Name = "German (Deutsch)",
 				Authors = new string[] { "l-33ter", "tomo2403" }
 			},
 			new Language
 			{
 				Code = "hu",
+				Name = "Hungarian (Magyar)",
 				Authors = new string[] { "KristofKekesi" }
 			},
 			new Language
 			{
+				Code = "it",
+				Name = "Italian (Italiano)",
+				Authors = new string[] {}
+			},
+			new Language
+			{
+				Code = "ja",
+				Name = "Japanese (日本語)",
+				Authors = new string[] {}
+			},
+			new Language
+			{
+				Code = "pl",
+				Name = "Polish (Polski)",
+				Authors = new string[] {}
+			},
+			new Language
+			{
 				Code = "ru",
+				Name = "Russian (Русский)",
 				Authors = new string[] { "Beelink" }
 			},
 			new Language
 			{
 				Code = "es",
+				Name = "Spanish (Español)",
 				Authors = new string[] { "asluppiter", "Alplox" }
 			},
 			new Language
 			{
-				Code = "es",
+				Code = "tr",
+				Name = "Turkish (Türkçe)",
 				Authors = new string[] { "ataberkcemunal" }
+			},
+			new Language
+			{
+				Code = "ua",
+				Name = "Ukrainian (Українська)",
+				Authors = new string[] { "koliasa" }
 			}
 		};
 
@@ -101,6 +136,7 @@ namespace PicPic
 			slideshowTimeNumeric.Value = Properties.Settings.Default.SlideshowTime;
 			slideshowCounterCheckBox.Checked = Properties.Settings.Default.SlideshowCounter;
 
+			foreach (Language lang in languages) langComboBox.Items.Add(lang.Name);
 			for (int i = 0; i < languages.Length; i++)
 			{
 				if (Properties.Settings.Default.Language == languages[i].Code)
@@ -290,6 +326,7 @@ namespace PicPic
 			if (owner != null)
 			{
 				translateAuthorsPanel.Controls.Clear();
+				translatedByLabel.Visible = languages[langComboBox.SelectedIndex].Authors.Length > 0;
 				translateAuthorsPanel.Left = translatedByLabel.Location.X + translatedByLabel.Width;
 
 				int curX = 0;
