@@ -2441,7 +2441,15 @@ namespace PicPic
 					pictureBox.Image = null;
 
 					if (NextFile() <= 1) closeFile();
-					File.Delete(path);
+					try
+					{
+						File.Delete(path);
+					}
+					catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException)
+					{
+						OpenFile(path);
+						showSuggestion(LangMan.Get("file-delete-failed") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+					}
 				}
 				else
 				{

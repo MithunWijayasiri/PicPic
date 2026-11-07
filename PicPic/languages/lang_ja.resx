@@ -345,6 +345,10 @@
     <value>ファイルをごみ箱に移動できませんでした</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="file-delete-failed" xml:space="preserve">
+    <value>ファイルを削除できませんでした</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>ファイルのプロパティ</value>
     <comment>Image info</comment>
