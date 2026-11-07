@@ -614,6 +614,7 @@ namespace PicPic
 			AboutForm aboutBox = new AboutForm();
 			aboutBox.Owner = this;
 			aboutBox.TopMost = alwaysOnTop;
+			aboutBox.DarkMode = darkMode;
 			aboutBox.ShowDialog();
 			aboutBox.Dispose();
 		}

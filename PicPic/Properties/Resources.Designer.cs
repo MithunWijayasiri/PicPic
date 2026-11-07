@@ -123,6 +123,16 @@ namespace PicPic.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_github {
+            get {
+                object obj = ResourceManager.GetObject("black-github", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_close {
             get {
                 object obj = ResourceManager.GetObject("black-close", resourceCulture);
@@ -576,6 +586,16 @@ namespace PicPic.Properties {
         internal static System.Drawing.Bitmap white_clock {
             get {
                 object obj = ResourceManager.GetObject("white-clock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_github {
+            get {
+                object obj = ResourceManager.GetObject("white-github", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

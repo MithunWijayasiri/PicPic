@@ -121,16 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="githubBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAPZJREFUOE/N
-        0sFKQkEUxvFb1NZoU8v0IQyhzGeQdj5Ja10EgZAgorgP1B5ACFEQfAC3bUsUoX2C5f87emHKO7ML+uDH
-        3DPnDHp1or9IAc9Y4mO39nCDYI7RwndAA0dITBtjnOMRI3QxxD3OMEETe9HX1idoOJQBNHdtlZMO1Chb
-        5c8dNPdklZMZ1MhY5U8amnuzyskKaqSs8ucEmvu0yskcahSt8ucWmnu3yon+57iR10ZCdA/iV9Vv9iNX
-        WKAEXZ4pTqFoVa2D8oUc9lJHHxfQqxxA0RoflioSo5tYwytetOFEB9d4wKE2QrnE7/tQQXb7+L8SRRsp
-        o0AfSXt+GQAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="logoPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAVvUlEQVR42u2de5SkdXnnP8/ze6u6qu+X
