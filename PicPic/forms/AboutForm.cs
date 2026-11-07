@@ -44,15 +44,15 @@ namespace PicPic
 
 		private void SetDarkColors()
 		{
-			Color back = Color.FromArgb(18, 18, 42);
-			Color secondary = Color.FromArgb(156, 156, 200);
+			Color back = ThemeMan.DarkBackColor;
+			Color secondary = Color.FromArgb(160, 160, 160);
 
 			CustomBackColor = back;
 			closeBtn.DarkMode = true;
 			githubBtn.Image = Properties.Resources.white_github;
 			updateBtn.Image = Properties.Resources.white_sync;
 			makeDefaultBtn.Image = Properties.Resources.white_check;
-			dividerPanel.BackColor = Color.FromArgb(46, 46, 92);
+			dividerPanel.BackColor = ThemeMan.DarkSecondColor;
 			descTextBox.BackColor = back;
 			descTextBox.ForeColor = Color.White;
 			versionLabel.ForeColor = secondary;
@@ -61,9 +61,9 @@ namespace PicPic
 
 			foreach (Button btn in new[] { githubBtn, updateBtn, makeDefaultBtn })
 			{
-				btn.BackColor = Color.FromArgb(36, 36, 74);
-				btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(48, 48, 96);
-				btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(26, 26, 56);
+				btn.BackColor = ThemeMan.DarkSecondColor;
+				btn.FlatAppearance.MouseOverBackColor = ThemeMan.DarkHoverColor;
+				btn.FlatAppearance.MouseDownBackColor = ThemeMan.DarkBackColor;
 			}
 		}
 
