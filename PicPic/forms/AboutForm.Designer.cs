@@ -128,7 +128,7 @@
 			// 
 			// descTextBox
 			// 
-			descTextBox.BackColor = System.Drawing.Color.FromArgb(236, 236, 248);
+			descTextBox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			descTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			descTextBox.Location = new System.Drawing.Point(113, 86);
 			descTextBox.Margin = new System.Windows.Forms.Padding(0);
@@ -217,7 +217,7 @@
 			Controls.Add(versionLabel);
 			Controls.Add(productLabel);
 			CustomBack = true;
-			CustomBackColor = System.Drawing.Color.FromArgb(236, 236, 248);
+			CustomBackColor = PicPic.Library.ThemeMan.LightBackColor;
 			Draggable = true;
 			EscToClose = true;
 			Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");

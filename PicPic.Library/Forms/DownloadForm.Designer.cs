@@ -59,7 +59,7 @@
 			// 
 			// cancelButton
 			// 
-			this.cancelButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.cancelButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.cancelButton.FlatAppearance.BorderSize = 0;
 			this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -74,7 +74,7 @@
 			// 
 			// updateButton
 			// 
-			this.updateButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.updateButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.updateButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.updateButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.updateButton.FlatAppearance.BorderSize = 0;

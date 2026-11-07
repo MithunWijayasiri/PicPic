@@ -159,7 +159,7 @@
 			// 
 			// statusStrip1
 			// 
-			this.statusStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.statusStrip1.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.statusStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.statusStrip1.GripMargin = new System.Windows.Forms.Padding(0);
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -248,7 +248,7 @@
 			// toolStripSeparator4
 			// 
 			this.toolStripSeparator4.AutoSize = false;
-			this.toolStripSeparator4.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.toolStripSeparator4.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.toolStripSeparator4.DarkMode = false;
 			this.toolStripSeparator4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.toolStripSeparator4.InsideMenu = false;
@@ -260,7 +260,7 @@
 			// toolStripSeparator1
 			// 
 			this.toolStripSeparator1.AutoSize = false;
-			this.toolStripSeparator1.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.toolStripSeparator1.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.toolStripSeparator1.DarkMode = false;
 			this.toolStripSeparator1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.toolStripSeparator1.InsideMenu = false;
@@ -290,7 +290,7 @@
 			// toolStripSeparator2
 			// 
 			this.toolStripSeparator2.AutoSize = false;
-			this.toolStripSeparator2.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.toolStripSeparator2.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.toolStripSeparator2.DarkMode = false;
 			this.toolStripSeparator2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.toolStripSeparator2.InsideMenu = false;
@@ -302,7 +302,7 @@
 			// toolStripSeparator3
 			// 
 			this.toolStripSeparator3.AutoSize = false;
-			this.toolStripSeparator3.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.toolStripSeparator3.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.toolStripSeparator3.DarkMode = false;
 			this.toolStripSeparator3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.toolStripSeparator3.InsideMenu = false;
@@ -314,7 +314,7 @@
 			// qlibToolsep1
 			// 
 			this.qlibToolsep1.AutoSize = false;
-			this.qlibToolsep1.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibToolsep1.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.qlibToolsep1.DarkMode = false;
 			this.qlibToolsep1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.qlibToolsep1.InsideMenu = false;
@@ -325,7 +325,7 @@
 			// 
 			// rmbMenu
 			// 
-			this.rmbMenu.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.rmbMenu.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.rmbMenu.DarkMode = false;
 			this.rmbMenu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.rmbMenu.ForeColor = System.Drawing.Color.Black;
@@ -344,7 +344,7 @@
 			// qlibToolsep5
 			// 
 			this.qlibToolsep5.AutoSize = false;
-			this.qlibToolsep5.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibToolsep5.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.qlibToolsep5.DarkMode = false;
 			this.qlibToolsep5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.qlibToolsep5.InsideMenu = true;
@@ -356,7 +356,7 @@
 			// qlibToolsep3
 			// 
 			this.qlibToolsep3.AutoSize = false;
-			this.qlibToolsep3.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibToolsep3.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.qlibToolsep3.DarkMode = false;
 			this.qlibToolsep3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.qlibToolsep3.InsideMenu = true;
@@ -609,7 +609,7 @@
 			// 
 			// openFileBtn
 			// 
-			this.openFileBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.openFileBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.openFileBtn.ForeColor = System.Drawing.Color.Black;
 			this.openFileBtn.Image = global::PicPic.Properties.Resources.black_imgfile;
 			this.openFileBtn.Name = "openFileBtn";
@@ -620,7 +620,7 @@
 			// 
 			// openFolderBtn
 			// 
-			this.openFolderBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.openFolderBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.openFolderBtn.ForeColor = System.Drawing.Color.Black;
 			this.openFolderBtn.Image = global::PicPic.Properties.Resources.black_imgfile;
 			this.openFolderBtn.Name = "openFolderBtn";
@@ -632,7 +632,7 @@
 			// 
 			// openRecursive
 			// 
-			this.openRecursive.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.openRecursive.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.openRecursive.ForeColor = System.Drawing.Color.Black;
 			this.openRecursive.Image = global::PicPic.Properties.Resources.black_recursive;
 			this.openRecursive.Name = "openRecursive";
@@ -657,7 +657,7 @@
 			// 
 			// saveBtn
 			// 
-			this.saveBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.saveBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.saveBtn.Enabled = false;
 			this.saveBtn.ForeColor = System.Drawing.Color.Black;
 			this.saveBtn.Image = global::PicPic.Properties.Resources.black_save;
@@ -669,7 +669,7 @@
 			// 
 			// saveAsBtn
 			// 
-			this.saveAsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.saveAsBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.saveAsBtn.Enabled = false;
 			this.saveAsBtn.ForeColor = System.Drawing.Color.Black;
 			this.saveAsBtn.Image = global::PicPic.Properties.Resources.black_saveas;
@@ -698,7 +698,7 @@
 			// 
 			// externalRunBtn
 			// 
-			this.externalRunBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.externalRunBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.externalRunBtn.Enabled = false;
 			this.externalRunBtn.ForeColor = System.Drawing.Color.Black;
 			this.externalRunBtn.Image = ((System.Drawing.Image)(resources.GetObject("externalRunBtn.Image")));
@@ -710,7 +710,7 @@
 			// 
 			// externalFavoriteBtn
 			// 
-			this.externalFavoriteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.externalFavoriteBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.externalFavoriteBtn.Enabled = false;
 			this.externalFavoriteBtn.ForeColor = System.Drawing.Color.Black;
 			this.externalFavoriteBtn.Image = global::PicPic.Properties.Resources.black_paint;
@@ -723,7 +723,7 @@
 			// 
 			// externalChooseBtn
 			// 
-			this.externalChooseBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.externalChooseBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.externalChooseBtn.Enabled = false;
 			this.externalChooseBtn.ForeColor = System.Drawing.Color.Black;
 			this.externalChooseBtn.Image = ((System.Drawing.Image)(resources.GetObject("externalChooseBtn.Image")));
@@ -876,7 +876,7 @@
 			// 
 			// flipHorizontalButton
 			// 
-			this.flipHorizontalButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.flipHorizontalButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.flipHorizontalButton.Enabled = false;
 			this.flipHorizontalButton.ForeColor = System.Drawing.Color.Black;
 			this.flipHorizontalButton.Image = ((System.Drawing.Image)(resources.GetObject("flipHorizontalButton.Image")));
@@ -888,7 +888,7 @@
 			// 
 			// flipVerticalButton
 			// 
-			this.flipVerticalButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.flipVerticalButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.flipVerticalButton.Enabled = false;
 			this.flipVerticalButton.ForeColor = System.Drawing.Color.Black;
 			this.flipVerticalButton.Image = ((System.Drawing.Image)(resources.GetObject("flipVerticalButton.Image")));
@@ -902,7 +902,7 @@
 			// qlibToolsep4
 			// 
 			this.qlibToolsep4.AutoSize = false;
-			this.qlibToolsep4.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibToolsep4.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.qlibToolsep4.DarkMode = false;
 			this.qlibToolsep4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.qlibToolsep4.InsideMenu = true;
@@ -913,7 +913,7 @@
 			// 
 			// rotateRightButton
 			// 
-			this.rotateRightButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.rotateRightButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.rotateRightButton.Enabled = false;
 			this.rotateRightButton.ForeColor = System.Drawing.Color.Black;
 			this.rotateRightButton.Image = global::PicPic.Properties.Resources.black_rotater;
@@ -925,7 +925,7 @@
 			// 
 			// rotateLeftButton
 			// 
-			this.rotateLeftButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.rotateLeftButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.rotateLeftButton.Enabled = false;
 			this.rotateLeftButton.ForeColor = System.Drawing.Color.Black;
 			this.rotateLeftButton.Image = ((System.Drawing.Image)(resources.GetObject("rotateLeftButton.Image")));
@@ -938,7 +938,7 @@
 			// 
 			// rotate180Button
 			// 
-			this.rotate180Button.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.rotate180Button.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.rotate180Button.Enabled = false;
 			this.rotate180Button.ForeColor = System.Drawing.Color.Black;
 			this.rotate180Button.Image = ((System.Drawing.Image)(resources.GetObject("rotate180Button.Image")));
@@ -950,7 +950,7 @@
 			// 
 			// customAngleBtn
 			// 
-			this.customAngleBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.customAngleBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.customAngleBtn.Enabled = false;
 			this.customAngleBtn.ForeColor = System.Drawing.Color.Black;
 			this.customAngleBtn.Image = global::PicPic.Properties.Resources.black_angle;
@@ -964,7 +964,7 @@
 			// toolStripSeparator7
 			// 
 			this.toolStripSeparator7.AutoSize = false;
-			this.toolStripSeparator7.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.toolStripSeparator7.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.toolStripSeparator7.DarkMode = false;
 			this.toolStripSeparator7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.toolStripSeparator7.InsideMenu = true;
@@ -975,7 +975,7 @@
 			// 
 			// cropBtn
 			// 
-			this.cropBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.cropBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.cropBtn.ForeColor = System.Drawing.Color.Black;
 			this.cropBtn.Image = global::PicPic.Properties.Resources.black_crop;
 			this.cropBtn.Name = "cropBtn";
@@ -1001,7 +1001,7 @@
 			// 
 			// bilinearBtn
 			// 
-			this.bilinearBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.bilinearBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.bilinearBtn.ForeColor = System.Drawing.Color.Black;
 			this.bilinearBtn.Image = global::PicPic.Properties.Resources.black_bilinear;
 			this.bilinearBtn.Name = "bilinearBtn";
@@ -1011,7 +1011,7 @@
 			// 
 			// nearestNeighborBtn
 			// 
-			this.nearestNeighborBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.nearestNeighborBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.nearestNeighborBtn.ForeColor = System.Drawing.Color.Black;
 			this.nearestNeighborBtn.Image = global::PicPic.Properties.Resources.black_nearest_neighbor;
 			this.nearestNeighborBtn.Name = "nearestNeighborBtn";
@@ -1107,7 +1107,7 @@
 			// 
 			// reloadButton
 			// 
-			this.reloadButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.reloadButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.reloadButton.Enabled = false;
 			this.reloadButton.ForeColor = System.Drawing.Color.Black;
 			this.reloadButton.Image = global::PicPic.Properties.Resources.black_sync;
@@ -1119,7 +1119,7 @@
 			// 
 			// deleteBtn
 			// 
-			this.deleteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.deleteBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.deleteBtn.Enabled = false;
 			this.deleteBtn.ForeColor = System.Drawing.Color.Black;
 			this.deleteBtn.Image = global::PicPic.Properties.Resources.black_trash;
@@ -1131,7 +1131,7 @@
 			// 
 			// permDeleteBtn
 			// 
-			this.permDeleteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.permDeleteBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.permDeleteBtn.Enabled = false;
 			this.permDeleteBtn.ForeColor = System.Drawing.Color.Black;
 			this.permDeleteBtn.Image = global::PicPic.Properties.Resources.black_permdel;
@@ -1143,7 +1143,7 @@
 			// 
 			// printButton
 			// 
-			this.printButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.printButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.printButton.Enabled = false;
 			this.printButton.ForeColor = System.Drawing.Color.Black;
 			this.printButton.Image = ((System.Drawing.Image)(resources.GetObject("printButton.Image")));
@@ -1156,7 +1156,7 @@
 			// toolStripSeparator9
 			// 
 			this.toolStripSeparator9.AutoSize = false;
-			this.toolStripSeparator9.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.toolStripSeparator9.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.toolStripSeparator9.DarkMode = false;
 			this.toolStripSeparator9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.toolStripSeparator9.InsideMenu = true;
@@ -1167,7 +1167,7 @@
 			// 
 			// backColorBtn
 			// 
-			this.backColorBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.backColorBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.backColorBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.backCustomBtn,
 			this.qlibMenuSeparator1,
@@ -1180,7 +1180,7 @@
 			// 
 			// backCustomBtn
 			// 
-			this.backCustomBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.backCustomBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.backCustomBtn.ForeColor = System.Drawing.Color.Black;
 			this.backCustomBtn.Image = global::PicPic.Properties.Resources.black_palette;
 			this.backCustomBtn.Name = "backCustomBtn";
@@ -1192,7 +1192,7 @@
 			// qlibMenuSeparator1
 			// 
 			this.qlibMenuSeparator1.AutoSize = false;
-			this.qlibMenuSeparator1.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibMenuSeparator1.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.qlibMenuSeparator1.DarkMode = false;
 			this.qlibMenuSeparator1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.qlibMenuSeparator1.InsideMenu = true;
@@ -1203,7 +1203,7 @@
 			// 
 			// backClearBtn
 			// 
-			this.backClearBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.backClearBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.backClearBtn.ForeColor = System.Drawing.Color.Black;
 			this.backClearBtn.Image = ((System.Drawing.Image)(resources.GetObject("backClearBtn.Image")));
 			this.backClearBtn.Name = "backClearBtn";
@@ -1214,7 +1214,7 @@
 			// 
 			// onTopButton
 			// 
-			this.onTopButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.onTopButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.onTopButton.ForeColor = System.Drawing.Color.Black;
 			this.onTopButton.Image = ((System.Drawing.Image)(resources.GetObject("onTopButton.Image")));
 			this.onTopButton.Name = "onTopButton";
@@ -1225,7 +1225,7 @@
 			// 
 			// framelessBtn
 			// 
-			this.framelessBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.framelessBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.framelessBtn.ForeColor = System.Drawing.Color.Black;
 			this.framelessBtn.Image = ((System.Drawing.Image)(resources.GetObject("framelessBtn.Image")));
 			this.framelessBtn.Name = "framelessBtn";
@@ -1236,7 +1236,7 @@
 			// 
 			// newWindowButton
 			// 
-			this.newWindowButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.newWindowButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.newWindowButton.ForeColor = System.Drawing.Color.Black;
 			this.newWindowButton.Image = global::PicPic.Properties.Resources.black_newwindow;
 			this.newWindowButton.Name = "newWindowButton";
@@ -1248,7 +1248,7 @@
 			// qlibToolsep2
 			// 
 			this.qlibToolsep2.AutoSize = false;
-			this.qlibToolsep2.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibToolsep2.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.qlibToolsep2.DarkMode = false;
 			this.qlibToolsep2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.qlibToolsep2.InsideMenu = true;
@@ -1259,7 +1259,7 @@
 			// 
 			// pluginManBtn
 			// 
-			this.pluginManBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.pluginManBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.pluginManBtn.ForeColor = System.Drawing.Color.Black;
 			this.pluginManBtn.Image = global::PicPic.Properties.Resources.black_plugin;
 			this.pluginManBtn.Name = "pluginManBtn";
@@ -1271,7 +1271,7 @@
 			// toolStripSeparator10
 			// 
 			this.toolStripSeparator10.AutoSize = false;
-			this.toolStripSeparator10.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.toolStripSeparator10.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.toolStripSeparator10.DarkMode = false;
 			this.toolStripSeparator10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.toolStripSeparator10.InsideMenu = true;
@@ -1282,7 +1282,7 @@
 			// 
 			// settingsButton
 			// 
-			this.settingsButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.settingsButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.settingsButton.ForeColor = System.Drawing.Color.Black;
 			this.settingsButton.Image = global::PicPic.Properties.Resources.black_settings;
 			this.settingsButton.Name = "settingsButton";
@@ -1293,7 +1293,7 @@
 			// 
 			// aboutBtn
 			// 
-			this.aboutBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.aboutBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.aboutBtn.ForeColor = System.Drawing.Color.Black;
 			this.aboutBtn.Image = global::PicPic.Properties.Resources.black_about;
 			this.aboutBtn.Name = "aboutBtn";
@@ -1336,7 +1336,7 @@
 			// 
 			// showMenuItem
 			// 
-			this.showMenuItem.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.showMenuItem.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.showMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.showNavArrowsBtn,
 			this.showToolbarBtn,
@@ -1351,7 +1351,7 @@
 			// 
 			// showNavArrowsBtn
 			// 
-			this.showNavArrowsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.showNavArrowsBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.showNavArrowsBtn.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.showNavArrowsBtn.ForeColor = System.Drawing.Color.Black;
 			this.showNavArrowsBtn.Image = global::PicPic.Properties.Resources.black_arrows;
@@ -1364,7 +1364,7 @@
 			// 
 			// showToolbarBtn
 			// 
-			this.showToolbarBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.showToolbarBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.showToolbarBtn.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.showToolbarBtn.ForeColor = System.Drawing.Color.Black;
 			this.showToolbarBtn.Image = global::PicPic.Properties.Resources.black_toolbar;
@@ -1377,7 +1377,7 @@
 			// 
 			// showStatusbarBtn
 			// 
-			this.showStatusbarBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.showStatusbarBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.showStatusbarBtn.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.showStatusbarBtn.ForeColor = System.Drawing.Color.Black;
 			this.showStatusbarBtn.Image = global::PicPic.Properties.Resources.black_statusbar;
@@ -1390,7 +1390,7 @@
 			// 
 			// wallpaperBtn
 			// 
-			this.wallpaperBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.wallpaperBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.wallpaperBtn.Enabled = false;
 			this.wallpaperBtn.ForeColor = System.Drawing.Color.Black;
 			this.wallpaperBtn.Image = global::PicPic.Properties.Resources.black_desktop;
@@ -1403,7 +1403,7 @@
 			// 
 			// copyBtn
 			// 
-			this.copyBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.copyBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.copyBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.copyImageBtn,
 			this.copyFileBtn});
@@ -1416,7 +1416,7 @@
 			// 
 			// copyImageBtn
 			// 
-			this.copyImageBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.copyImageBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.copyImageBtn.ForeColor = System.Drawing.Color.Black;
 			this.copyImageBtn.Image = global::PicPic.Properties.Resources.black_image;
 			this.copyImageBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -1429,7 +1429,7 @@
 			// 
 			// copyFileBtn
 			// 
-			this.copyFileBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.copyFileBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.copyFileBtn.ForeColor = System.Drawing.Color.Black;
 			this.copyFileBtn.Image = global::PicPic.Properties.Resources.black_imgfile;
 			this.copyFileBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -1443,7 +1443,7 @@
 			// 
 			// pasteBtn
 			// 
-			this.pasteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.pasteBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.pasteBtn.ForeColor = System.Drawing.Color.Black;
 			this.pasteBtn.Image = global::PicPic.Properties.Resources.black_paste;
 			this.pasteBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -1455,7 +1455,7 @@
 			// 
 			// selectAllBtn
 			// 
-			this.selectAllBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.selectAllBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.selectAllBtn.Enabled = false;
 			this.selectAllBtn.ForeColor = System.Drawing.Color.Black;
 			this.selectAllBtn.Image = global::PicPic.Properties.Resources.black_selectall;
@@ -1471,7 +1471,7 @@
 			this.AllowDrop = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.BackColor = System.Drawing.SystemColors.Control;
+			this.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.ClientSize = new System.Drawing.Size(684, 446);
 			this.Controls.Add(this.suggestionIcon);
 			this.Controls.Add(this.suggestionLabel);

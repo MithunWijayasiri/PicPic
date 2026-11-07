@@ -14,7 +14,7 @@ Architecture only: project structure, build/run commands, dependencies, conventi
 | `PicPic/forms/` | Forms: `MainForm` (viewer), `SettingsForm`, `AboutForm`, `InfoForm`, `MiniViewForm`, `PrintForm`, `PluginManForm`, … |
 | `PicPic/typewrappers/` | Format decoders/encoders. Dispatch in `system/FileTypeMan.cs` (switch on extension). |
 | `PicPic/typewrappers/engines/` | In-repo engines: `WebpEngine.cs` (libwebp P/Invoke), `IcoEngine.cs`. |
-| `PicPic/languages/` | `lang_<code>.resx` UI strings (14 languages), read via `LangMan.Get(key)`. |
+| `PicPic/languages/` | `lang_<code>.resx` UI strings (14 languages), read via `LangMan.Get(key)` (ResourceManager; no generated `.Designer.cs`). |
 | `PicPic/resources/` | Icons, images, `dlls/` (libwebp x86/x64, SimplePsd). |
 | `PicPic.Library/` | Vendored from ModuleArt/quick-library @ `ffe09a3` (GPL-3). Custom `Qlib*` controls, `ThemeMan`, `LangMan`, `NativeMan`, `UpdateMan`, `PluginMan` (plugins in `%LOCALAPPDATA%\PicPic\plugins`, scanned from disk), `PluginInstaller` (zip manifest/install validation). Owned code now — edit freely. |
 | `PicPic.Library.Tests/` | xUnit (`net8.0-windows`) logic tests for plugin manifest validation, install compatibility, folder scan, icons. Builds zips in temp dirs; no UI automation. |

@@ -53,7 +53,7 @@
 			// 
 			this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.listView1.BackColor = System.Drawing.SystemColors.Control;
+			this.listView1.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.pluginNameColumn,
@@ -98,7 +98,7 @@
 			// 
 			// contextMenuStrip1
 			// 
-			this.contextMenuStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.contextMenuStrip1.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.contextMenuStrip1.DarkMode = false;
 			this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.contextMenuStrip1.ForeColor = System.Drawing.Color.Black;
@@ -126,7 +126,7 @@
 			// qlibMenuSeparator2
 			// 
 			this.qlibMenuSeparator2.AutoSize = false;
-			this.qlibMenuSeparator2.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibMenuSeparator2.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.qlibMenuSeparator2.DarkMode = false;
 			this.qlibMenuSeparator2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.qlibMenuSeparator2.InsideMenu = true;
@@ -176,7 +176,7 @@
 			// 
 			// morePluginsBtn
 			// 
-			this.morePluginsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.morePluginsBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.morePluginsBtn.FlatAppearance.BorderSize = 0;
 			this.morePluginsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.morePluginsBtn.Image = global::PicPic.Properties.Resources.black_plugin;
@@ -199,7 +199,7 @@
 			// 
 			// addPluginBtn
 			// 
-			this.addPluginBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.addPluginBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.addPluginBtn.FlatAppearance.BorderSize = 0;
 			this.addPluginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.addPluginBtn.Image = global::PicPic.Properties.Resources.black_open;
@@ -216,7 +216,7 @@
 			// 
 			// refreshBtn
 			// 
-			this.refreshBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.refreshBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.refreshBtn.FlatAppearance.BorderSize = 0;
 			this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.refreshBtn.Image = global::PicPic.Properties.Resources.black_sync;

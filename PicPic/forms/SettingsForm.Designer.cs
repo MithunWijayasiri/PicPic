@@ -106,7 +106,7 @@
 			// 
 			// themePage
 			// 
-			this.themePage.BackColor = System.Drawing.SystemColors.Control;
+			this.themePage.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.themePage.Controls.Add(this.restartLabel1);
 			this.themePage.Controls.Add(this.systemThemeRadio);
 			this.themePage.Controls.Add(this.darkThemeRadio);
@@ -133,7 +133,7 @@
 			// 
 			// systemThemeRadio
 			// 
-			this.systemThemeRadio.BackColor = System.Drawing.SystemColors.Control;
+			this.systemThemeRadio.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.systemThemeRadio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.systemThemeRadio.CausesValidation = false;
 			this.systemThemeRadio.Checked = true;
@@ -156,7 +156,7 @@
 			// 
 			// darkThemeRadio
 			// 
-			this.darkThemeRadio.BackColor = System.Drawing.SystemColors.Control;
+			this.darkThemeRadio.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.darkThemeRadio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.darkThemeRadio.CausesValidation = false;
 			this.darkThemeRadio.Cursor = System.Windows.Forms.Cursors.Default;
@@ -177,7 +177,7 @@
 			// 
 			// lightThemeRadio
 			// 
-			this.lightThemeRadio.BackColor = System.Drawing.SystemColors.Control;
+			this.lightThemeRadio.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.lightThemeRadio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.lightThemeRadio.CausesValidation = false;
 			this.lightThemeRadio.Cursor = System.Windows.Forms.Cursors.Default;
@@ -212,7 +212,7 @@
 			// 
 			// mousePage
 			// 
-			this.mousePage.BackColor = System.Drawing.SystemColors.Control;
+			this.mousePage.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.mousePage.Controls.Add(this.mouseWheelActionRadio3);
 			this.mousePage.Controls.Add(this.mouseWheelActionRadio2);
 			this.mousePage.Controls.Add(this.mouseWheelActionRadio1);
@@ -230,7 +230,7 @@
 			// 
 			// mouseWheelActionRadio3
 			// 
-			this.mouseWheelActionRadio3.BackColor = System.Drawing.SystemColors.Control;
+			this.mouseWheelActionRadio3.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.mouseWheelActionRadio3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.mouseWheelActionRadio3.CausesValidation = false;
 			this.mouseWheelActionRadio3.Cursor = System.Windows.Forms.Cursors.Default;
@@ -251,7 +251,7 @@
 			// 
 			// mouseWheelActionRadio2
 			// 
-			this.mouseWheelActionRadio2.BackColor = System.Drawing.SystemColors.Control;
+			this.mouseWheelActionRadio2.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.mouseWheelActionRadio2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.mouseWheelActionRadio2.CausesValidation = false;
 			this.mouseWheelActionRadio2.Cursor = System.Windows.Forms.Cursors.Default;
@@ -272,7 +272,7 @@
 			// 
 			// mouseWheelActionRadio1
 			// 
-			this.mouseWheelActionRadio1.BackColor = System.Drawing.SystemColors.Control;
+			this.mouseWheelActionRadio1.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.mouseWheelActionRadio1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.mouseWheelActionRadio1.CausesValidation = false;
 			this.mouseWheelActionRadio1.Checked = true;
@@ -305,7 +305,7 @@
 			// 
 			// escToExitCheckBox
 			// 
-			this.escToExitCheckBox.BackColor = System.Drawing.SystemColors.Control;
+			this.escToExitCheckBox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.escToExitCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.escToExitCheckBox.CausesValidation = false;
 			this.escToExitCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
@@ -327,7 +327,7 @@
 			// 
 			// fullscrCursorCheckBox
 			// 
-			this.fullscrCursorCheckBox.BackColor = System.Drawing.SystemColors.Control;
+			this.fullscrCursorCheckBox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.fullscrCursorCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.fullscrCursorCheckBox.CausesValidation = false;
 			this.fullscrCursorCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
@@ -349,7 +349,7 @@
 			// 
 			// slideshowPage
 			// 
-			this.slideshowPage.BackColor = System.Drawing.SystemColors.Control;
+			this.slideshowPage.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.slideshowPage.Controls.Add(this.slideshowSecondsLabel);
 			this.slideshowPage.Controls.Add(this.slideshowTimeLabel);
 			this.slideshowPage.Controls.Add(this.slideshowTimeNumeric);
@@ -386,7 +386,7 @@
 			// 
 			this.slideshowTimeNumeric.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.slideshowTimeNumeric.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.slideshowTimeNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.slideshowTimeNumeric.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.slideshowTimeNumeric.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.slideshowTimeNumeric.CausesValidation = false;
 			this.slideshowTimeNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -418,7 +418,7 @@
 			// 
 			// slideshowCounterCheckBox
 			// 
-			this.slideshowCounterCheckBox.BackColor = System.Drawing.SystemColors.Control;
+			this.slideshowCounterCheckBox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.slideshowCounterCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.slideshowCounterCheckBox.CausesValidation = false;
 			this.slideshowCounterCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
@@ -440,7 +440,7 @@
 			// 
 			// startupPage
 			// 
-			this.startupPage.BackColor = System.Drawing.SystemColors.Control;
+			this.startupPage.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.startupPage.Controls.Add(this.startupBoundsCheckBox);
 			this.startupPage.Controls.Add(this.updatesCheckBox);
 			this.startupPage.Controls.Add(this.startupPasteCheckBox);
@@ -456,7 +456,7 @@
 			// 
 			// startupBoundsCheckBox
 			// 
-			this.startupBoundsCheckBox.BackColor = System.Drawing.SystemColors.Control;
+			this.startupBoundsCheckBox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.startupBoundsCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.startupBoundsCheckBox.CausesValidation = false;
 			this.startupBoundsCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
@@ -478,7 +478,7 @@
 			// 
 			// updatesCheckBox
 			// 
-			this.updatesCheckBox.BackColor = System.Drawing.SystemColors.Control;
+			this.updatesCheckBox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.updatesCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.updatesCheckBox.CausesValidation = false;
 			this.updatesCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
@@ -501,7 +501,7 @@
 			// 
 			// startupPasteCheckBox
 			// 
-			this.startupPasteCheckBox.BackColor = System.Drawing.SystemColors.Control;
+			this.startupPasteCheckBox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.startupPasteCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.startupPasteCheckBox.CausesValidation = false;
 			this.startupPasteCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
@@ -533,7 +533,7 @@
 			// 
 			// externalPage
 			// 
-			this.externalPage.BackColor = System.Drawing.SystemColors.Control;
+			this.externalPage.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.externalPage.Controls.Add(this.makeDefaultBtn);
 			this.externalPage.Controls.Add(this.browseWithCheckBox);
 			this.externalPage.Controls.Add(this.contextMenuLabel);
@@ -551,7 +551,7 @@
 			// 
 			// makeDefaultBtn
 			// 
-			this.makeDefaultBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.makeDefaultBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.makeDefaultBtn.Enabled = false;
 			this.makeDefaultBtn.FlatAppearance.BorderSize = 0;
 			this.makeDefaultBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -566,7 +566,7 @@
 			// 
 			// browseWithCheckBox
 			// 
-			this.browseWithCheckBox.BackColor = System.Drawing.SystemColors.Control;
+			this.browseWithCheckBox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.browseWithCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.browseWithCheckBox.CausesValidation = false;
 			this.browseWithCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
@@ -598,7 +598,7 @@
 			// 
 			// openWithCheckBox
 			// 
-			this.openWithCheckBox.BackColor = System.Drawing.SystemColors.Control;
+			this.openWithCheckBox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.openWithCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.openWithCheckBox.CausesValidation = false;
 			this.openWithCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
@@ -620,7 +620,7 @@
 			// 
 			// browseBtn
 			// 
-			this.browseBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.browseBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.browseBtn.FlatAppearance.BorderSize = 0;
 			this.browseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.browseBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -641,7 +641,7 @@
 			// 
 			this.favExtTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.favExtTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.favExtTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.favExtTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.favExtTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.favExtTextBox.CausesValidation = false;
 			this.favExtTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -670,7 +670,7 @@
 			// 
 			// langPage
 			// 
-			this.langPage.BackColor = System.Drawing.SystemColors.Control;
+			this.langPage.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.langPage.Controls.Add(this.helpTranslateBtn);
 			this.langPage.Controls.Add(this.translateAuthorsPanel);
 			this.langPage.Controls.Add(this.translatedByLabel);
@@ -688,7 +688,7 @@
 			// 
 			// helpTranslateBtn
 			// 
-			this.helpTranslateBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.helpTranslateBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.helpTranslateBtn.FlatAppearance.BorderSize = 0;
 			this.helpTranslateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.helpTranslateBtn.Location = new System.Drawing.Point(10, 110);
@@ -740,7 +740,7 @@
 			// 
 			// langComboBox
 			// 
-			this.langComboBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.langComboBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.langComboBox.CausesValidation = false;
 			this.langComboBox.DarkMode = false;
 			this.langComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;

@@ -42,7 +42,7 @@
 			// 
 			// cropBtn
 			// 
-			this.cropBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.cropBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.cropBtn.ForeColor = System.Drawing.Color.Black;
 			this.cropBtn.Image = global::PicPic.Properties.Resources.black_crop;
 			this.cropBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -56,7 +56,7 @@
 			// qlibToolsep5
 			// 
 			this.qlibToolsep5.AutoSize = false;
-			this.qlibToolsep5.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibToolsep5.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.qlibToolsep5.DarkMode = false;
 			this.qlibToolsep5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.qlibToolsep5.InsideMenu = true;
@@ -67,7 +67,7 @@
 			// 
 			// selectionCopyBtn
 			// 
-			this.selectionCopyBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.selectionCopyBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.selectionCopyBtn.ForeColor = System.Drawing.Color.Black;
 			this.selectionCopyBtn.Image = global::PicPic.Properties.Resources.black_copy;
 			this.selectionCopyBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -79,7 +79,7 @@
 			// 
 			// selectionSelectAllBtn
 			// 
-			this.selectionSelectAllBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.selectionSelectAllBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.selectionSelectAllBtn.ForeColor = System.Drawing.Color.Black;
 			this.selectionSelectAllBtn.Image = global::PicPic.Properties.Resources.black_selectall;
 			this.selectionSelectAllBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -91,7 +91,7 @@
 			// 
 			// editSelectionBtn
 			// 
-			this.editSelectionBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.editSelectionBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.editSelectionBtn.ForeColor = System.Drawing.Color.Black;
 			this.editSelectionBtn.Image = global::PicPic.Properties.Resources.black_editsel;
 			this.editSelectionBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -103,7 +103,7 @@
 			// 
 			// selectionMenu
 			// 
-			this.selectionMenu.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.selectionMenu.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.selectionMenu.DarkMode = false;
 			this.selectionMenu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.selectionMenu.ForeColor = System.Drawing.Color.Black;
@@ -119,7 +119,7 @@
 			// 
 			// cutBtn
 			// 
-			this.cutBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.cutBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.cutBtn.ForeColor = System.Drawing.Color.Black;
 			this.cutBtn.Image = global::PicPic.Properties.Resources.black_cut;
 			this.cutBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;

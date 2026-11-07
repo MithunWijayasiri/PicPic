@@ -80,8 +80,8 @@ namespace PicPic
 					}
 
 					int freeIndex = 0;
-					string freePath = "picpic-cr2-";
-					string tempPath = Path.Combine(Path.GetTempPath(), freePath + freeIndex + ".jpg");
+					const string TempPrefix = "picpic-cr2-";
+					string tempPath = Path.Combine(Path.GetTempPath(), TempPrefix + freeIndex + ".jpg");
 					while (File.Exists(tempPath))
 					{
 						try
@@ -91,7 +91,7 @@ namespace PicPic
 						catch
 						{
 							freeIndex++;
-							tempPath = Path.Combine(Path.GetTempPath(), freePath + freeIndex + ".jpg");
+							tempPath = Path.Combine(Path.GetTempPath(), TempPrefix + freeIndex + ".jpg");
 						}
 					}
 

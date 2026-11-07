@@ -95,7 +95,7 @@
 			// qlibMenuSeparator2
 			// 
 			this.qlibMenuSeparator2.AutoSize = false;
-			this.qlibMenuSeparator2.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibMenuSeparator2.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.qlibMenuSeparator2.DarkMode = false;
 			this.qlibMenuSeparator2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.qlibMenuSeparator2.InsideMenu = true;

@@ -42,7 +42,7 @@
 			// buttonYes
 			// 
 			this.buttonYes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonYes.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.buttonYes.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.buttonYes.DialogResult = System.Windows.Forms.DialogResult.Yes;
 			this.buttonYes.FlatAppearance.BorderSize = 0;
 			this.buttonYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -58,7 +58,7 @@
 			// boxReleaseNotes
 			// 
 			this.boxReleaseNotes.Appearance = System.Windows.Forms.Appearance.Button;
-			this.boxReleaseNotes.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.boxReleaseNotes.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.boxReleaseNotes.FlatAppearance.BorderSize = 0;
 			this.boxReleaseNotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.boxReleaseNotes.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -109,7 +109,7 @@
 			// 
 			// messageTextBox
 			// 
-			this.messageTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.messageTextBox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.messageTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.messageTextBox.Location = new System.Drawing.Point(10, 42);
 			this.messageTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -122,7 +122,7 @@
 			// skipBtn
 			// 
 			this.skipBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.skipBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.skipBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.skipBtn.DialogResult = System.Windows.Forms.DialogResult.No;
 			this.skipBtn.FlatAppearance.BorderSize = 0;
 			this.skipBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

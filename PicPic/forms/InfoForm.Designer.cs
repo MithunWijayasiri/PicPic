@@ -81,7 +81,7 @@
 			// 
 			this.extensionTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.extensionTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.extensionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.extensionTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.extensionTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.extensionTextBox.CausesValidation = false;
 			this.extensionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -113,7 +113,7 @@
 			// copyPathButton
 			// 
 			this.copyPathButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.copyPathButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.copyPathButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.copyPathButton.FlatAppearance.BorderSize = 0;
 			this.copyPathButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.copyPathButton.Image = ((System.Drawing.Image)(resources.GetObject("copyPathButton.Image")));
@@ -129,7 +129,7 @@
 			// copyFolderButton
 			// 
 			this.copyFolderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.copyFolderButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.copyFolderButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.copyFolderButton.FlatAppearance.BorderSize = 0;
 			this.copyFolderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.copyFolderButton.Image = ((System.Drawing.Image)(resources.GetObject("copyFolderButton.Image")));
@@ -145,7 +145,7 @@
 			// copyNameButton
 			// 
 			this.copyNameButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.copyNameButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.copyNameButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.copyNameButton.FlatAppearance.BorderSize = 0;
 			this.copyNameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.copyNameButton.Image = ((System.Drawing.Image)(resources.GetObject("copyNameButton.Image")));
@@ -162,7 +162,7 @@
 			// 
 			this.compressionTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.compressionTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.compressionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.compressionTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.compressionTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.compressionTextBox.CausesValidation = false;
 			this.compressionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -194,7 +194,7 @@
 			// 
 			this.fullPathTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.fullPathTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.fullPathTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.fullPathTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.fullPathTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.fullPathTextBox.CausesValidation = false;
 			this.fullPathTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -227,7 +227,7 @@
 			// 
 			this.folderTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.folderTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.folderTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.folderTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.folderTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.folderTextBox.CausesValidation = false;
 			this.folderTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -248,7 +248,7 @@
 			// 
 			this.fileNameTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.fileNameTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.fileNameTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.fileNameTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.fileNameTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.fileNameTextBox.CausesValidation = false;
 			this.fileNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -281,7 +281,7 @@
 			// 
 			this.sizeTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.sizeTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.sizeTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.sizeTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.sizeTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.sizeTextBox.CausesValidation = false;
 			this.sizeTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -313,7 +313,7 @@
 			// 
 			this.megapixelsTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.megapixelsTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.megapixelsTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.megapixelsTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.megapixelsTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.megapixelsTextBox.CausesValidation = false;
 			this.megapixelsTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -345,7 +345,7 @@
 			// 
 			this.resolutionTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.resolutionTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.resolutionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.resolutionTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.resolutionTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.resolutionTextBox.CausesValidation = false;
 			this.resolutionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -377,7 +377,7 @@
 			// 
 			this.inchesTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.inchesTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.inchesTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.inchesTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.inchesTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.inchesTextBox.CausesValidation = false;
 			this.inchesTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -409,7 +409,7 @@
 			// 
 			this.cmTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.cmTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.cmTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.cmTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.cmTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.cmTextBox.CausesValidation = false;
 			this.cmTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -453,7 +453,7 @@
 			// 
 			this.ratioTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.ratioTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.ratioTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.ratioTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.ratioTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.ratioTextBox.CausesValidation = false;
 			this.ratioTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -473,7 +473,7 @@
 			// 
 			this.diskSizeTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.diskSizeTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.diskSizeTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.diskSizeTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.diskSizeTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.diskSizeTextBox.CausesValidation = false;
 			this.diskSizeTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -518,7 +518,7 @@
 			// 
 			this.modifiedTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.modifiedTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.modifiedTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.modifiedTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.modifiedTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.modifiedTextBox.CausesValidation = false;
 			this.modifiedTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -551,7 +551,7 @@
 			// 
 			this.createdTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.createdTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.createdTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.createdTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.createdTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.createdTextBox.CausesValidation = false;
 			this.createdTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -570,7 +570,7 @@
 			// 
 			// propertiesButton
 			// 
-			this.propertiesButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.propertiesButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.propertiesButton.FlatAppearance.BorderSize = 0;
 			this.propertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.propertiesButton.Image = ((System.Drawing.Image)(resources.GetObject("propertiesButton.Image")));

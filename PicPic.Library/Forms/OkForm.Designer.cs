@@ -60,7 +60,7 @@
 			// 
 			this.textBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox.BackColor = System.Drawing.SystemColors.Control;
+			this.textBox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.textBox.Location = new System.Drawing.Point(10, 42);
 			this.textBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -74,7 +74,7 @@
 			// 
 			this.okBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.okBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.okBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.okBtn.DialogResult = System.Windows.Forms.DialogResult.Yes;
 			this.okBtn.FlatAppearance.BorderSize = 0;
 			this.okBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

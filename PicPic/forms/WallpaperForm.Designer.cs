@@ -38,7 +38,7 @@
 			// 
 			// okButton
 			// 
-			this.okButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.okButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -86,7 +86,7 @@
 			// 
 			// fitComboBox
 			// 
-			this.fitComboBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.fitComboBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.fitComboBox.CausesValidation = false;
 			this.fitComboBox.DarkMode = false;
 			this.fitComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;

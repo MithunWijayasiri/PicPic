@@ -42,7 +42,7 @@
 			// 
 			this.yesBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.yesBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.yesBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.yesBtn.DialogResult = System.Windows.Forms.DialogResult.Yes;
 			this.yesBtn.FlatAppearance.BorderSize = 0;
 			this.yesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -81,7 +81,7 @@
 			// 
 			this.textBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox.BackColor = System.Drawing.SystemColors.Control;
+			this.textBox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.textBox.Location = new System.Drawing.Point(10, 42);
 			this.textBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -95,7 +95,7 @@
 			// 
 			this.noBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.noBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.noBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.noBtn.DialogResult = System.Windows.Forms.DialogResult.Yes;
 			this.noBtn.FlatAppearance.BorderSize = 0;
 			this.noBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -115,7 +115,7 @@
 			// 
 			this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.cancelBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.cancelBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Yes;
 			this.cancelBtn.FlatAppearance.BorderSize = 0;
 			this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

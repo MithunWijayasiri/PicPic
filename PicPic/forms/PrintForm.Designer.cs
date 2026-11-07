@@ -52,7 +52,7 @@
 			// 
 			// okButton
 			// 
-			this.okButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.okButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -71,7 +71,7 @@
 			// 
 			// setMarginsButton
 			// 
-			this.setMarginsButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.setMarginsButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.setMarginsButton.FlatAppearance.BorderSize = 0;
 			this.setMarginsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.setMarginsButton.Location = new System.Drawing.Point(10, 290);
@@ -116,7 +116,7 @@
 			// 
 			// centerCheckbox
 			// 
-			this.centerCheckbox.BackColor = System.Drawing.SystemColors.Control;
+			this.centerCheckbox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.centerCheckbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.centerCheckbox.CausesValidation = false;
 			this.centerCheckbox.Checked = true;
@@ -152,7 +152,7 @@
 			// 
 			this.bottomMarginTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.bottomMarginTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.bottomMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.bottomMarginTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.bottomMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.bottomMarginTextBox.CausesValidation = false;
 			this.bottomMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -185,7 +185,7 @@
 			// 
 			this.rightMarginTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.rightMarginTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.rightMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.rightMarginTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.rightMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.rightMarginTextBox.CausesValidation = false;
 			this.rightMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -218,7 +218,7 @@
 			// 
 			this.topMarginTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.topMarginTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.topMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.topMarginTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.topMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.topMarginTextBox.CausesValidation = false;
 			this.topMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -261,7 +261,7 @@
 			// 
 			this.leftMarginTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.leftMarginTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.leftMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.leftMarginTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.leftMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.leftMarginTextBox.CausesValidation = false;
 			this.leftMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -304,7 +304,7 @@
 			// 
 			this.titleTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.titleTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.titleTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.titleTextBox.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.titleTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.titleTextBox.CausesValidation = false;
 			this.titleTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -322,7 +322,7 @@
 			// 
 			// horizontalCheckBox
 			// 
-			this.horizontalCheckBox.BackColor = System.Drawing.SystemColors.Control;
+			this.horizontalCheckBox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.horizontalCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.horizontalCheckBox.CausesValidation = false;
 			this.horizontalCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
@@ -345,7 +345,7 @@
 			// 
 			// marginsCheckBox
 			// 
-			this.marginsCheckBox.BackColor = System.Drawing.SystemColors.Control;
+			this.marginsCheckBox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.marginsCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.marginsCheckBox.CausesValidation = false;
 			this.marginsCheckBox.Checked = true;
@@ -369,7 +369,7 @@
 			// 
 			// printPreviewControl1
 			// 
-			this.printPreviewControl1.BackColor = System.Drawing.SystemColors.Control;
+			this.printPreviewControl1.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.printPreviewControl1.Location = new System.Drawing.Point(308, 36);
 			this.printPreviewControl1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.printPreviewControl1.Name = "printPreviewControl1";

@@ -51,7 +51,7 @@
 			// 
 			// okButton
 			// 
-			this.okButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.okButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.okButton.Image = ((System.Drawing.Image)(resources.GetObject("okButton.Image")));
@@ -90,7 +90,7 @@
 			// 
 			this.widthNumeric.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.widthNumeric.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.widthNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.widthNumeric.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.widthNumeric.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.widthNumeric.CausesValidation = false;
 			this.widthNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -124,7 +124,7 @@
 			// 
 			this.heightNumeric.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.heightNumeric.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.heightNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.heightNumeric.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.heightNumeric.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.heightNumeric.CausesValidation = false;
 			this.heightNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -156,7 +156,7 @@
 			// 
 			// aspectRatioCheckbox
 			// 
-			this.aspectRatioCheckbox.BackColor = System.Drawing.SystemColors.Control;
+			this.aspectRatioCheckbox.BackColor = PicPic.Library.ThemeMan.LightBackColor;
 			this.aspectRatioCheckbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.aspectRatioCheckbox.CausesValidation = false;
 			this.aspectRatioCheckbox.Checked = true;
@@ -180,7 +180,7 @@
 			// 
 			// size128Button
 			// 
-			this.size128Button.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.size128Button.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.size128Button.FlatAppearance.BorderSize = 0;
 			this.size128Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.size128Button.Location = new System.Drawing.Point(10, 155);
@@ -194,7 +194,7 @@
 			// 
 			// size64Button
 			// 
-			this.size64Button.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.size64Button.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.size64Button.FlatAppearance.BorderSize = 0;
 			this.size64Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.size64Button.Location = new System.Drawing.Point(174, 113);
@@ -208,7 +208,7 @@
 			// 
 			// defaultSizeButton
 			// 
-			this.defaultSizeButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.defaultSizeButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.defaultSizeButton.FlatAppearance.BorderSize = 0;
 			this.defaultSizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.defaultSizeButton.Location = new System.Drawing.Point(10, 71);
@@ -222,7 +222,7 @@
 			// 
 			// size256Button
 			// 
-			this.size256Button.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.size256Button.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.size256Button.FlatAppearance.BorderSize = 0;
 			this.size256Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.size256Button.Location = new System.Drawing.Point(92, 155);
@@ -246,7 +246,7 @@
 			// 
 			// size512Button
 			// 
-			this.size512Button.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.size512Button.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.size512Button.FlatAppearance.BorderSize = 0;
 			this.size512Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.size512Button.Location = new System.Drawing.Point(174, 155);
@@ -280,7 +280,7 @@
 			// 
 			// size32Button
 			// 
-			this.size32Button.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.size32Button.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.size32Button.FlatAppearance.BorderSize = 0;
 			this.size32Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.size32Button.Location = new System.Drawing.Point(92, 113);
@@ -294,7 +294,7 @@
 			// 
 			// size16Button
 			// 
-			this.size16Button.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.size16Button.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.size16Button.FlatAppearance.BorderSize = 0;
 			this.size16Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.size16Button.Location = new System.Drawing.Point(10, 113);
@@ -308,7 +308,7 @@
 			// 
 			// autoSizeBtn
 			// 
-			this.autoSizeBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.autoSizeBtn.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.autoSizeBtn.FlatAppearance.BorderSize = 0;
 			this.autoSizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.autoSizeBtn.Location = new System.Drawing.Point(133, 71);

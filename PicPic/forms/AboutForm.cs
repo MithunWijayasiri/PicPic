@@ -45,7 +45,7 @@ namespace PicPic
 		private void SetDarkColors()
 		{
 			Color back = ThemeMan.DarkBackColor;
-			Color secondary = Color.FromArgb(160, 160, 160);
+			Color secondary = ThemeMan.DarkSecondaryTextColor;
 
 			CustomBackColor = back;
 			closeBtn.DarkMode = true;

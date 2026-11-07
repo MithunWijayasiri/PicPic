@@ -44,7 +44,7 @@
 			// 
 			// okButton
 			// 
-			this.okButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.okButton.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -82,7 +82,7 @@
 			// 
 			this.heightNumeric.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.heightNumeric.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.heightNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.heightNumeric.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.heightNumeric.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.heightNumeric.CausesValidation = false;
 			this.heightNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -136,7 +136,7 @@
 			// 
 			this.widthNumeric.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.widthNumeric.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.widthNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.widthNumeric.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.widthNumeric.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.widthNumeric.CausesValidation = false;
 			this.widthNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -170,7 +170,7 @@
 			// 
 			this.yNumeric.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.yNumeric.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.yNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.yNumeric.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.yNumeric.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.yNumeric.CausesValidation = false;
 			this.yNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -224,7 +224,7 @@
 			// 
 			this.xNumeric.AutoScrollMargin = new System.Drawing.Size(0, 0);
 			this.xNumeric.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-			this.xNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.xNumeric.BackColor = PicPic.Library.ThemeMan.LightSecondColor;
 			this.xNumeric.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.xNumeric.CausesValidation = false;
 			this.xNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;

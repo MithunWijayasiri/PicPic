@@ -15,8 +15,9 @@ namespace PicPic.Library
 		public static Color DarkSecondColor = Color.FromArgb(56, 56, 56);
 		public static Color DarkPaleColor = Color.FromArgb(0, 58, 105);
 		public static Color DarkHoverColor = Color.FromArgb(67, 67, 67);
+		public static Color DarkSecondaryTextColor = Color.FromArgb(160, 160, 160);
 
-		public static Color LightMainColor = Color.FromArgb(236, 236, 248);
+		public static Color LightMainColor = Color.FromArgb(246, 246, 252);
 		public static Color LightBackColor = Color.FromArgb(236, 236, 248);
 		public static Color LightSecondColor = Color.FromArgb(216, 216, 240);
 		public static Color LightPaleColor = Color.FromArgb(205, 228, 247);
