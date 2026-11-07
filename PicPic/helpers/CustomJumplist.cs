@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection;
 using System.Windows.Shell;
 
 namespace PicPic
@@ -13,7 +12,7 @@ namespace PicPic
 			JumpItem[] jumpItems = { new JumpTask() {
 				Title = newWindowTitle,
 				Description = newWindowDesc,
-				ApplicationPath = Assembly.GetEntryAssembly().Location,
+				ApplicationPath = Environment.ProcessPath,
 				Arguments = "-1",
 				IconResourcePath = Environment.ProcessPath
 			} };

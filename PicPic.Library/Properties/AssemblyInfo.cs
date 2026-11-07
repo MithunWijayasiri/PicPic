@@ -9,7 +9,7 @@ using System.Runtime.Versioning;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("PicPic.Library")]
-[assembly: AssemblyDescription("Windows Forms Control class library for for \"Quick\" apps (.NET Framework)")]
+[assembly: AssemblyDescription("Shared controls and managers for PicPic")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("PicPic")]
 [assembly: AssemblyProduct("PicPic.Library")]
@@ -35,6 +35,6 @@ using System.Runtime.Versioning;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.6.0")]
-[assembly: AssemblyFileVersion("2.6.0")]
+[assembly: AssemblyVersion("0.1.0")]
+[assembly: AssemblyFileVersion("0.1.0")]
 [assembly: NeutralResourcesLanguage("en")]

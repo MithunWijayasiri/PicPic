@@ -94,15 +94,13 @@
 			developerBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(170, 144, 88);
 			developerBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(193, 164, 101);
 			developerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			developerBtn.Image = (System.Drawing.Image)resources.GetObject("developerBtn.Image");
 			developerBtn.Location = new System.Drawing.Point(155, 334);
 			developerBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			developerBtn.Name = "developerBtn";
 			developerBtn.Size = new System.Drawing.Size(135, 32);
 			developerBtn.TabIndex = 2;
-			developerBtn.Text = " Mithun Wijayasiri";
-			developerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			developerBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			developerBtn.Text = "Mithun Wijayasiri";
+			developerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			infoTooltip.SetToolTip(developerBtn, "github.com/MithunWijayasiri");
 			developerBtn.UseVisualStyleBackColor = false;
 			developerBtn.Click += developerBtn_Click;
