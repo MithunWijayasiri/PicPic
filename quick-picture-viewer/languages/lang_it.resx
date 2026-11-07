@@ -429,6 +429,10 @@
     <value>Installa ora</value>
     <comment>Update manager</comment>
   </data>
+  <data name="install-plugin" xml:space="preserve">
+    <value>Install plugin</value>
+    <comment>Plugin manager</comment>
+  </data>
   <data name="landscape" xml:space="preserve">
     <value>Panorama</value>
     <comment>Image info</comment>
@@ -605,6 +609,18 @@
     <value>Plugin</value>
     <comment>Plugin manager</comment>
   </data>
+  <data name="plugin-incompatible" xml:space="preserve">
+    <value>This plugin is not compatible with this version of PicPic.</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-install-warning" xml:space="preserve">
+    <value>Plugins run code with your permissions. Only install plugins you trust.</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-invalid" xml:space="preserve">
+    <value>This file is not a valid plugin.</value>
+    <comment>Plugin manager</comment>
+  </data>
   <data name="plugin-manager" xml:space="preserve">
     <value>Gestore dei plugin</value>
     <comment>Menu, Plugin manager</comment>
@@ -663,6 +679,10 @@
   </data>
   <data name="reload-plugins" xml:space="preserve">
     <value>Ricarica lista plugin</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="replace-plugin" xml:space="preserve">
+    <value>Replace plugin</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="resize-svg" xml:space="preserve">

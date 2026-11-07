@@ -46,7 +46,7 @@ namespace QuickLibrary
 						value = en;
 						break;
 				}
-				return value;
+				return string.IsNullOrEmpty(value) ? en : value;
 			}
 		}
 
