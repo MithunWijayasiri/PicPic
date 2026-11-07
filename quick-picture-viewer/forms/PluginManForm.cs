@@ -141,6 +141,10 @@ namespace quick_picture_viewer
 				if (pi.functions == null || pi.functions.Length == 0) throw new InvalidDataException("Manifest has no functions.");
 				if (pi.authors == null) throw new InvalidDataException("Manifest has no authors.");
 
+				string dllEntry = pi.name + "/" + pi.name + ".dll";
+				if (!zip.Entries.Any(e => string.Equals(e.FullName.Replace('\\', '/'), dllEntry, StringComparison.OrdinalIgnoreCase)))
+					throw new InvalidDataException("Zip has no " + dllEntry);
+
 				foreach (ZipArchiveEntry entry in zip.Entries)
 				{
 					string destination = Path.GetFullPath(Path.Combine(root, entry.FullName));

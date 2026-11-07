@@ -47,7 +47,7 @@ namespace QuickLibrary
 							PluginInfo pi = PluginInfo.FromJson(File.ReadAllText(Path.Combine(di.FullName, files[i].Name)));
 							if (pi != null && pi.apiVer == apiVer && pi.inputType == inputType) plugins.Add(pi);
 						}
-						catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException || ex is Utf8Json.JsonParsingException)
+						catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException || ex is Utf8Json.JsonParsingException || ex is IndexOutOfRangeException)
 						{
 							// Unreadable or invalid manifest: skip it so other plugins still load.
 						}

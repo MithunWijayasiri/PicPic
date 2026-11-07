@@ -8,7 +8,7 @@ Plugin Manager → browse for a `.zip`, or drop it on the window. PicPic asks fo
 
 - Plugins live in `%LOCALAPPDATA%\PicPic\plugins`.
 - Installing a plugin with the same `name` replaces it. If the replace fails because the DLL is in use, restart PicPic and retry.
-- Invalid or incompatible zips (bad manifest, `apiVer` not 4, files outside the plugin folder) are rejected with an error.
+- Invalid or incompatible zips (bad manifest, `apiVer` not 4, no `<name>/<name>.dll`, files outside the plugin folder) are rejected with an error.
 
 ## Zip layout
 
@@ -63,7 +63,7 @@ my-plugin.zip
 
 ## C# plugin
 
-Namespace = `<name>` with `-` replaced by `_`. Class `Main` with a public parameterless constructor. One public method per manifest function:
+Namespace = `<name>` with `-` replaced by `_`; must be a valid C# identifier, so `<name>` must not start with a digit. Class `Main` with a public parameterless constructor. One public method per manifest function:
 
 ```csharp
 namespace my_plugin
@@ -72,7 +72,8 @@ namespace my_plugin
     {
         public Bitmap invert(Bitmap bmp, string path, bool darkMode, string language, bool alwaysOnTop, Rectangle selection)
         {
-            // return the new image, or null to leave the current image unchanged
+            // return the new image, or null to leave the current image unchanged.
+            // bmp is the live image: in-place edits survive a null return and are not marked as changed. Clone bmp before editing if the plugin may cancel.
         }
     }
 }
