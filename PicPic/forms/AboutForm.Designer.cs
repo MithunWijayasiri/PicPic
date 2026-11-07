@@ -51,7 +51,7 @@
 			productLabel.Name = "productLabel";
 			productLabel.Size = new System.Drawing.Size(280, 19);
 			productLabel.TabIndex = 27;
-			productLabel.Text = "PicPic";
+			productLabel.Text = Program.AppName;
 			productLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// versionLabel

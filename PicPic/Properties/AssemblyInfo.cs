@@ -8,11 +8,11 @@ using System.Runtime.Versioning;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PicPic")]
+[assembly: AssemblyTitle(PicPic.Program.AppName)]
 [assembly: AssemblyDescription("A fast, minimal image viewer for Windows.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("PicPic")]
-[assembly: AssemblyProduct("PicPic")]
+[assembly: AssemblyProduct(PicPic.Program.AppName)]
 [assembly: AssemblyCopyright("Copyright © 2023 Module Art; © 2026 Mithun Wijayasiri")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

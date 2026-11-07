@@ -1486,7 +1486,7 @@
 			this.KeyPreview = true;
 			this.MinimumSize = new System.Drawing.Size(420, 320);
 			this.Name = "MainForm";
-			this.Text = "PicPic";
+			this.Text = Program.AppName;
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
 			this.Shown += new System.EventHandler(this.MainForm_Shown);
 			this.ResizeEnd += new System.EventHandler(this.MainForm_ResizeEnd);

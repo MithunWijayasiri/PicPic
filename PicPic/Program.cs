@@ -6,6 +6,8 @@ namespace PicPic
 {
 	static class Program
 	{
+		public const string AppName = "PicPic - Image Viewer";
+
 		[STAThread]
 		static void Main(string[] args)
 		{
