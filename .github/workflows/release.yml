@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 8.0.x
+      - name: Publish self-contained single-file
+        run: >
+          dotnet publish PicPic/PicPic.csproj -c Release -r win-x64
+          --self-contained true
+          -p:PublishSingleFile=true
+          -p:IncludeNativeLibrariesForSelfExtract=true
+          -p:EnableCompressionInSingleFile=true
+          -p:DebugType=none
+          -o publish/self-contained
+      - name: Publish framework-dependent
+        run: >
+          dotnet publish PicPic/PicPic.csproj -c Release -r win-x64
+          --self-contained false
+          -p:DebugType=none
+          -o publish/framework-dependent
+      - name: Add icon beside the single-file exe
+        shell: pwsh
+        run: Copy-Item assets/picpic.ico publish/self-contained/picpic.ico
+      - name: Package
+        shell: pwsh
+        run: |
+          $tag = "${{ github.ref_name }}"
+          Compress-Archive -Path publish/self-contained/* -DestinationPath "PicPic-$tag-win-x64-self-contained.zip"
+          Compress-Archive -Path publish/framework-dependent/* -DestinationPath "PicPic-$tag-win-x64-framework-dependent.zip"
+      - name: Create release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "${{ github.ref_name }}" PicPic-*.zip --title "${{ github.ref_name }}" --generate-notes --prerelease
