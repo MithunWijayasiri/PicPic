@@ -9,7 +9,7 @@
 </p>
 
 > [!IMPORTANT]
-> PicPic is in early development. There are no releases yet.
+> PicPic is in early development. Beta builds are on the [Releases](https://github.com/MithunWijayasiri/PicPic/releases) page.
 
 PicPic is a fork of [Quick Picture Viewer](https://github.com/ModuleArt/quick-picture-viewer) by Module Art, which is no longer maintained. It is being modernized with a cleaner, distraction-free UI, modern .NET, and support for newer image formats.
 

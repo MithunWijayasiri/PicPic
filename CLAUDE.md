@@ -27,7 +27,7 @@ Architecture only: project structure, build/run commands, dependencies, conventi
 | `.gitattributes` | `* text=auto eol=lf` (`*.sln` CRLF). |
 | `.git-blame-ignore-revs` | One-time reformat commit(s); skipped by `git blame` (`git config blame.ignoreRevsFile .git-blame-ignore-revs`). |
 | `.claude/skills/` | Project skills. `pr-guidelines`: PR title, description and test-plan conventions. |
-| `.github/` | Workflows: `ci.yml` (build + `dotnet test` + `dotnet format whitespace --verify-no-changes` on PR + push to `master`, `windows-latest`), `pr-title.yml` (Conventional Commits PR title), `codeql.yml` (C# CodeQL: PR, push to `master`, weekly), `pages.yml` (site), `release.yml` (on tag `v*`: publishes self-contained single-file + framework-dependent win-x64 zips, creates a prerelease GitHub release). `dependabot.yml`: monthly `nuget` + `github-actions`, one grouped PR per ecosystem. |
+| `.github/` | Workflows: `ci.yml` (build + `dotnet test` + `dotnet format whitespace --verify-no-changes` on PR + push to `master`, `windows-latest`), `pr-title.yml` (Conventional Commits PR title), `codeql.yml` (C# CodeQL: PR, push to `master`, weekly), `pages.yml` (site), `release.yml` (manual `workflow_dispatch` from `master`, inputs `version` + `prerelease`: publishes self-contained single-file + framework-dependent win-x64 zips, creates tag `v<version>` + GitHub release). `dependabot.yml`: monthly `nuget` + `github-actions`, one grouped PR per ecosystem. |
 
 ## Build
 
@@ -44,7 +44,8 @@ Warnings are errors (`TreatWarningsAsErrors` in every csproj). Existing warnings
 
 ## Conventions
 
-- Version starts at `0.1.0` (beta). Tags `v0.1.0`; pushing a `v*` tag triggers `release.yml`. Keep `AssemblyVersion` in `PicPic/Properties/AssemblyInfo.cs` in sync with the tag.
+- Version is set at release time only: Release workflow passes `-p:Version=<input>`; `Directory.Build.props` writes it into `AssemblyVersion`/`AssemblyFileVersion` (About box reads it). Default `0.0.0` for local builds. Tags `v0.1.0`. No version in source to keep in sync.
+- Workflow `name:`s use a prefix (`CI:`, `PR:`, `Site:`, `Release:`) so the Actions sidebar groups them.
 - UI layout in `*.Designer.cs`, logic in code-behind. Edit Designer files by hand; no Visual Studio required.
 - Formatting: run `dotnet format whitespace` before pushing; CI fails on diffs. Reformat-only commits → add SHA to `.git-blame-ignore-revs`.
 - Don't enable `Nullable`/`ImplicitUsings` project-wide (legacy code floods warnings).
