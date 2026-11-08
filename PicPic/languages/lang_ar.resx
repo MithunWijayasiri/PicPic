@@ -349,6 +349,10 @@
     <value>فشل نقل الملف إلى سلة المحذوفات</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="file-delete-failed" xml:space="preserve">
+    <value>تعذّر حذف الملف</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>خصائص الملف</value>
     <comment>Image info</comment>

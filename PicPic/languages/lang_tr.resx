@@ -349,6 +349,10 @@
     <value>Dosya Geri Dönüşüm Kutusu'na taşınamadı</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="file-delete-failed" xml:space="preserve">
+    <value>Dosya silinemedi</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Dosya özellikleri</value>
     <comment>Image info</comment>

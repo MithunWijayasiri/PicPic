@@ -349,6 +349,10 @@
     <value>Nem sikerült a fájlt a lomtárba helyezni</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="file-delete-failed" xml:space="preserve">
+    <value>Nem sikerült törölni a fájlt</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Fájl tulajdonságai</value>
     <comment>Image info</comment>

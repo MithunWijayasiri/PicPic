@@ -290,6 +290,10 @@
     <value>Не вдалося перемістити файл у кошик</value>
     <comment>Підказка</comment>
   </data>
+  <data name="file-delete-failed" xml:space="preserve">
+    <value>Не вдалося видалити файл</value>
+    <comment>Підказка</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Властивості файлу</value>
     <comment>Інформація про зображення</comment>

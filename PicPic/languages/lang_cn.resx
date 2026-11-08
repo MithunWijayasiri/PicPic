@@ -349,6 +349,10 @@
     <value>无法将文件移至回收站</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="file-delete-failed" xml:space="preserve">
+    <value>无法删除文件</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>文件属性</value>
     <comment>Image info</comment>

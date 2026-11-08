@@ -349,6 +349,10 @@
     <value>Impossible de déplacer le fichier dans la corbeille</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="file-delete-failed" xml:space="preserve">
+    <value>Impossible de supprimer le fichier</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Propriétés de l'image</value>
     <comment>Image info</comment>
