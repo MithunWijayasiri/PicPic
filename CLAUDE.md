@@ -26,7 +26,7 @@ Architecture only: project structure, build/run commands, dependencies, conventi
 | `.editorconfig` | LF, final newline, trimmed trailing whitespace; tabs size 4 for `*.cs`. Checked by `dotnet format whitespace`. |
 | `.gitattributes` | `* text=auto eol=lf` (`*.sln` CRLF). |
 | `.git-blame-ignore-revs` | One-time reformat commit(s); skipped by `git blame` (`git config blame.ignoreRevsFile .git-blame-ignore-revs`). |
-| `.github/` | Workflows: `ci.yml` (build + `dotnet test` + `dotnet format whitespace --verify-no-changes` on PR + push to `master`, `windows-latest`), `pr-title.yml` (Conventional Commits PR title), `codeql.yml` (C# CodeQL: PR, push to `master`, weekly), `pages.yml` (site). `dependabot.yml`: monthly `nuget` + `github-actions`, one grouped PR per ecosystem. |
+| `.github/` | Workflows: `ci.yml` (build + `dotnet test` + `dotnet format whitespace --verify-no-changes` on PR + push to `master`, `windows-latest`), `pr-title.yml` (Conventional Commits PR title), `codeql.yml` (C# CodeQL: PR, push to `master`, weekly), `pages.yml` (site), `release.yml` (on tag `v*`: publishes self-contained single-file + framework-dependent win-x64 zips, creates a prerelease GitHub release). `dependabot.yml`: monthly `nuget` + `github-actions`, one grouped PR per ecosystem. |
 
 ## Build
 
@@ -43,7 +43,7 @@ Warnings are errors (`TreatWarningsAsErrors` in every csproj). Existing warnings
 
 ## Conventions
 
-- Version starts at `0.1.0` (beta). Tags `v0.1.0`.
+- Version starts at `0.1.0` (beta). Tags `v0.1.0`; pushing a `v*` tag triggers `release.yml`. Keep `AssemblyVersion` in `PicPic/Properties/AssemblyInfo.cs` in sync with the tag.
 - UI layout in `*.Designer.cs`, logic in code-behind. Edit Designer files by hand; no Visual Studio required.
 - Formatting: run `dotnet format whitespace` before pushing; CI fails on diffs. Reformat-only commits → add SHA to `.git-blame-ignore-revs`.
 - Don't enable `Nullable`/`ImplicitUsings` project-wide (legacy code floods warnings).
