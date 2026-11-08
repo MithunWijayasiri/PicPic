@@ -25,10 +25,13 @@ jobs:
         shell: pwsh
         env:
           VERSION: ${{ inputs.version }}
-          REF: ${{ github.ref_name }}
+          REF: ${{ github.ref }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           if ($env:VERSION -notmatch '^\d+\.\d+\.\d+$') { throw "Version must look like 1.2.3, got: $env:VERSION" }
-          if ($env:REF -ne "master") { throw "Run this workflow from master." }
+          if ($env:REF -ne "refs/heads/master") { throw "Run this workflow from the master branch." }
+          gh api "repos/${{ github.repository }}/git/ref/tags/v$env:VERSION" 2>$null | Out-Null
+          if ($LASTEXITCODE -eq 0) { throw "Tag v$env:VERSION already exists." }
       - uses: actions/checkout@v7
       - uses: actions/setup-dotnet@v6
         with:
