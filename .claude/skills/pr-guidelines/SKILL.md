@@ -29,7 +29,7 @@ Checkbox list, grouped by who/when verifies. Skip groups with no items. Tick (`[
 ### Verified by the agent
 Anything the agent can run itself: build, tests, format, local publish, running the app against a scripted scenario. Do it before opening the PR, tick it, and say what was checked.
 
-### Manual (you)
+### Manual (user)
 Needs a human: UI behavior, visual checks, real machine or account state, anything the agent can't drive. Steps must be copy-followable: exact action, expected result.
 
 ### After merge
