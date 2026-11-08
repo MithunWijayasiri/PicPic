@@ -24,13 +24,19 @@ Start with **Summary**, end with **Test plan**. Between them, add what helps the
 
 ## Test plan
 
-Checkbox list, grouped by who/when verifies. Skip groups with no items. Tick (`[x]`) only what was actually verified.
+Checkbox list. Skip groups with no items. Tick (`[x]`) only what was actually verified. Never list CI/PR checks passing: merge is blocked until they pass.
+
+Put each item in exactly one group, by asking in order:
+
+1. Can it only be checked after the PR is on `master`? → **After merge** (whoever does the check).
+2. Otherwise, can the agent run it itself? → **Verified by the agent**.
+3. Otherwise → **Manual (user)**.
 
 ### Verified by the agent
-Anything the agent can run itself: build, tests, format, local publish, running the app against a scripted scenario. Do it before opening the PR, tick it, and say what was checked.
+Build, tests, format, local publish, running the app against a scripted scenario. Do it before opening the PR, tick it, say what was checked.
 
 ### Manual (user)
-Needs a human: UI behavior, visual checks, real machine or account state, anything the agent can't drive. Steps must be copy-followable: exact action, expected result.
+Needs a human, checkable before merge: UI behavior, visual checks, real machine or account state. Steps must be copy-followable: exact action, expected result.
 
 ### After merge
-Only checkable once the PR is on `master` or later: manual or tag-triggered workflows, deployed site, releases, scheduled jobs. State the trigger (e.g. "run Release workflow with version `0.1.1`") and the expected result.
+Only checkable on `master` or later: manual or tag-triggered workflows, Actions sidebar names, deployed site, releases, scheduled jobs. State the trigger (e.g. "run Release workflow with version `0.1.1`") and the expected result.
