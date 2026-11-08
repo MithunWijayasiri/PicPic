@@ -247,7 +247,7 @@
   }
 
   function navImg(d) { show(idx + d); if (playing) resetTimer(); }
-  function zoomBy(f) { zoom = Math.min(6, Math.max(0.25, zoom * f)); if (zoom < 1.02 && zoom > 0.98) zoom = 1; apply(); }
+  function zoomBy(f) { zoom = Math.min(6, Math.max(0.25, zoom * f)); if (zoom < 1.02 && zoom > 0.98) zoom = 1; if (zoom <= 1) pan = { x: 0, y: 0 }; apply(); }
   function fit() { zoom = 1; pan = { x: 0, y: 0 }; apply(); }
 
   function setPlaying(on) {
@@ -315,7 +315,7 @@
   $("#pipRestore").addEventListener("click", () => setPip(false));
 
   viewer.addEventListener("keydown", (e) => {
-    if (e.target.closest("button")) return;
+    if (e.target.closest("button") || e.ctrlKey || e.metaKey || e.altKey) return;
     const map = {
       ArrowLeft: () => navImg(-1), ArrowRight: () => navImg(1),
       "+": () => zoomBy(1.25), "=": () => zoomBy(1.25), "-": () => zoomBy(1 / 1.25),
