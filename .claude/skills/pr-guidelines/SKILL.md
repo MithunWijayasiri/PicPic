@@ -1,6 +1,6 @@
 ---
 name: pr-guidelines
-description: Write or update a pull request title and description for PicPic. Use when opening a PR, editing a PR body, or the user asks for a PR description or test plan.
+description: Use when asked to open a PR or update a PR (title, description, test plan) for PicPic.
 ---
 
 # PR guidelines
