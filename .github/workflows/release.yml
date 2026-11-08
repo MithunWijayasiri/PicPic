@@ -26,13 +26,21 @@ jobs:
         env:
           VERSION: ${{ inputs.version }}
           REF: ${{ github.ref }}
-          GH_TOKEN: ${{ github.token }}
         run: |
           if ($env:VERSION -notmatch '^\d+\.\d+\.\d+$') { throw "Version must look like 1.2.3, got: $env:VERSION" }
           if ($env:REF -ne "refs/heads/master") { throw "Run this workflow from the master branch." }
-          gh api "repos/${{ github.repository }}/git/ref/tags/v$env:VERSION" 2>$null | Out-Null
-          if ($LASTEXITCODE -eq 0) { throw "Tag v$env:VERSION already exists." }
       - uses: actions/checkout@v7
+      - name: Check tag is free
+        shell: pwsh
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          git ls-remote --exit-code --tags origin "refs/tags/v$env:VERSION" | Out-Null
+          switch ($LASTEXITCODE) {
+            0 { throw "Tag v$env:VERSION already exists." }
+            2 { $global:LASTEXITCODE = 0 }
+            default { throw "Could not look up tags (git exit $LASTEXITCODE)." }
+          }
       - uses: actions/setup-dotnet@v6
         with:
           dotnet-version: 8.0.x
@@ -72,6 +80,8 @@ jobs:
           PRERELEASE: ${{ inputs.prerelease }}
         run: |
           $tag = "v$env:VERSION"
-          $ghArgs = @($tag) + (Get-ChildItem PicPic-*.zip | ForEach-Object Name) + @('--target', '${{ github.sha }}', '--title', $tag, '--generate-notes')
+          gh api "repos/${{ github.repository }}/git/refs" -f "ref=refs/tags/$tag" -f "sha=${{ github.sha }}" | Out-Null
+          if ($LASTEXITCODE -ne 0) { throw "Could not create tag $tag (it may already exist)." }
+          $ghArgs = @($tag) + (Get-ChildItem PicPic-*.zip | ForEach-Object Name) + @('--title', $tag, '--generate-notes')
           if ($env:PRERELEASE -eq 'true') { $ghArgs += '--prerelease' }
           gh release create @ghArgs
