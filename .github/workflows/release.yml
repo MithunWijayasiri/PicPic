@@ -1,8 +1,18 @@
-name: Release
+name: "Release: Publish version"
+
+run-name: "Release v${{ inputs.version }}"
 
 on:
-  push:
-    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version number, e.g. 0.1.1 (the tag becomes v0.1.1)"
+        required: true
+        type: string
+      prerelease:
+        description: "Mark as prerelease"
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -11,6 +21,14 @@ jobs:
   release:
     runs-on: windows-latest
     steps:
+      - name: Check version
+        shell: pwsh
+        env:
+          VERSION: ${{ inputs.version }}
+          REF: ${{ github.ref_name }}
+        run: |
+          if ($env:VERSION -notmatch '^\d+\.\d+\.\d+$') { throw "Version must look like 1.2.3, got: $env:VERSION" }
+          if ($env:REF -ne "master") { throw "Run this workflow from master." }
       - uses: actions/checkout@v7
       - uses: actions/setup-dotnet@v6
         with:
@@ -23,24 +41,34 @@ jobs:
           -p:IncludeNativeLibrariesForSelfExtract=true
           -p:EnableCompressionInSingleFile=true
           -p:DebugType=none
+          -p:Version=${{ inputs.version }}
           -o publish/self-contained
       - name: Publish framework-dependent
         run: >
           dotnet publish PicPic/PicPic.csproj -c Release -r win-x64
           --self-contained false
           -p:DebugType=none
+          -p:Version=${{ inputs.version }}
           -o publish/framework-dependent
       - name: Add icon beside the single-file exe
         shell: pwsh
         run: Copy-Item assets/picpic.ico publish/self-contained/picpic.ico
       - name: Package
         shell: pwsh
+        env:
+          VERSION: ${{ inputs.version }}
         run: |
-          $tag = "${{ github.ref_name }}"
+          $tag = "v$env:VERSION"
           Compress-Archive -Path publish/self-contained/* -DestinationPath "PicPic-$tag-win-x64-self-contained.zip"
           Compress-Archive -Path publish/framework-dependent/* -DestinationPath "PicPic-$tag-win-x64-framework-dependent.zip"
       - name: Create release
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "${{ github.ref_name }}" PicPic-*.zip --title "${{ github.ref_name }}" --generate-notes --prerelease
+          VERSION: ${{ inputs.version }}
+          PRERELEASE: ${{ inputs.prerelease }}
+        run: |
+          $tag = "v$env:VERSION"
+          $ghArgs = @($tag) + (Get-ChildItem PicPic-*.zip | ForEach-Object Name) + @('--target', '${{ github.sha }}', '--title', $tag, '--generate-notes')
+          if ($env:PRERELEASE -eq 'true') { $ghArgs += '--prerelease' }
+          gh release create @ghArgs

@@ -33,4 +33,4 @@ Anything the agent can run itself: build, tests, format, local publish, running 
 Needs a human: UI behavior, visual checks, real machine or account state, anything the agent can't drive. Steps must be copy-followable: exact action, expected result.
 
 ### After merge
-Only checkable once the PR is on `master` or later: tag-triggered workflows, deployed site, releases, scheduled jobs. State the trigger (e.g. "push tag `v0.1.0`") and the expected result.
+Only checkable once the PR is on `master` or later: manual or tag-triggered workflows, deployed site, releases, scheduled jobs. State the trigger (e.g. "run Release workflow with version `0.1.1`") and the expected result.

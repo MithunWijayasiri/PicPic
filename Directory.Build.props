@@ -1,0 +1,15 @@
+<Project>
+  <PropertyGroup>
+    <Version Condition="'$(Version)' == ''">0.0.0</Version>
+  </PropertyGroup>
+  <Target Name="WriteVersionAttributes" BeforeTargets="CoreCompile" Condition="'$(GenerateAssemblyInfo)' == 'false'">
+    <ItemGroup>
+      <VersionAttribute Include="System.Reflection.AssemblyVersion"><_Parameter1>$(Version)</_Parameter1></VersionAttribute>
+      <VersionAttribute Include="System.Reflection.AssemblyFileVersion"><_Parameter1>$(Version)</_Parameter1></VersionAttribute>
+    </ItemGroup>
+    <WriteCodeFragment Language="C#" OutputFile="$(IntermediateOutputPath)$(MSBuildProjectName).Version.g.cs" AssemblyAttributes="@(VersionAttribute)">
+      <Output TaskParameter="OutputFile" ItemName="Compile" />
+      <Output TaskParameter="OutputFile" ItemName="FileWrites" />
+    </WriteCodeFragment>
+  </Target>
+</Project>
