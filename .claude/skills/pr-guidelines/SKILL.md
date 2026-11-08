@@ -9,10 +9,8 @@ Defaults, not a template. User asks for extra content, or the change warrants ne
 
 ## Title
 
-- Conventional Commits, enforced by `.github/workflows/pr-title.yml`.
-- Types: `build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test`, optional `(scope)`, optional `!`.
+- Conventional Commits; allowed types checked by `.github/workflows/pr-title.yml`.
 - Squash merge uses the title → write it as the final commit subject: lowercase, imperative, no trailing period.
-- One phase/item per PR (see `CLAUDE.md`).
 
 ## Description
 
@@ -36,9 +34,3 @@ Needs a human: UI behavior, visual checks, real machine or account state, anythi
 
 ### After merge
 Only checkable once the PR is on `master` or later: tag-triggered workflows, deployed site, releases, scheduled jobs. State the trigger (e.g. "push tag `v0.1.0`") and the expected result.
-
-## Before opening
-
-- Branch pushed, title passes the regex.
-- Ask the user before commit, push, or PR (see global rules).
-- Return the PR URL.
