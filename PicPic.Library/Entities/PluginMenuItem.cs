@@ -1,19 +1,16 @@
 ﻿using System;
-using System.IO;
-using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace PicPic.Library
 {
 	public class PluginMenuItem : ToolStripMenuItem
 	{
-		private string dllPath;
 		private PluginInfo pi;
 		private PluginInfo.Function func;
 		private bool darkMode;
 		private string langCode;
 		private PluginMan pluginMan;
+		private readonly PluginRunner runner;
 
 		public PluginMenuItem(
 			PluginInfo pi,
@@ -28,9 +25,9 @@ namespace PicPic.Library
 			this.darkMode = darkMode;
 			this.langCode = langCode;
 			this.pluginMan = pluginMan;
+			runner = new PluginRunner(pluginMan, pi, func, darkMode, langCode);
 
 			Text = func.title.Get(langCode);
-			dllPath = Path.Combine(pluginMan.pluginsFolder, pi.name, pi.name + ".dll");
 
 			if (func.hotkey.ctrl)
 			{
@@ -67,6 +64,10 @@ namespace PicPic.Library
 			Image = pluginMan.GetPluginIcon(pi.name, func.name, darkMode);
 		}
 
+		public bool IsDialog => func.dialog;
+
+		public string PluginTitle => func.title.Get(langCode);
+
 		public void ProcessPlugin(
 			object input,
 			string path,
@@ -79,28 +80,7 @@ namespace PicPic.Library
 
 			if (mainForm != null && func.hideMainForm) mainForm.Hide();
 
-			object res = null;
-			if (pi.dllType == "cpp")
-			{
-				IntPtr pluginPtr = NativeMan.LoadLibrary(dllPath);
-				IntPtr funcPtr = NativeMan.GetProcAddressOrdinal(pluginPtr, func.name);
-				var callback = Marshal.GetDelegateForFunctionPointer<PluginMan.RunFunction>(funcPtr);
-				res = callback(input, path, darkMode, langCode, alwaysOnTop, secondaryArg);
-			}
-			else if (pi.dllType == "csharp")
-			{
-				Assembly assembly = Assembly.LoadFrom(dllPath);
-				Type type = assembly.GetType(Path.GetFileNameWithoutExtension(dllPath).Replace("-", "_") + ".Main");
-				object instance = Activator.CreateInstance(type);
-				res = type.GetMethod(func.name).Invoke(instance, new object[] {
-					input,
-					path,
-					darkMode,
-					langCode,
-					alwaysOnTop,
-					secondaryArg
-				}) as object;
-			}
+			object res = runner.Run(input, path, alwaysOnTop, secondaryArg);
 
 			if (res != null)
 			{
