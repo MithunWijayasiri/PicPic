@@ -7,13 +7,22 @@ namespace PicPic.Library
 {
 	public class PluginRunner
 	{
+		public delegate object CsharpRunFunction(
+			object input = null,
+			string path = null,
+			bool darkMode = false,
+			string language = "en",
+			bool alwaysOnTop = false,
+			object secondaryArg = null
+		);
+
 		private readonly string dllPath;
 		private readonly PluginInfo pi;
 		private readonly PluginInfo.Function func;
 		private readonly bool darkMode;
 		private readonly string langCode;
 		private readonly Func<string, string, PluginMan.RunFunction> cppEntryPoint;
-		private readonly Func<string, string, PluginMan.RunFunction> csharpEntryPoint;
+		private readonly Func<string, string, CsharpRunFunction> csharpEntryPoint;
 
 		public PluginRunner(
 			PluginMan pluginMan,
@@ -22,7 +31,7 @@ namespace PicPic.Library
 			bool darkMode,
 			string langCode,
 			Func<string, string, PluginMan.RunFunction> cppEntryPoint = null,
-			Func<string, string, PluginMan.RunFunction> csharpEntryPoint = null
+			Func<string, string, CsharpRunFunction> csharpEntryPoint = null
 		)
 		{
 			this.pi = pi;
@@ -47,7 +56,7 @@ namespace PicPic.Library
 			return Marshal.GetDelegateForFunctionPointer<PluginMan.RunFunction>(funcPtr);
 		}
 
-		private static PluginMan.RunFunction DefaultCsharpEntryPoint(string dllPath, string funcName)
+		private static CsharpRunFunction DefaultCsharpEntryPoint(string dllPath, string funcName)
 		{
 			Assembly assembly = Assembly.LoadFrom(dllPath);
 			Type type = assembly.GetType(GetEntryPointTypeName(dllPath));
@@ -55,7 +64,7 @@ namespace PicPic.Library
 			return (input, path, darkMode, langCode, alwaysOnTop, secondaryArg) =>
 			{
 				object instance = Activator.CreateInstance(type);
-				return (string[])method.Invoke(instance, new object[] { input, path, darkMode, langCode, alwaysOnTop, secondaryArg });
+				return method.Invoke(instance, new object[] { input, path, darkMode, langCode, alwaysOnTop, secondaryArg });
 			};
 		}
 
@@ -71,7 +80,7 @@ namespace PicPic.Library
 			}
 			else if (pi.dllType == "csharp")
 			{
-				PluginMan.RunFunction callback = csharpEntryPoint(dllPath, func.name);
+				CsharpRunFunction callback = csharpEntryPoint(dllPath, func.name);
 				return callback(input, path, darkMode, langCode, alwaysOnTop, secondaryArg);
 			}
 			return null;

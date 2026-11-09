@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using PicPic.Library;
 using static PicPic.Library.Tests.TestData;
 
@@ -6,7 +7,7 @@ namespace PicPic.Library.Tests
 {
 	public class PluginRunnerTests
 	{
-		private static PluginRunner CreateRunner(TempPluginsFolder folder, string dllType, Func<string, string, PluginMan.RunFunction> cpp = null, Func<string, string, PluginMan.RunFunction> csharp = null)
+		private static PluginRunner CreateRunner(TempPluginsFolder folder, string dllType, Func<string, string, PluginMan.RunFunction> cpp = null, Func<string, string, PluginRunner.CsharpRunFunction> csharp = null)
 		{
 			PluginInfo pi = PluginInfo.FromJson(Manifest(dllType: dllType));
 			return new PluginRunner(folder.CreatePluginMan(), pi, pi.functions[0], true, "en", cpp, csharp);
@@ -60,14 +61,30 @@ namespace PicPic.Library.Tests
 					{
 						seenPath = dllPath;
 						seenFunc = funcName;
-						return (input, path, darkMode, langCode, alwaysOnTop, secondaryArg) => new string[] { "csharp-result" };
+						return (input, path, darkMode, langCode, alwaysOnTop, secondaryArg) => "csharp-result";
 					});
 
 				object result = runner.Run("pixel", "photo.png", false, null);
 
-				Assert.Equal(new string[] { "csharp-result" }, result);
+				Assert.Equal("csharp-result", result);
 				Assert.Equal(folder.PathOf("my-plugin", "my-plugin.dll"), seenPath);
 				Assert.Equal("invert", seenFunc);
+			}
+		}
+
+		[Fact]
+		public void Run_Csharp_BitmapResult_Returned()
+		{
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			using (Bitmap bitmap = new Bitmap(1, 1))
+			{
+				PluginRunner runner = CreateRunner(folder, "csharp",
+					csharp: (dllPath, funcName) =>
+					{
+						return (input, path, darkMode, langCode, alwaysOnTop, secondaryArg) => bitmap;
+					});
+
+				Assert.Same(bitmap, runner.Run("pixel", "photo.png", false, null));
 			}
 		}
 
@@ -79,7 +96,7 @@ namespace PicPic.Library.Tests
 				int calls = 0;
 				PluginRunner runner = CreateRunner(folder, "unknown",
 					cpp: (dllPath, funcName) => { calls++; return (input, path, darkMode, langCode, alwaysOnTop, secondaryArg) => new string[] { "x" }; },
-					csharp: (dllPath, funcName) => { calls++; return (input, path, darkMode, langCode, alwaysOnTop, secondaryArg) => new string[] { "x" }; });
+					csharp: (dllPath, funcName) => { calls++; return (input, path, darkMode, langCode, alwaysOnTop, secondaryArg) => "x"; });
 
 				Assert.Null(runner.Run("pixel", "photo.png", false, null));
 				Assert.Equal(0, calls);
