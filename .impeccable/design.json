@@ -1,0 +1,362 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T00:00:00Z",
+  "title": "Design System: PicPic Site",
+  "extensions": {
+    "colorMeta": {
+      "slate": {
+        "role": "neutral",
+        "displayName": "Deep Slate",
+        "canonical": "oklch(21% 0.026 245)",
+        "tonalRamp": [
+          "oklch(15% 0.012 245)",
+          "oklch(28% 0.026 245)",
+          "oklch(40% 0.032 245)",
+          "oklch(55% 0.03 245)",
+          "oklch(70% 0.024 245)",
+          "oklch(82% 0.016 245)",
+          "oklch(90% 0.009 245)",
+          "oklch(95% 0.005 245)"
+        ]
+      },
+      "slate-2": {
+        "role": "neutral",
+        "displayName": "Raised Slate",
+        "canonical": "oklch(25% 0.028 243)",
+        "tonalRamp": [
+          "oklch(15% 0.012 243)",
+          "oklch(28% 0.027 243)",
+          "oklch(40% 0.033 243)",
+          "oklch(55% 0.031 243)",
+          "oklch(70% 0.025 243)",
+          "oklch(82% 0.017 243)",
+          "oklch(90% 0.009 243)",
+          "oklch(95% 0.005 243)"
+        ]
+      },
+      "slate-3": {
+        "role": "neutral",
+        "displayName": "Slate Lift",
+        "canonical": "oklch(29% 0.03 242)",
+        "tonalRamp": [
+          "oklch(15% 0.013 242)",
+          "oklch(28% 0.03 242)",
+          "oklch(40% 0.035 242)",
+          "oklch(55% 0.033 242)",
+          "oklch(70% 0.027 242)",
+          "oklch(82% 0.018 242)",
+          "oklch(90% 0.01 242)",
+          "oklch(95% 0.005 242)"
+        ]
+      },
+      "footer": {
+        "role": "neutral",
+        "displayName": "Footer Slate",
+        "canonical": "oklch(17% 0.022 245)",
+        "tonalRamp": [
+          "oklch(15% 0.011 245)",
+          "oklch(28% 0.024 245)",
+          "oklch(40% 0.03 245)",
+          "oklch(55% 0.028 245)",
+          "oklch(70% 0.022 245)",
+          "oklch(82% 0.015 245)",
+          "oklch(90% 0.008 245)",
+          "oklch(95% 0.004 245)"
+        ]
+      },
+      "bone": {
+        "role": "neutral",
+        "displayName": "Bone",
+        "canonical": "oklch(94% 0.008 95)",
+        "tonalRamp": [
+          "oklch(15% 0.004 95)",
+          "oklch(28% 0.008 95)",
+          "oklch(40% 0.01 95)",
+          "oklch(55% 0.011 95)",
+          "oklch(70% 0.01 95)",
+          "oklch(82% 0.009 95)",
+          "oklch(90% 0.008 95)",
+          "oklch(95% 0.006 95)"
+        ]
+      },
+      "bone-dim": {
+        "role": "neutral",
+        "displayName": "Dim Bone",
+        "canonical": "oklch(79% 0.018 235)",
+        "tonalRamp": [
+          "oklch(15% 0.008 235)",
+          "oklch(28% 0.016 235)",
+          "oklch(40% 0.021 235)",
+          "oklch(55% 0.023 235)",
+          "oklch(70% 0.021 235)",
+          "oklch(82% 0.016 235)",
+          "oklch(90% 0.01 235)",
+          "oklch(95% 0.005 235)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(242, 240, 235, 0.16)",
+        "tonalRamp": [
+          "oklch(15% 0.004 95)",
+          "oklch(28% 0.008 95)",
+          "oklch(40% 0.01 95)",
+          "oklch(55% 0.011 95)",
+          "oklch(70% 0.01 95)",
+          "oklch(82% 0.009 95)",
+          "oklch(90% 0.008 95)",
+          "oklch(95% 0.006 95)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong",
+        "canonical": "rgba(242, 240, 235, 0.28)",
+        "tonalRamp": [
+          "oklch(15% 0.005 95)",
+          "oklch(28% 0.009 95)",
+          "oklch(40% 0.011 95)",
+          "oklch(55% 0.012 95)",
+          "oklch(70% 0.011 95)",
+          "oklch(82% 0.01 95)",
+          "oklch(90% 0.008 95)",
+          "oklch(95% 0.006 95)"
+        ]
+      },
+      "amber": {
+        "role": "primary",
+        "displayName": "Amber",
+        "canonical": "oklch(93% 0.17 92)",
+        "tonalRamp": [
+          "oklch(15% 0.04 92)",
+          "oklch(28% 0.11 92)",
+          "oklch(40% 0.18 92)",
+          "oklch(55% 0.22 92)",
+          "oklch(70% 0.19 92)",
+          "oklch(82% 0.13 92)",
+          "oklch(90% 0.07 92)",
+          "oklch(95% 0.02 92)"
+        ]
+      },
+      "amber-ink": {
+        "role": "neutral",
+        "displayName": "Amber Ink",
+        "canonical": "oklch(21% 0.026 245)",
+        "tonalRamp": [
+          "oklch(15% 0.012 245)",
+          "oklch(28% 0.026 245)",
+          "oklch(40% 0.032 245)",
+          "oklch(55% 0.03 245)",
+          "oklch(70% 0.024 245)",
+          "oklch(82% 0.016 245)",
+          "oklch(90% 0.009 245)",
+          "oklch(95% 0.005 245)"
+        ]
+      },
+      "scrollbar-thumb": {
+        "role": "neutral",
+        "displayName": "Scrollbar Slate",
+        "canonical": "oklch(36% 0.04 232)",
+        "tonalRamp": [
+          "oklch(15% 0.015 232)",
+          "oklch(28% 0.032 232)",
+          "oklch(40% 0.042 232)",
+          "oklch(55% 0.04 232)",
+          "oklch(70% 0.032 232)",
+          "oklch(82% 0.022 232)",
+          "oklch(90% 0.012 232)",
+          "oklch(95% 0.006 232)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headlines."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Row and panel headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base reading text and descriptions."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Mono status, tags, and data labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "action-rest",
+        "value": "0 16px 36px -14px rgba(0, 0, 0, 0.65)",
+        "purpose": "Primary button at rest; the only resting shadow in the system."
+      },
+      {
+        "name": "action-hover",
+        "value": "0 20px 44px -14px rgba(0, 0, 0, 0.65)",
+        "purpose": "Primary button on hover."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-state",
+        "value": "transform 180ms cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 180ms ease, background-color 180ms ease, border-color 180ms ease, color 180ms ease",
+        "purpose": "Default easing for button state transitions."
+      },
+      {
+        "name": "hero-parallax",
+        "value": "lerp 0.12, exponential ease-out, translateY -0.08 factor",
+        "purpose": "Single authored moment: damped hero image drift on scroll, killed under reduced motion."
+      },
+      {
+        "name": "hover-lift",
+        "value": "translateY(-2px)",
+        "purpose": "Only hover displacement in the system, on buttons and format chips."
+      },
+      {
+        "name": "nav-state",
+        "value": "background-color 220ms ease, border-color 220ms ease",
+        "purpose": "Nav scrolled state transition."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "lg",
+        "value": "1020px"
+      },
+      {
+        "name": "md",
+        "value": "860px"
+      },
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "xs",
+        "value": "460px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The largest control on the page; amber fill with slate ink, used for Download.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\"><svg viewBox=\"0 0 20 20\" width=\"17\" height=\"17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M10 3v10M6 9.5l4 4 4-4M4 16.5h12\"/></svg>Download beta</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 58px; padding: 18px 30px; font: 700 17px/1 Archivo, system-ui, sans-serif; background: #ffe14d; color: #101820; border: 1px solid transparent; border-radius: 14px; text-decoration: none; box-shadow: 0 16px 36px -14px rgba(0,0,0,0.65); transition: transform 180ms cubic-bezier(0.2,0.7,0.2,1), box-shadow 180ms ease, background-color 180ms ease; } .ds-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 20px 44px -14px rgba(0,0,0,0.65); } .ds-btn-primary:focus-visible { outline: 2px solid #ffe14d; outline-offset: 3px; border-radius: 4px; } .ds-btn-primary:active { transform: translateY(0) scale(0.98); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary translucent control with a hairline border; shifts to amber on hover.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">See features</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 14px 22px; font: 700 15px/1 Archivo, system-ui, sans-serif; background: rgba(16,24,32,0.35); color: #f2f0eb; border: 1px solid rgba(242,240,235,0.28); border-radius: 14px; text-decoration: none; transition: transform 180ms cubic-bezier(0.2,0.7,0.2,1), border-color 180ms ease, color 180ms ease, background-color 180ms ease; } .ds-btn-ghost:hover { transform: translateY(-2px); border-color: #ffe14d; color: #ffe14d; } .ds-btn-ghost:focus-visible { outline: 2px solid #ffe14d; outline-offset: 3px; border-radius: 4px; } .ds-btn-ghost:active { transform: translateY(0) scale(0.98); }"
+    },
+    {
+      "name": "Format Chip",
+      "kind": "chip",
+      "refersTo": "chip-format",
+      "description": "Static mono label for a file format in a strict grid; lifts and turns amber on hover.",
+      "html": "<span class=\"ds-fmt-chip\" tabindex=\"0\">.png</span>",
+      "css": ".ds-fmt-chip { display: block; padding: 14px 10px; text-align: center; font: 500 14px/1.4 \"JetBrains Mono\", ui-monospace, monospace; font-variant-numeric: tabular-nums; color: #f2f0eb; background: rgba(16,24,32,0.35); border: 1px solid rgba(242,240,235,0.16); border-radius: 10px; transition: border-color 160ms ease, color 160ms ease, transform 160ms ease; } .ds-fmt-chip:hover { border-color: #ffe14d; color: #ffe14d; transform: translateY(-2px); } .ds-fmt-chip:focus-visible { outline: 2px solid #ffe14d; outline-offset: 3px; border-radius: 4px; }"
+    },
+    {
+      "name": "Feature Box",
+      "kind": "custom",
+      "description": "Compact slate panel with a bordered amber icon square, title over description, four-across grid.",
+      "html": "<article class=\"ds-feat\" tabindex=\"0\"><span class=\"ds-feat-icon\"><svg viewBox=\"0 0 22 22\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 17 17 4M17 4h-5M17 4v5M4 5v14h14\"/></svg></span><div class=\"ds-feat-body\"><h3>Feature title</h3><p>Short supporting description for a feature box.</p></div></article>",
+      "css": ".ds-feat { display: flex; flex-direction: column; gap: 14px; padding: 24px; background: #16212b; border: 1px solid rgba(242,240,235,0.16); border-radius: 18px; transition: transform 200ms cubic-bezier(.2,.7,.2,1), border-color 200ms ease; } .ds-feat:hover { transform: translateY(-3px); border-color: rgba(255,225,77,0.35); } .ds-feat:focus-visible { outline: 2px solid #ffe14d; outline-offset: 3px; border-radius: 4px; } .ds-feat-icon { display: grid; place-items: center; width: 48px; height: 48px; color: #ffe14d; background: rgba(255,225,77,0.06); border: 1px solid rgba(242,240,235,0.16); border-radius: 14px; } .ds-feat-body h3 { font: 700 17px/1.3 Archivo, system-ui, sans-serif; letter-spacing: -0.01em; color: #f2f0eb; margin-bottom: 6px; } .ds-feat-body p { font: 400 14px/1.5 Archivo, system-ui, sans-serif; color: #b9c2cc; }"
+    },
+    {
+      "name": "Plugin Row",
+      "kind": "custom",
+      "description": "Static panel list item with an amber square mark, mono filename, and dim description.",
+      "html": "<ul class=\"ds-plugin-list\"><li tabindex=\"0\"><span class=\"ds-pm-dot\" aria-hidden=\"true\"></span><span class=\"ds-pm-info\"><b>example.dll</b><small>Example plugin description</small></span></li></ul>",
+      "css": ".ds-plugin-list { list-style: none; display: flex; flex-direction: column; gap: 10px; } .ds-plugin-list li { display: flex; align-items: center; gap: 12px; padding: 13px 14px; background: rgba(242,240,235,0.03); border: 1px solid rgba(242,240,235,0.16); border-radius: 12px; transition: background-color 180ms ease, border-color 180ms ease; } .ds-plugin-list li:hover { background: rgba(242,240,235,0.06); border-color: rgba(242,240,235,0.28); } .ds-plugin-list li:focus-visible { outline: 2px solid #ffe14d; outline-offset: 3px; border-radius: 4px; } .ds-pm-dot { width: 9px; height: 9px; border-radius: 3px; background: #ffe14d; flex: none; } .ds-pm-info b { display: block; font: 600 13px/1.3 \"JetBrains Mono\", ui-monospace, monospace; color: #f2f0eb; } .ds-pm-info small { font: 400 12.5px/1.4 Archivo, system-ui, sans-serif; color: #b9c2cc; }"
+    },
+    {
+      "name": "Checklist Item",
+      "kind": "custom",
+      "description": "Static release checklist row with an amber circle check, bold text, and dim support text.",
+      "html": "<ol class=\"ds-checklist\"><li tabindex=\"0\"><span class=\"ds-check\"><svg viewBox=\"0 0 14 14\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m2.5 7.5 3 3 6-6\"/></svg></span><span><b>Checklist item</b><small>Supporting detail</small></span></li></ol>",
+      "css": ".ds-checklist { list-style: none; display: flex; flex-direction: column; gap: 10px; } .ds-checklist li { display: flex; gap: 14px; align-items: flex-start; padding: 16px; border: 1px solid rgba(242,240,235,0.16); border-radius: 14px; background: rgba(242,240,235,0.03); transition: background-color 180ms ease, border-color 180ms ease; } .ds-checklist li:hover { background: rgba(242,240,235,0.06); border-color: rgba(242,240,235,0.28); } .ds-checklist li:focus-visible { outline: 2px solid #ffe14d; outline-offset: 3px; border-radius: 4px; } .ds-check { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #ffe14d; color: #101820; flex: none; margin-top: 1px; } .ds-checklist b { display: block; font: 700 15px/1.3 Archivo, system-ui, sans-serif; color: #f2f0eb; } .ds-checklist small { font: 400 13px/1.4 Archivo, system-ui, sans-serif; color: #b9c2cc; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Fixed glass taskbar, 64px tall, with brand, section links, and a ghost action.",
+      "html": "<header class=\"ds-nav\"><div class=\"ds-nav-inner\"><a class=\"ds-brand\" href=\"#\"><span class=\"ds-brand-name\">PicPic</span></a><nav class=\"ds-nav-links\" aria-label=\"Sections\"><a href=\"#\">Features</a><a href=\"#\">Formats</a><a href=\"#\" class=\"ds-active\">Plugins</a><a href=\"#\">Release</a></nav></div></header>",
+      "css": ".ds-nav { display: block; background: rgba(16,24,32,0.55); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid transparent; } .ds-nav-inner { height: 64px; display: flex; align-items: center; gap: 28px; padding-inline: 24px; } .ds-brand { text-decoration: none; } .ds-brand-name { font: 800 20px/1 Archivo, system-ui, sans-serif; letter-spacing: -0.01em; color: #f2f0eb; } .ds-nav-links { display: flex; gap: 4px; margin-left: auto; } .ds-nav-links a { padding: 8px 13px; border-radius: 9px; color: #b9c2cc; font: 600 14px/1 Archivo, system-ui, sans-serif; text-decoration: none; transition: color 160ms ease, background-color 160ms ease; } .ds-nav-links a:hover { color: #f2f0eb; background: rgba(242,240,235,0.07); } .ds-nav-links a:focus-visible { outline: 2px solid #ffe14d; outline-offset: 3px; border-radius: 4px; } .ds-nav-links a.ds-active { color: #ffe14d; }"
+    },
+    {
+      "name": "Status Strip",
+      "kind": "custom",
+      "description": "Uppercase mono status line with an amber dot, bold values, and dimmed separators.",
+      "html": "<p class=\"ds-status\" tabindex=\"0\"><span class=\"ds-status-dot\" aria-hidden=\"true\"></span><b>Windows</b><span class=\"ds-x\">/</span>.NET 8<span class=\"ds-x\">/</span>19 formats</p>",
+      "css": ".ds-status { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font: 500 12px/1.4 \"JetBrains Mono\", ui-monospace, monospace; font-variant-numeric: tabular-nums; text-transform: uppercase; letter-spacing: 0.12em; color: #b9c2cc; } .ds-status:hover { color: #f2f0eb; } .ds-status:focus-visible { outline: 2px solid #ffe14d; outline-offset: 3px; border-radius: 4px; } .ds-status b { color: #f2f0eb; font-weight: 700; } .ds-status-dot { width: 7px; height: 7px; border-radius: 50%; background: #ffe14d; flex: none; } .ds-x { opacity: 0.7; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Desktop Wallpaper Ritual",
+    "overview": "The image is the desktop. The page refuses the SaaS hero-plus-card template and instead puts a wallpaper photograph as the ground, with chrome floating above it. The first viewport is full-bleed image with object-fit cover, bottom-anchored copy left-aligned, and a floating taskbar nav on top; deep slate is only where image is not.\n\nA visitor who opens images daily recognizes the desktop instantly, reads the offer in one line, and can download without hunting past the four feature boxes. Translucent glass chrome, bone type, and one amber action keep the interface achromatic; the image carries most color. Formats and plugins read as named rows, not tiles. Below the fold the structure stays static — four feature boxes, format groups, plugin links, and a release block — with no live viewer and no drag-drop. Motion is a single authored moment: damped hero parallax, and nothing else staggers in.",
+    "keyCharacteristics": [
+      "Wallpaper photograph as the ground; slate only where image is not",
+      "Floating translucent taskbar chrome over a bottom-anchored hero",
+      "Bone type on deep slate; one amber action",
+      "Image carries color; interface stays achromatic except Download",
+      "Four compact feature boxes; formats and plugins as named rows",
+      "One damped parallax moment; no entrance staggers, no glow"
+    ],
+    "rules": [
+      {
+        "name": "The One Amber Rule",
+        "body": "Amber appears only on the primary action and its supporting accents (hover, focus, active, status, icon stroke). Everything else is slate, bone, or hairline.",
+        "section": "colors"
+      },
+      {
+        "name": "The Image Carries Color Rule",
+        "body": "The interface adds no color of its own beyond amber; photography is the color source. If a surface is not image, it is achromatic.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono-For-Data-Only Rule",
+        "body": "JetBrains Mono is used only for data, status, tags, and format names — never for prose, headings, or buttons.",
+        "section": "typography"
+      },
+      {
+        "name": "The Action-Only Shadow Rule",
+        "body": "Shadows appear only on the primary action and never as ambient glow. Everything else stays flat and is grouped by hairlines and tone.",
+        "section": "elevation"
+      },
+      {
+        "name": "The One Largest Action Rule",
+        "body": "Download is the largest control on the page — 58px primary against 48px ghost and 38px small — and nothing else competes with it in size or color.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do use Download as the largest control (58px primary, amber fill) against smaller ghost (48px) and small (38px) controls.",
+      "Do keep the image as the ground (object-fit cover, 100svh hero) with the scrim gradient carrying legibility over photography.",
+      "Do keep mono for data only — JetBrains Mono for status, tags, counts, and format names, never for prose or headings.",
+      "Do keep the interface achromatic except Download: slate, bone, and hairlines everywhere, amber only on the action and its accents."
+    ],
+    "donts": [
+      "Don't use eyebrows or kickers above headlines; headlines stand on their own at 800 weight.",
+      "Don't use gradient text; the single amber accent word and the scrim gradient are the only gradients in the system.",
+      "Don't add more than the four owner-directed feature boxes; they stay compact slate panels with hairline borders, not a card wall.",
+      "Don't use section numbers; numbered discipline belongs to format groups and data, not to headlines.",
+      "Don't use paper, glow, or neon; no halos, no ambient shadow, no chromatic chrome — image carries all other color.",
+      "Don't add new commercial claims to the visual system; the world describes presentation only, with no benchmarks, testimonials, or counts."
+    ]
+  }
+}
