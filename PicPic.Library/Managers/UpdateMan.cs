@@ -63,11 +63,19 @@ namespace PicPic.Library
 
 					if (result == DialogResult.Yes)
 					{
-						Process.Start(new ProcessStartInfo
+						try
 						{
-							UseShellExecute = true,
-							FileName = UpdateChecker.LatestRelease.HtmlUrl
-						});
+							Process.Start(new ProcessStartInfo
+							{
+								UseShellExecute = true,
+								FileName = UpdateChecker.LatestRelease.HtmlUrl
+							});
+						}
+						catch (Exception ex)
+						{
+							// The user clicked Download, so report even on the silent startup path.
+							OnUpdateFailed(new UpdateFailedEventArgs { Exception = ex });
+						}
 					}
 					else if (result == DialogResult.No)
 					{

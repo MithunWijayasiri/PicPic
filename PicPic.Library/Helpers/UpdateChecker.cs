@@ -34,7 +34,11 @@ namespace PicPic.Library
 
 			foreach (Release release in releases)
 			{
-				Version version = Version.Parse(release.TagName.Substring(1));
+				Version version = ParseReleaseVersion(release.TagName);
+				if (version == null)
+				{
+					continue;
+				}
 				if (version > _currentVersion)
 				{
 					LatestRelease = release;
@@ -42,6 +46,11 @@ namespace PicPic.Library
 				}
 			}
 			return null;
+		}
+
+		internal static Version ParseReleaseVersion(string tagName)
+		{
+			return Version.TryParse(tagName.TrimStart('v', 'V'), out Version version) ? version : null;
 		}
 
 		internal static async Task<string> RenderReleaseNotes()
