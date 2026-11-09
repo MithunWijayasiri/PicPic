@@ -293,8 +293,8 @@
     <value>Ne pas enregistrer</value>
     <comment>Main window</comment>
   </data>
-  <data name="downloading-update" xml:space="preserve">
-    <value>Téléchargement de la mise à jour...</value>
+  <data name="download" xml:space="preserve">
+    <value>Download</value>
     <comment>Update manager</comment>
   </data>
   <data name="dragged-image" xml:space="preserve">
@@ -452,10 +452,6 @@
   <data name="input" xml:space="preserve">
     <value>Souris et clavier</value>
     <comment>Settings</comment>
-  </data>
-  <data name="install-now" xml:space="preserve">
-    <value>Installer maintenant</value>
-    <comment>Update manager</comment>
   </data>
   <data name="landscape" xml:space="preserve">
     <value>Paysage</value>
@@ -701,10 +697,6 @@
     <value>Taille d'impression</value>
     <comment>Image info</comment>
   </data>
-  <data name="ready-to-install" xml:space="preserve">
-    <value>Prêt à être installé</value>
-    <comment>Update manager</comment>
-  </data>
   <data name="reload-file" xml:space="preserve">
     <value>Recharger le fichier</value>
     <comment>Menu</comment>
@@ -932,10 +924,6 @@
   <data name="updates" xml:space="preserve">
     <value>Mises à jour</value>
     <comment>About</comment>
-  </data>
-  <data name="updating-picpic" xml:space="preserve">
-    <value>Mise à jour de PicPic</value>
-    <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">
     <value>Utiliser les paramètres ystème</value>

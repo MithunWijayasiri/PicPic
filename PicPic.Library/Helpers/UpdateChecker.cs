@@ -1,5 +1,6 @@
 ﻿using Octokit;
 using System;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace PicPic.Library
@@ -7,59 +8,37 @@ namespace PicPic.Library
 	internal static class UpdateChecker
 	{
 		private static IReleasesClient _releaseClient;
-		internal static GitHubClient Github;
+		private static GitHubClient _github;
+		private static string _repositoryOwner;
+		private static string _repositoryName;
+		private static Version _currentVersion;
 
 		internal static string CurrentVersion;
-		internal static string RepositoryOwner;
-		internal static string RepostoryName;
 		internal static Release LatestRelease;
 
 		internal static void Init(string owner, string repo)
 		{
-			string version = System.Windows.Forms.Application.ProductVersion;
+			_currentVersion = Assembly.GetEntryAssembly().GetName().Version;
+			CurrentVersion = _currentVersion.ToString(3);
 
-			Github = new GitHubClient(new ProductHeaderValue(repo + @"-UpdateCheck"));
-			_releaseClient = Github.Repository.Release;
+			_github = new GitHubClient(new ProductHeaderValue(repo + @"-UpdateCheck"));
+			_releaseClient = _github.Repository.Release;
 
-			RepositoryOwner = owner;
-			RepostoryName = repo;
-			CurrentVersion = version;
+			_repositoryOwner = owner;
+			_repositoryName = repo;
 		}
 
 		internal static async Task<string> CheckUpdate()
 		{
-			var releases = await _releaseClient.GetAll(RepositoryOwner, RepostoryName);
-			LatestRelease = releases[0];
+			var releases = await _releaseClient.GetAll(_repositoryOwner, _repositoryName);
 
-			string[] curDots = CurrentVersion.Split('.');
-			int curMajor = Convert.ToInt32(curDots[0]);
-			int curMinor = Convert.ToInt32(curDots[1]);
-			int curPatch = Convert.ToInt32(curDots[2]);
-
-			for (int i = 0; i < releases.Count; i++)
+			foreach (Release release in releases)
 			{
-				string[] dots = releases[i].TagName.Substring(1, releases[i].TagName.Length - 1).Split('.');
-				int major = Convert.ToInt32(dots[0]);
-				int minor = Convert.ToInt32(dots[1]);
-				int patch = Convert.ToInt32(dots[2]);
-
-				if (major > curMajor)
+				Version version = Version.Parse(release.TagName.Substring(1));
+				if (version > _currentVersion)
 				{
-					return major + "." + minor + "." + patch;
-				}
-				else if (major == curMajor)
-				{
-					if (minor > curMinor)
-					{
-						return major + "." + minor + "." + patch;
-					}
-					else if (minor == curMinor)
-					{
-						if (patch > curPatch)
-						{
-							return major + "." + minor + "." + patch;
-						}
-					}
+					LatestRelease = release;
+					return version.ToString();
 				}
 			}
 			return null;
@@ -71,13 +50,7 @@ namespace PicPic.Library
 			{
 				throw new InvalidOperationException();
 			}
-			return await Github.Miscellaneous.RenderRawMarkdown(LatestRelease.Body);
-		}
-
-		internal static string GetAssetUrl(string assetname)
-		{
-			const string template = "https://github.com/{0}/{1}/releases/download/{2}/{3}";
-			return string.Format(template, RepositoryOwner, RepostoryName, LatestRelease.TagName, assetname);
+			return await _github.Miscellaneous.RenderRawMarkdown(LatestRelease.Body);
 		}
 	}
 }

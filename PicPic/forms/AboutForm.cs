@@ -73,10 +73,14 @@ namespace PicPic
 			descTextBox.Text = LangMan.Get("app-description");
 			makeDefaultBtn.Text = " " + LangMan.Get("set-as-default");
 			infoTooltip.SetToolTip(makeDefaultBtn, LangMan.Get("set-as-default-image-viewer"));
-			// TODO: enable updateBtn and wire it to UpdateMan once the first PicPic release exists.
 			updateBtn.Text = " " + LangMan.Get("updates");
 			infoTooltip.SetToolTip(updateBtn, LangMan.Get("check-for-app-updates"));
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
+		}
+
+		private void updateBtn_Click(object sender, EventArgs e)
+		{
+			UpdateMan.CheckForUpdates(true, true, Handle);
 		}
 
 		private void makeDefaultBtn_Click(object sender, EventArgs e)

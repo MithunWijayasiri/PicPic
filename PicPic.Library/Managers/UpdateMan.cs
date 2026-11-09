@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace PicPic.Library
@@ -7,7 +8,6 @@ namespace PicPic.Library
 	{
 		private static string _githubOwner;
 		private static string _githubRepo;
-		private static string _exeName;
 		private static bool _darkMode;
 		private static string _skippedVersion;
 
@@ -17,33 +17,21 @@ namespace PicPic.Library
 		private static string _skipBtnText;
 		private static string _whatsNewBtnText;
 
-		private static string _updating;
-		private static string _downloading;
-		private static string _readyToInstall;
-		private static string _failed;
-
-		public static void Init(string githubOwner, string githubRepo, string exeName, bool darkMode, string skippedVersion)
+		public static void Init(string githubOwner, string githubRepo, bool darkMode, string skippedVersion)
 		{
 			_githubOwner = githubOwner;
 			_githubRepo = githubRepo;
-			_exeName = exeName;
 			_darkMode = darkMode;
 			_skippedVersion = skippedVersion;
 		}
 
-		public static void InitLang(string title, string message, string dwnldBtnText, string skipBtnText, string whatsNewBtnText,
-									string updating, string downloading, string readyToInstall, string failed)
+		public static void InitLang(string title, string message, string dwnldBtnText, string skipBtnText, string whatsNewBtnText)
 		{
 			_title = title;
 			_message = message;
 			_dwnldBtnText = dwnldBtnText;
 			_skipBtnText = skipBtnText;
 			_whatsNewBtnText = whatsNewBtnText;
-
-			_updating = updating;
-			_downloading = downloading;
-			_readyToInstall = readyToInstall;
-			_failed = failed;
 		}
 
 		public static async void CheckForUpdates(bool showUpToDateDialog, bool topMost, IntPtr owner)
@@ -71,23 +59,23 @@ namespace PicPic.Library
 					updateDialog.TopMost = topMost;
 
 					DialogResult result = updateDialog.ShowDialog(Form.FromHandle(owner));
+					updateDialog.Dispose();
+
 					if (result == DialogResult.Yes)
 					{
-						DownloadForm downloadBox = new DownloadForm(UpdateChecker.GetAssetUrl(_exeName), _darkMode, _updating, _downloading, _readyToInstall, _failed, _dwnldBtnText);
-						downloadBox.TopMost = topMost;
-						downloadBox.ShowDialog(Form.FromHandle(owner));
+						Process.Start(new ProcessStartInfo
+						{
+							UseShellExecute = true,
+							FileName = UpdateChecker.LatestRelease.HtmlUrl
+						});
 					}
-					if (result == DialogResult.No)
+					else if (result == DialogResult.No)
 					{
 						UpdateSkippedEventArgs usea = new UpdateSkippedEventArgs
 						{
 							SkippedVersion = update
 						};
 						OnUpdateSkipped(usea);
-					}
-					else
-					{
-						updateDialog.Dispose();
 					}
 				}
 			}

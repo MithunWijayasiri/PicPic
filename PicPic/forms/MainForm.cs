@@ -74,6 +74,7 @@ namespace PicPic
 
 			SetDarkMode(darkMode);
 			InitLanguage();
+			InitUpdateChecker();
 
 			toolStrip1.Visible = Properties.Settings.Default.ShowToolbar;
 			statusStrip1.Visible = Properties.Settings.Default.ShowStatusBar;
@@ -1790,6 +1791,36 @@ namespace PicPic
 			zoomInTimer.Stop();
 		}
 
+		private void InitUpdateChecker()
+		{
+			UpdateMan.Init("MithunWijayasiri", "PicPic", darkMode, Properties.Settings.Default.SkippedVersion);
+			UpdateMan.InitLang(
+				LangMan.Get("new-version-available"),
+				LangMan.Get("update-text"),
+				LangMan.Get("download"),
+				LangMan.Get("skip-this-version"),
+				LangMan.Get("whats-new"));
+			UpdateMan.IsUpToDate += UpdateMan_IsUpToDate;
+			UpdateMan.UpdateFailed += UpdateMan_UpdateFailed;
+			UpdateMan.UpdateSkipped += UpdateMan_UpdateSkipped;
+		}
+
+		private void UpdateMan_IsUpToDate(object sender, EventArgs e)
+		{
+			DialogMan.ShowInfo(Form.ActiveForm, LangMan.Get("app-is-up-to-date"), LangMan.Get("updates"), darkMode, true);
+		}
+
+		private void UpdateMan_UpdateFailed(object sender, UpdateFailedEventArgs e)
+		{
+			DialogMan.ShowInfo(Form.ActiveForm, LangMan.Get("update-failed") + ": " + e.Exception.Message, LangMan.Get("updates"), darkMode, true);
+		}
+
+		private void UpdateMan_UpdateSkipped(object sender, UpdateSkippedEventArgs e)
+		{
+			Properties.Settings.Default.SkippedVersion = e.SkippedVersion;
+			Properties.Settings.Default.Save();
+		}
+
 		private void MainForm_Shown(object sender, EventArgs e)
 		{
 			try
@@ -1799,6 +1830,11 @@ namespace PicPic
 			catch
 			{
 
+			}
+
+			if (Properties.Settings.Default.CheckForUpdates)
+			{
+				UpdateMan.CheckForUpdates(false, false, Handle);
 			}
 		}
 

@@ -94,7 +94,6 @@
 			updateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(184, 184, 220);
 			updateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(200, 200, 232);
 			updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			updateBtn.Enabled = false;
 			updateBtn.Image = Properties.Resources.black_sync;
 			updateBtn.Location = new System.Drawing.Point(150, 134);
 			updateBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -105,6 +104,7 @@
 			updateBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			updateBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			updateBtn.UseVisualStyleBackColor = false;
+			updateBtn.Click += updateBtn_Click;
 			// 
 			// githubBtn
 			// 

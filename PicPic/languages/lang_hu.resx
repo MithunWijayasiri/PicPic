@@ -293,8 +293,8 @@
     <value>Ne mentsen</value>
     <comment>Main window</comment>
   </data>
-  <data name="downloading-update" xml:space="preserve">
-    <value>Frissítés letöltése...</value>
+  <data name="download" xml:space="preserve">
+    <value>Download</value>
     <comment>Update manager</comment>
   </data>
   <data name="dragged-image" xml:space="preserve">
@@ -452,10 +452,6 @@
   <data name="input" xml:space="preserve">
     <value>Egér és billentyűzet</value>
     <comment>Settings</comment>
-  </data>
-  <data name="install-now" xml:space="preserve">
-    <value>Telepítés most</value>
-    <comment>Update manager</comment>
   </data>
   <data name="landscape" xml:space="preserve">
     <value>Fekvés</value>
@@ -701,10 +697,6 @@
     <value>Nyomtatási méret</value>
     <comment>Image info</comment>
   </data>
-  <data name="ready-to-install" xml:space="preserve">
-    <value>Telepítésre kész</value>
-    <comment>Update manager</comment>
-  </data>
   <data name="reload-file" xml:space="preserve">
     <value>Fájl újratöltése</value>
     <comment>Menu</comment>
@@ -932,10 +924,6 @@
   <data name="updates" xml:space="preserve">
     <value>Frissítések</value>
     <comment>About</comment>
-  </data>
-  <data name="updating-picpic" xml:space="preserve">
-    <value>PicPic Frissítése</value>
-    <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">
     <value>Rendszerbeállítás használata</value>
