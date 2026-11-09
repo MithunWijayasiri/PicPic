@@ -12,6 +12,9 @@ colors:
   line-strong: "rgba(242, 240, 235, 0.28)"
   amber: "#ffe14d"
   amber-ink: "#101820"
+  amber-on-light: "#7a6200"
+  paper: "#e6e2d4"
+  ink-dim: "#47525f"
   scrollbar-thumb: "#3a4a5a"
 typography:
   display:
@@ -101,12 +104,12 @@ components:
 
 The image is the desktop. The page refuses the SaaS hero-plus-card template and instead puts a wallpaper photograph as the ground, with chrome floating above it. The first viewport is full-bleed image with object-fit cover, bottom-anchored copy left-aligned, and a floating taskbar nav on top; deep slate is only where image is not.
 
-A visitor who opens images daily recognizes the desktop instantly, reads the offer in one line, and can download without hunting past the four feature boxes. Translucent glass chrome, bone type, and one amber action keep the interface achromatic; the image carries most color. Formats and plugins read as named rows, not tiles. Below the fold the structure stays static — four feature boxes, format groups, plugin links, and a release block — with no live viewer and no drag-drop. Motion is a single authored moment: damped hero parallax, and nothing else staggers in.
+A visitor who opens images daily recognizes the desktop instantly, reads the offer in one line, and can download without hunting past the four feature boxes. Translucent glass chrome, bone type, and one amber action keep the interface achromatic; the image carries most color. Below the hero every section sits on the same bone ground with slate ink; the dark blocks are the feature boxes, format chips, plugin panel, checklist items, ghost buttons, link-row icons, nav, footer, and the hero photo itself. Formats and plugins read as named rows, not tiles. Below the fold the structure stays static — four feature boxes, format groups, plugin links, and a release block — with no live viewer and no drag-drop. Motion is a single authored moment: damped hero parallax, and nothing else staggers in.
 
 **Key Characteristics:**
 - Wallpaper photograph as the ground; slate only where image is not
 - Floating translucent taskbar chrome over a bottom-anchored hero
-- Bone type on deep slate; one amber action
+- Bone type on deep slate and slate ink on bone light bands; one amber action
 - Image carries color; interface stays achromatic except Download
 - Four compact feature boxes; formats and plugins as named rows
 - One damped parallax moment; no entrance staggers, no glow
@@ -129,8 +132,11 @@ A near-monochrome slate-and-bone system with a single amber action, letting phot
 - **Hairline Strong** (rgba(242, 240, 235, 0.28)): Emphasized borders on ghost controls and tags.
 - **Scrollbar Slate** (#3a4a5a): Scrollbar thumb on Deep Slate.
 - **Amber Ink** (#101820): Text on amber fills; intentionally identical to Deep Slate.
+- **Bone Ground** (#e6e2d4): Uniform ground for all below-hero sections; headings and prose on it use Deep Slate (#101820) ink.
+- **Ink Dim** (#47525f): Secondary text on Bone Ground.
+- **Amber on Light** (#7a6200): The release-heading accent word, hover arrow, and release-note link, darkened from Amber (#ffe14d) for legibility on Bone Ground. All other amber accents sit on dark fills and stay Amber (#ffe14d).
 
-Bone and Dim Bone on Deep Slate meet at least 4.5:1 for body text and 3:1 for large text.
+Bone and Dim Bone on Deep Slate meet at least 4.5:1 for body text and 3:1 for large text. On Bone Ground, Deep Slate ink and Ink Dim meet 4.5:1, and Amber on Light meets 3:1 for icon strokes and hover accents.
 
 ### Named Rules
 **The One Amber Rule.** Amber appears only on the primary action and its supporting accents (hover, focus, active, status, icon stroke). Everything else is slate, bone, or hairline.
@@ -156,7 +162,7 @@ Bone and Dim Bone on Deep Slate meet at least 4.5:1 for body text and 3:1 for la
 
 ## Layout
 
-A single 1120px wrap with 24px inline padding, sections inset 24px inline with the wrap padding zeroed inside them (96px vertical rhythm, 72px at 640px and below), and hairline top borders between sections. The hero is 100svh, full-bleed, flex-end anchored with 64px bottom padding, copy capped by the headline and 60ch sub measures. Alternating sections shift tonally to Raised Slate. Content density is airy: 48px section-head blocks, 40px gaps between format groups, 56px two-column gaps for plugins and release that collapse to one column at 1020px. Nav links hide and a menu button appears at 860px; hero buttons go full-width at 640px, and feature boxes step four-across, two at 1020px, and one at 640px; the format grid steps down at 640px and 460px. Breakpoints are 1020px, 860px, 640px, and 460px. Motion lives here as spatial behavior: the hero image drifts with damped parallax on scroll (0.12 lerp follow, exponential ease-out settle, -0.08 translateY factor, killed under reduced motion), and hover lifts are limited to translateY(-2px). No section entrance staggers exist.
+A single 1120px wrap with 24px inline padding, sections inset 24px inline with the wrap padding zeroed inside them (96px vertical rhythm, 72px at 640px and below), and hairline top borders between sections. The hero is 100svh, full-bleed, flex-end anchored with 64px bottom padding, copy capped by the headline and 60ch sub measures. Every below-hero section shares the same Bone Ground; grouping comes from the dark Raised Slate blocks (feature boxes, plugin panel, checklist items) and Deep Slate chips and buttons inset into it, with the footer in Footer Slate closing the page. Content density is airy: 48px section-head blocks, 40px gaps between format groups, 56px two-column gaps for plugins and release that collapse to one column at 1020px. Nav links hide and a menu button appears at 860px; hero buttons go full-width at 640px, and feature boxes step four-across, two at 1020px, and one at 640px; the format grid steps down at 640px and 460px. Breakpoints are 1020px, 860px, 640px, and 460px. Motion lives here as spatial behavior: the hero image drifts with damped parallax on scroll (0.12 lerp follow, exponential ease-out settle, -0.08 translateY factor, killed under reduced motion), and hover lifts are limited to translateY(-2px). No section entrance staggers exist.
 
 ## Elevation & Depth
 
@@ -187,7 +193,7 @@ Soft, utilitarian corners with no hard edge anywhere: 14px on buttons, feature i
 
 ### Cards / Containers
 - **Corner Style:** 18px on the plugin panel and feature boxes; 14px on checklist rows; 12px on plugin list rows.
-- **Background:** Raised Slate (#16212b) on the plugin panel and feature boxes; rgba(242, 240, 235, 0.03) on checklist and plugin rows.
+- **Background:** Raised Slate (#16212b) on the plugin panel, feature boxes, and checklist items (dark blocks on the bone ground); rgba(242, 240, 235, 0.03) on plugin rows inside the dark panel.
 - **Shadow Strategy:** None. Grouping is carried by 1px hairline borders, not elevation (see Elevation & Depth).
 - **Border:** 1px hairline on every container.
 - **Internal Padding:** 26px on the plugin panel (20px at 460px and below); 24px on feature boxes; 16px on checklist rows; 13px 14px on plugin list rows.
@@ -196,7 +202,7 @@ Soft, utilitarian corners with no hard edge anywhere: 14px on buttons, feature i
 Fixed glass taskbar, 64px tall, translucent slate (rgba(16, 24, 32, 0.55)) with 14px backdrop blur, deepening to rgba(16, 24, 32, 0.88) with a hairline bottom border once scrolled. Brand mark with 800 20px name; bone-dim 14px 600 links with 9px radius, bone text with a faint bone wash on hover, amber when active. The mobile menu drops below the bar as a translucent column with hairline-separated links and an amber final link.
 
 ### Feature Boxes
-Compact slate panels (24px padding, 18px radius, 1px hairline) in a four-across grid (two at 1020px, one at 640px): a 48px bordered icon square with amber stroke and faint amber wash on top, a 700 17px title over a 14px dim description. Hover lifts translateY(-3px) with an amber-tinted border. The four owner-directed boxes are Basic editing, Slideshow, Print &amp; PDF, and Image details; no thumbnails.
+Compact dark panels (Raised Slate, 24px padding, 18px radius, 1px hairline) inset into the bone ground in a four-across grid (two at 1020px, one at 640px): a 48px bordered icon square with amber stroke and faint amber wash on top, a 700 17px title over a 14px dim description. Hover lifts translateY(-3px) with an amber-tinted border. The four owner-directed boxes are Basic editing, Slideshow, Print &amp; PDF, and Image details; no thumbnails.
 
 ### Plugin Rows
 Static list items (13px 14px padding, 12px radius, 1px hairline) with a 9px amber square mark at 3px radius, a 600 13px mono filename, and a 12.5px dim description. Link rows above them pair a 44px bordered icon square with bold 15.5px text, 13.5px dim support text, and a dim arrow that turns amber on hover while the row shifts translateX(4px).

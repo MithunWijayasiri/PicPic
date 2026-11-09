@@ -287,7 +287,43 @@ h1 {
 /* Sections */
 .section { padding: 96px 24px; scroll-margin-top: calc(var(--nav-h) + 16px); border-top: 1px solid var(--line); }
 .section > .wrap { padding-inline: 0; }
-.section-alt { background: var(--slate-2); }
+.section-light {
+  background: #e6e2d4;
+  color: #101820;
+  --bone: #101820;
+  --bone-dim: #47525f;
+  --line: rgba(16, 24, 32, .14);
+  --line-strong: rgba(16, 24, 32, .28);
+}
+.section-light .feat,
+.section-light .plugin-panel,
+.section-light .checklist li {
+  color: #f2f0eb;
+  --bone: #f2f0eb;
+  --bone-dim: #b9c2cc;
+  --line: rgba(242, 240, 235, .16);
+  --line-strong: rgba(242, 240, 235, .28);
+}
+.section-light .checklist li { background: var(--slate-2); }
+.section-light .fmt-chip {
+  background: #101820;
+  color: #f2f0eb;
+  border-color: #101820;
+}
+.section-light .link-row-icon {
+  background: #101820;
+  color: #ffe14d;
+  border-color: #101820;
+}
+.section-light .btn-ghost {
+  background: #101820;
+  color: #f2f0eb;
+  border-color: #101820;
+}
+.section-light .btn-ghost:hover { border-color: #ffe14d; color: #ffe14d; }
+.section-light .accent { color: #7a6200; }
+.section-light .beta-note a { color: #7a6200; }
+.section-light .link-row:hover .link-row-arrow { color: #7a6200; }
 .section-head { max-width: 640px; margin-bottom: 48px; }
 h2 {
   font-weight: 800;
