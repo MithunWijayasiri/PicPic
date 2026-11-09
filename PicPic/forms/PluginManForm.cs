@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 using PicPic.Library;
-using System.IO.Compression;
 using System.IO;
 using System.Diagnostics;
 
@@ -147,9 +146,7 @@ namespace PicPic
 				return;
 			}
 
-			string pluginFolder = Path.Combine(pluginMan.pluginsFolder, pi.name);
-			string manifestPath = pluginFolder + ".json";
-			bool exists = File.Exists(manifestPath) || Directory.Exists(pluginFolder);
+			bool exists = installer.IsInstalled(pi.name);
 
 			DialogResult window = DialogMan.ShowConfirm(
 				this,
@@ -163,9 +160,7 @@ namespace PicPic
 
 			try
 			{
-				if (Directory.Exists(pluginFolder)) Directory.Delete(pluginFolder, true);
-				if (File.Exists(manifestPath)) File.Delete(manifestPath);
-				ZipFile.ExtractToDirectory(pathToZip, pluginMan.pluginsFolder);
+				installer.Install(pathToZip, pi);
 			}
 			catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException)
 			{
@@ -195,27 +190,28 @@ namespace PicPic
 
 			if (window == DialogResult.Yes)
 			{
-				listView1.Items[numberInList].Remove();
-
 				PluginMan pluginMan = PluginMan.CreateDefault();
-				string pluginFolder = Path.Combine(pluginMan.pluginsFolder, codenames[numberInList]);
-				string manifestPath = pluginFolder + ".json";
-				if (File.Exists(manifestPath))
+				PluginInstaller.UninstallResult result;
+				try
 				{
-					bool manifestMoved = FileMan.MoveFileOrFolderToRecycleBin(manifestPath);
-					bool folderMoved = !Directory.Exists(pluginFolder) || FileMan.MoveFileOrFolderToRecycleBin(pluginFolder);
-					if (!manifestMoved || !folderMoved)
-					{
-						DialogMan.ShowInfo(
-							this,
-							LangMan.Get("plugin-delete-failed"),
-							LangMan.Get("error"),
-							DarkMode,
-							TopMost
-						);
-					}
+					result = new PluginInstaller(pluginMan).Uninstall(codenames[numberInList]);
 				}
-				else
+				catch (InvalidDataException ex)
+				{
+					ShowError(LangMan.Get("plugin-delete-failed") + "\n\n" + ex.Message);
+					return;
+				}
+				if (result == PluginInstaller.UninstallResult.Failed)
+				{
+					DialogMan.ShowInfo(
+						this,
+						LangMan.Get("plugin-delete-failed"),
+						LangMan.Get("error"),
+						DarkMode,
+						TopMost
+					);
+				}
+				else if (result == PluginInstaller.UninstallResult.NotFound)
 				{
 					DialogMan.ShowInfo(
 						this,

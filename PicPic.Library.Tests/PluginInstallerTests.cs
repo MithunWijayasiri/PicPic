@@ -257,5 +257,185 @@ namespace PicPic.Library.Tests
 				Assert.Equal(expected, new PluginInstaller(folder.CreatePluginMan()).IsCompatible(pi));
 			}
 		}
+
+		[Fact]
+		public void Install_ValidZip_ExtractsManifestAndDll()
+		{
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			{
+				PluginInstaller installer = new PluginInstaller(folder.CreatePluginMan());
+				string zipPath = ZipWith(folder,
+					Entry("my-plugin.json", Manifest()),
+					Entry(DllEntry, "MZ"));
+				PluginInfo pi = installer.ReadManifest(zipPath);
+
+				installer.Install(zipPath, pi);
+
+				Assert.True(File.Exists(folder.PathOf("my-plugin.json")));
+				Assert.True(File.Exists(folder.PathOf("my-plugin", "my-plugin.dll")));
+			}
+		}
+
+		[Fact]
+		public void Install_ReplaceOld_RemovesStaleFiles()
+		{
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			{
+				Directory.CreateDirectory(folder.PathOf("my-plugin"));
+				File.WriteAllText(folder.PathOf("my-plugin", "stale.txt"), "old");
+				File.WriteAllText(folder.PathOf("my-plugin.json"), "old");
+
+				PluginInstaller installer = new PluginInstaller(folder.CreatePluginMan());
+				string zipPath = ZipWith(folder,
+					Entry("my-plugin.json", Manifest()),
+					Entry(DllEntry, "MZ"));
+				PluginInfo pi = installer.ReadManifest(zipPath);
+
+				installer.Install(zipPath, pi);
+
+				Assert.False(File.Exists(folder.PathOf("my-plugin", "stale.txt")));
+				Assert.True(File.Exists(folder.PathOf("my-plugin", "my-plugin.dll")));
+				Assert.Contains("my-plugin", File.ReadAllText(folder.PathOf("my-plugin.json")));
+			}
+		}
+
+		[Fact]
+		public void Install_NullPluginInfo_Throws()
+		{
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			{
+				PluginInstaller installer = new PluginInstaller(folder.CreatePluginMan());
+				string zipPath = ZipWith(folder,
+					Entry("my-plugin.json", Manifest()),
+					Entry(DllEntry, "MZ"));
+
+				InvalidDataException ex = Assert.Throws<InvalidDataException>(() => installer.Install(zipPath, null));
+				Assert.Equal("Manifest is null.", ex.Message);
+			}
+		}
+
+		[Fact]
+		public void IsInstalled_ChecksManifestAndFolder()
+		{
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			{
+				PluginInstaller installer = new PluginInstaller(folder.CreatePluginMan());
+
+				Assert.False(installer.IsInstalled("my-plugin"));
+
+				Directory.CreateDirectory(folder.PathOf("my-plugin"));
+				Assert.True(installer.IsInstalled("my-plugin"));
+			}
+		}
+
+		[Fact]
+		public void IsInstalled_ManifestOnly_True()
+		{
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			{
+				File.WriteAllText(folder.PathOf("my-plugin.json"), Manifest());
+
+				Assert.True(new PluginInstaller(folder.CreatePluginMan()).IsInstalled("my-plugin"));
+			}
+		}
+
+		[Fact]
+		public void Uninstall_ExistingManifest_RecyclesBoth()
+		{
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			{
+				Directory.CreateDirectory(folder.PathOf("my-plugin"));
+				File.WriteAllText(folder.PathOf("my-plugin.json"), Manifest());
+				List<string> moved = new List<string>();
+
+				PluginInstaller installer = new PluginInstaller(folder.CreatePluginMan(), path => { moved.Add(path); return true; });
+				PluginInstaller.UninstallResult result = installer.Uninstall("my-plugin");
+
+				Assert.Equal(PluginInstaller.UninstallResult.Success, result);
+				Assert.Equal(2, moved.Count);
+				Assert.Contains(folder.PathOf("my-plugin.json"), moved);
+				Assert.Contains(folder.PathOf("my-plugin"), moved);
+			}
+		}
+
+		[Fact]
+		public void Uninstall_MissingManifest_ReturnsNotFound()
+		{
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			{
+				int calls = 0;
+				PluginInstaller installer = new PluginInstaller(folder.CreatePluginMan(), _ => { calls++; return true; });
+
+				Assert.Equal(PluginInstaller.UninstallResult.NotFound, installer.Uninstall("my-plugin"));
+				Assert.Equal(0, calls);
+			}
+		}
+
+		[Fact]
+		public void Uninstall_MissingManifestWithFolder_ReturnsNotFoundAndLeavesFolder()
+		{
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			{
+				Directory.CreateDirectory(folder.PathOf("my-plugin"));
+				PluginInstaller installer = new PluginInstaller(folder.CreatePluginMan(), _ => true);
+
+				Assert.Equal(PluginInstaller.UninstallResult.NotFound, installer.Uninstall("my-plugin"));
+				Assert.True(Directory.Exists(folder.PathOf("my-plugin")));
+			}
+		}
+
+		[Fact]
+		public void Uninstall_RecycleBinFails_ReturnsFailed()
+		{
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			{
+				Directory.CreateDirectory(folder.PathOf("my-plugin"));
+				File.WriteAllText(folder.PathOf("my-plugin.json"), Manifest());
+				PluginInstaller installer = new PluginInstaller(folder.CreatePluginMan(), _ => false);
+
+				Assert.Equal(PluginInstaller.UninstallResult.Failed, installer.Uninstall("my-plugin"));
+			}
+		}
+
+		[Fact]
+		public void Uninstall_ManifestMoveFails_SkipsFolderMove()
+		{
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			{
+				Directory.CreateDirectory(folder.PathOf("my-plugin"));
+				File.WriteAllText(folder.PathOf("my-plugin.json"), Manifest());
+				List<string> moved = new List<string>();
+				PluginInstaller installer = new PluginInstaller(folder.CreatePluginMan(), path => { moved.Add(path); return false; });
+
+				Assert.Equal(PluginInstaller.UninstallResult.Failed, installer.Uninstall("my-plugin"));
+				Assert.Single(moved);
+				Assert.Equal(folder.PathOf("my-plugin.json"), moved[0]);
+			}
+		}
+
+		[Fact]
+		public void Uninstall_FolderMoveFails_ReturnsFailed()
+		{
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			{
+				Directory.CreateDirectory(folder.PathOf("my-plugin"));
+				File.WriteAllText(folder.PathOf("my-plugin.json"), Manifest());
+				PluginInstaller installer = new PluginInstaller(folder.CreatePluginMan(), path => path.EndsWith(".json"));
+
+				Assert.Equal(PluginInstaller.UninstallResult.Failed, installer.Uninstall("my-plugin"));
+			}
+		}
+
+		[Fact]
+		public void Uninstall_InvalidName_Throws()
+		{
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			{
+				PluginInstaller installer = new PluginInstaller(folder.CreatePluginMan(), _ => true);
+
+				InvalidDataException ex = Assert.Throws<InvalidDataException>(() => installer.Uninstall("a/b"));
+				Assert.Equal(InvalidName, ex.Message);
+			}
+		}
 	}
 }
