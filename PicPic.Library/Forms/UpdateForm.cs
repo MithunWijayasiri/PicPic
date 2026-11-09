@@ -50,10 +50,10 @@ namespace PicPic.Library
 			}
 
 			if (IsDisposed) return;
-			ReleaseNotes.DocumentText = BuildNotesPage(html, DarkMode);
+			ReleaseNotes.DocumentText = BuildNotesPage(html, UpdateChecker.LatestRelease.HtmlUrl, DarkMode);
 		}
 
-		internal static string BuildNotesPage(string bodyHtml, bool darkMode)
+		internal static string BuildNotesPage(string bodyHtml, string baseUrl, bool darkMode)
 		{
 			string bg = darkMode ? "#191919" : "#ffffff";
 			string text = darkMode ? "#e8e8e8" : "#242430";
@@ -64,7 +64,7 @@ namespace PicPic.Library
 			string codeBg = darkMode ? "#2c2c2c" : "#ececf8";
 			// IE-engine scrollbar ignores normal CSS; only these legacy properties theme it.
 			string scrollbar = darkMode ? "scrollbar-base-color:#202020;scrollbar-face-color:#383838;scrollbar-track-color:#191919;scrollbar-arrow-color:#a0a0a0;scrollbar-shadow-color:#383838;scrollbar-highlight-color:#383838;scrollbar-3dlight-color:#383838;scrollbar-darkshadow-color:#191919;" : "";
-			return "<html><head><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><style>" +
+			return "<html><head><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><base href=\"" + WebUtility.HtmlEncode(baseUrl) + "\"><style>" +
 				"body{background:" + bg + ";color:" + text + ";font-family:'Segoe UI',sans-serif;font-size:12px;line-height:1.5;margin:8px;" + scrollbar + "}" +
 				"h1,h2,h3{color:" + heading + ";font-size:14px;border-bottom:1px solid " + border + ";padding-bottom:4px;}" +
 				"a{color:" + link + ";}" +
@@ -78,10 +78,26 @@ namespace PicPic.Library
 
 		private void ReleaseNotes_Navigating(object sender, WebBrowserNavigatingEventArgs e)
 		{
-			if (e.Url.Scheme == Uri.UriSchemeHttp || e.Url.Scheme == Uri.UriSchemeHttps)
+			if (e.Url.Scheme != Uri.UriSchemeHttp && e.Url.Scheme != Uri.UriSchemeHttps)
 			{
-				e.Cancel = true;
+				return;
+			}
+			e.Cancel = true;
+
+			// Fragment links resolve against the base URL; GitHub anchors are prefixed with "user-content-".
+			if (e.Url.Fragment.Length > 0 && e.Url.GetLeftPart(UriPartial.Path) == UpdateChecker.LatestRelease.HtmlUrl)
+			{
+				ReleaseNotes.Document.GetElementById("user-content-" + e.Url.Fragment.TrimStart('#'))?.ScrollIntoView(true);
+				return;
+			}
+
+			try
+			{
 				Process.Start(new ProcessStartInfo { UseShellExecute = true, FileName = e.Url.ToString() });
+			}
+			catch (Exception ex)
+			{
+				UpdateMan.OnUpdateFailed(new UpdateFailedEventArgs { Exception = ex });
 			}
 		}
 
