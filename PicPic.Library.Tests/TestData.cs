@@ -8,17 +8,17 @@ namespace PicPic.Library.Tests
 {
 	internal sealed class TempPluginsFolder : IDisposable
 	{
-		private readonly string oldPluginsFolder = PluginMan.pluginsFolder;
-		private readonly string oldInputType = PluginMan.inputType;
-
 		public string Path { get; }
 
 		public TempPluginsFolder(bool create = true)
 		{
 			Path = System.IO.Path.Combine(System.IO.Path.GetTempPath(), Guid.NewGuid().ToString());
 			if (create) Directory.CreateDirectory(Path);
-			PluginMan.pluginsFolder = Path;
-			PluginMan.inputType = "bitmap";
+		}
+
+		public PluginMan CreatePluginMan(int apiVer = 4)
+		{
+			return new PluginMan(Path, "bitmap", apiVer);
 		}
 
 		public string PathOf(params string[] parts)
@@ -30,8 +30,6 @@ namespace PicPic.Library.Tests
 
 		public void Dispose()
 		{
-			PluginMan.pluginsFolder = oldPluginsFolder;
-			PluginMan.inputType = oldInputType;
 			if (Directory.Exists(Path)) Directory.Delete(Path, true);
 		}
 	}

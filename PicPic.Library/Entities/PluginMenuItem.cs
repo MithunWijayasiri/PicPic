@@ -13,21 +13,24 @@ namespace PicPic.Library
 		private PluginInfo.Function func;
 		private bool darkMode;
 		private string langCode;
+		private PluginMan pluginMan;
 
 		public PluginMenuItem(
 			PluginInfo pi,
 			PluginInfo.Function func,
 			string langCode,
-			bool darkMode
+			bool darkMode,
+			PluginMan pluginMan
 		)
 		{
 			this.pi = pi;
 			this.func = func;
 			this.darkMode = darkMode;
 			this.langCode = langCode;
+			this.pluginMan = pluginMan;
 
 			Text = func.title.Get(langCode);
-			dllPath = Path.Combine(PluginMan.pluginsFolder, pi.name, pi.name + ".dll");
+			dllPath = Path.Combine(pluginMan.pluginsFolder, pi.name, pi.name + ".dll");
 
 			if (func.hotkey.ctrl)
 			{
@@ -61,7 +64,7 @@ namespace PicPic.Library
 				Text += " ...";
 			}
 
-			Image = PluginMan.GetPluginIcon(pi.name, func.name, darkMode);
+			Image = pluginMan.GetPluginIcon(pi.name, func.name, darkMode);
 		}
 
 		public void ProcessPlugin(

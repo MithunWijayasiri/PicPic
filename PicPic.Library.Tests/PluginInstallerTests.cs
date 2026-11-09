@@ -13,9 +13,9 @@ namespace PicPic.Library.Tests
 		private const string InvalidName = "Invalid plugin name.";
 		private const string Outside = "Zip contains files outside the plugin folder: ";
 
-		private static void AssertInvalid(string zipPath, string message)
+		private static void AssertInvalid(TempPluginsFolder folder, string zipPath, string message)
 		{
-			InvalidDataException ex = Assert.Throws<InvalidDataException>(() => PluginInstaller.ReadManifest(zipPath));
+			InvalidDataException ex = Assert.Throws<InvalidDataException>(() => new PluginInstaller(folder.CreatePluginMan()).ReadManifest(zipPath));
 			Assert.Equal(message, ex.Message);
 		}
 
@@ -31,7 +31,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				PluginInfo pi = PluginInstaller.ReadManifest(ZipWith(folder,
+				PluginInfo pi = new PluginInstaller(folder.CreatePluginMan()).ReadManifest(ZipWith(folder,
 					Entry("my-plugin.json", Manifest()),
 					Entry(DllEntry, "MZ")));
 
@@ -46,7 +46,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				AssertInvalid(ZipWith(folder, Entry(DllEntry, "MZ")), NoRootManifest);
+				AssertInvalid(folder, ZipWith(folder, Entry(DllEntry, "MZ")), NoRootManifest);
 			}
 		}
 
@@ -55,7 +55,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				AssertInvalid(ZipWith(folder,
+				AssertInvalid(folder, ZipWith(folder,
 					Entry("my-plugin.json", Manifest()),
 					Entry("second.json", Manifest()),
 					Entry(DllEntry, "MZ")), NoRootManifest);
@@ -67,7 +67,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				AssertInvalid(ZipWith(folder,
+				AssertInvalid(folder, ZipWith(folder,
 					Entry("my-plugin/my-plugin.json", Manifest()),
 					Entry(DllEntry, "MZ")), NoRootManifest);
 			}
@@ -78,7 +78,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				AssertInvalid(ZipWith(folder,
+				AssertInvalid(folder, ZipWith(folder,
 					Entry("other.json", Manifest()),
 					Entry(DllEntry, "MZ")), "Manifest file name must be <name>.json.");
 			}
@@ -96,7 +96,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				AssertInvalid(ZipWith(folder,
+				AssertInvalid(folder, ZipWith(folder,
 					Entry(manifestEntry, Manifest(name: name)),
 					Entry(name + "/" + name + ".dll", "MZ")), InvalidName);
 			}
@@ -107,7 +107,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				AssertInvalid(ZipWith(folder,
+				AssertInvalid(folder, ZipWith(folder,
 					Entry("my-plugin.json", Manifest()),
 					Entry(DllEntry, "MZ"),
 					Entry("my-plugin/../x.json", "{}")), Outside + "my-plugin/../x.json");
@@ -119,7 +119,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				AssertInvalid(ZipWith(folder,
+				AssertInvalid(folder, ZipWith(folder,
 					Entry("my-plugin.json", Manifest()),
 					Entry(DllEntry, "MZ"),
 					Entry("C:/x.dll", "MZ")), Outside + "C:/x.dll");
@@ -131,7 +131,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				AssertInvalid(ZipWith(folder,
+				AssertInvalid(folder, ZipWith(folder,
 					Entry("my-plugin.json", Manifest()),
 					Entry(DllEntry, "MZ"),
 					Entry("readme.txt", "hello")), Outside + "readme.txt");
@@ -143,7 +143,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				AssertInvalid(ZipWith(folder,
+				AssertInvalid(folder, ZipWith(folder,
 					Entry("my-plugin.json", Manifest()),
 					Entry(DllEntry, "MZ"),
 					Entry("other/x.dll", "MZ")), Outside + "other/x.dll");
@@ -155,7 +155,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				AssertInvalid(ZipWith(folder, Entry("my-plugin.json", Manifest())), "Zip has no " + DllEntry);
+				AssertInvalid(folder, ZipWith(folder, Entry("my-plugin.json", Manifest())), "Zip has no " + DllEntry);
 			}
 		}
 
@@ -164,7 +164,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				PluginInfo pi = PluginInstaller.ReadManifest(ZipWith(folder,
+				PluginInfo pi = new PluginInstaller(folder.CreatePluginMan()).ReadManifest(ZipWith(folder,
 					Entry("my-plugin.json", Manifest()),
 					Entry("my-plugin/MY-PLUGIN.dll", "MZ")));
 
@@ -179,7 +179,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				AssertInvalid(ZipWith(folder,
+				AssertInvalid(folder, ZipWith(folder,
 					Entry("my-plugin.json", Manifest(functions: functions)),
 					Entry(DllEntry, "MZ")), "Manifest has no functions.");
 			}
@@ -190,7 +190,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				AssertInvalid(ZipWith(folder,
+				AssertInvalid(folder, ZipWith(folder,
 					Entry("my-plugin.json", Manifest(withAuthors: false)),
 					Entry(DllEntry, "MZ")), "Manifest has no authors.");
 			}
@@ -209,7 +209,7 @@ namespace PicPic.Library.Tests
 					Entry("my-plugin.json", json),
 					Entry(DllEntry, "MZ"));
 
-				Assert.ThrowsAny<Exception>(() => PluginInstaller.ReadManifest(path));
+				Assert.ThrowsAny<Exception>(() => new PluginInstaller(folder.CreatePluginMan()).ReadManifest(path));
 			}
 		}
 
@@ -218,7 +218,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				AssertInvalid(ZipWith(folder,
+				AssertInvalid(folder, ZipWith(folder,
 					Entry("my-plugin.json", "null"),
 					Entry(DllEntry, "MZ")), "Manifest is null.");
 			}
@@ -237,7 +237,10 @@ namespace PicPic.Library.Tests
 		[Fact]
 		public void IsCompatible_ValidManifest_True()
 		{
-			Assert.True(PluginInstaller.IsCompatible(PluginInfo.FromJson(Manifest())));
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			{
+				Assert.True(new PluginInstaller(folder.CreatePluginMan()).IsCompatible(PluginInfo.FromJson(Manifest())));
+			}
 		}
 
 		[Theory]
@@ -249,7 +252,10 @@ namespace PicPic.Library.Tests
 		{
 			PluginInfo pi = PluginInfo.FromJson(Manifest(apiVer: apiVer, inputType: inputType, dllType: dllType));
 
-			Assert.Equal(expected, PluginInstaller.IsCompatible(pi));
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			{
+				Assert.Equal(expected, new PluginInstaller(folder.CreatePluginMan()).IsCompatible(pi));
+			}
 		}
 	}
 }

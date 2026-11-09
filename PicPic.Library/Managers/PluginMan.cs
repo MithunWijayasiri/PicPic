@@ -7,13 +7,27 @@ namespace PicPic.Library
 {
 	public class PluginMan
 	{
-		public static string pluginsFolder = Path.Combine(
+		public static readonly string DefaultPluginsFolder = Path.Combine(
 			Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
 			"PicPic",
 			"plugins"
 		);
-		public static int apiVer = 4;
-		public static string inputType = null;
+
+		public readonly string pluginsFolder;
+		public readonly string inputType;
+		public readonly int apiVer;
+
+		public PluginMan(string pluginsFolder, string inputType, int apiVer = 4)
+		{
+			this.pluginsFolder = pluginsFolder;
+			this.inputType = inputType;
+			this.apiVer = apiVer;
+		}
+
+		public static PluginMan CreateDefault()
+		{
+			return new PluginMan(DefaultPluginsFolder, "bitmap");
+		}
 
 		public delegate string[] RunFunction(
 			object input = null,
@@ -31,7 +45,7 @@ namespace PicPic.Library
 			public object input { get; set; }
 		}
 
-		public static PluginInfo[] GetPlugins()
+		public PluginInfo[] GetPlugins()
 		{
 			List<PluginInfo> plugins = new List<PluginInfo>();
 			DirectoryInfo di = new DirectoryInfo(pluginsFolder);
@@ -69,7 +83,7 @@ namespace PicPic.Library
 			}
 		}
 
-		public static Image GetPluginIcon(string pluginName, string funcName, bool darkMode)
+		public Image GetPluginIcon(string pluginName, string funcName, bool darkMode)
 		{
 			if (darkMode)
 			{
