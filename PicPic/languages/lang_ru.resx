@@ -697,6 +697,10 @@
     <value>Размер печати</value>
     <comment>Image info</comment>
   </data>
+  <data name="release-notes-failed" xml:space="preserve">
+    <value>Couldn't load the release notes.</value>
+    <comment>Update manager</comment>
+  </data>
   <data name="reload-file" xml:space="preserve">
     <value>Переоткрыть файл</value>
     <comment>Menu</comment>
@@ -937,13 +941,13 @@
     <value>Вид</value>
     <comment>RMB menu</comment>
   </data>
+  <data name="view-release-on-github" xml:space="preserve">
+    <value>View them on GitHub</value>
+    <comment>Update manager</comment>
+  </data>
   <data name="warning" xml:space="preserve">
     <value>Внимание</value>
     <comment>Message box</comment>
-  </data>
-  <data name="whats-new" xml:space="preserve">
-    <value>Что нового?</value>
-    <comment>Update manager</comment>
   </data>
   <data name="width" xml:space="preserve">
     <value>Ширина</value>

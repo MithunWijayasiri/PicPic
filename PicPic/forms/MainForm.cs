@@ -1799,7 +1799,8 @@ namespace PicPic
 				LangMan.Get("update-text"),
 				LangMan.Get("download"),
 				LangMan.Get("skip-this-version"),
-				LangMan.Get("whats-new"));
+				LangMan.Get("release-notes-failed"),
+				LangMan.Get("view-release-on-github"));
 			UpdateMan.IsUpToDate += UpdateMan_IsUpToDate;
 			UpdateMan.UpdateFailed += UpdateMan_UpdateFailed;
 			UpdateMan.UpdateSkipped += UpdateMan_UpdateSkipped;

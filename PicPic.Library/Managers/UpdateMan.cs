@@ -16,7 +16,8 @@ namespace PicPic.Library
 		private static string _message;
 		private static string _dwnldBtnText;
 		private static string _skipBtnText;
-		private static string _whatsNewBtnText;
+		private static string _notesFailedText;
+		private static string _viewOnGithubText;
 
 		public static void Init(string githubOwner, string githubRepo, bool darkMode, string skippedVersion)
 		{
@@ -26,13 +27,14 @@ namespace PicPic.Library
 			_skippedVersion = skippedVersion;
 		}
 
-		public static void InitLang(string title, string message, string dwnldBtnText, string skipBtnText, string whatsNewBtnText)
+		public static void InitLang(string title, string message, string dwnldBtnText, string skipBtnText, string notesFailedText, string viewOnGithubText)
 		{
 			_title = title;
 			_message = message;
 			_dwnldBtnText = dwnldBtnText;
 			_skipBtnText = skipBtnText;
-			_whatsNewBtnText = whatsNewBtnText;
+			_notesFailedText = notesFailedText;
+			_viewOnGithubText = viewOnGithubText;
 		}
 
 		public static async void CheckForUpdates(bool showUpToDateDialog, bool topMost, IntPtr owner)
@@ -58,7 +60,7 @@ namespace PicPic.Library
 						return;
 					}
 
-					UpdateForm updateDialog = new UpdateForm(_darkMode, _title, _message, _dwnldBtnText, _skipBtnText, _whatsNewBtnText);
+					UpdateForm updateDialog = new UpdateForm(_darkMode, _title, _message, _dwnldBtnText, _skipBtnText, _notesFailedText, _viewOnGithubText);
 					updateDialog.TopMost = topMost;
 
 					DialogResult result = updateDialog.ShowDialog(Form.FromHandle(owner));
