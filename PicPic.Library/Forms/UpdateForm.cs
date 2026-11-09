@@ -49,7 +49,18 @@ namespace PicPic.Library
 
 			if (_loadednotes) return;
 
-			ReleaseNotes.DocumentText = await UpdateChecker.RenderReleaseNotes();
+			string notes;
+			try
+			{
+				notes = await UpdateChecker.RenderReleaseNotes();
+			}
+			catch (Exception)
+			{
+				return;
+			}
+
+			if (IsDisposed) return;
+			ReleaseNotes.DocumentText = notes;
 			_loadednotes = true;
 		}
 

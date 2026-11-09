@@ -10,6 +10,7 @@ namespace PicPic.Library
 		private static string _githubRepo;
 		private static bool _darkMode;
 		private static string _skippedVersion;
+		private static bool _checking;
 
 		private static string _title;
 		private static string _message;
@@ -36,6 +37,8 @@ namespace PicPic.Library
 
 		public static async void CheckForUpdates(bool showUpToDateDialog, bool topMost, IntPtr owner)
 		{
+			if (_checking) return;
+			_checking = true;
 			try
 			{
 				UpdateChecker.Init(_githubOwner, _githubRepo);
@@ -97,6 +100,10 @@ namespace PicPic.Library
 					};
 					OnUpdateFailed(ufea);
 				}
+			}
+			finally
+			{
+				_checking = false;
 			}
 		}
 
