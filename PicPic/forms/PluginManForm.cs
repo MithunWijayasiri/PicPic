@@ -51,9 +51,9 @@ namespace PicPic
 			if (listView1.Items != null && listView1.Items.Count > 0) listView1.Items.Clear();
 			if (imageList1.Images != null && imageList1.Images.Count > 0) imageList1.Images.Clear();
 
-			PluginMan.inputType = "bitmap";
+			PluginMan pluginMan = PluginMan.CreateDefault();
 
-			PluginInfo[] plugins = PluginMan.GetPlugins();
+			PluginInfo[] plugins = pluginMan.GetPlugins();
 			codenames = new string[plugins.Length];
 			pluginsLinks = new string[plugins.Length];
 			for (int i = 0; i < plugins.Length; i++)
@@ -75,7 +75,7 @@ namespace PicPic
 					"v" + plugins[i].version
 				});
 
-				Image img = PluginMan.GetPluginIcon(plugins[i].name, plugins[i].functions[0].name, DarkMode);
+				Image img = pluginMan.GetPluginIcon(plugins[i].name, plugins[i].functions[0].name, DarkMode);
 				if (img != null)
 				{
 					imageList1.Images.Add(imageList1.Images.Count.ToString(), img);
@@ -127,10 +127,13 @@ namespace PicPic
 				return;
 			}
 
+			PluginMan pluginMan = PluginMan.CreateDefault();
+			PluginInstaller installer = new PluginInstaller(pluginMan);
+
 			PluginInfo pi;
 			try
 			{
-				pi = PluginInstaller.ReadManifest(pathToZip);
+				pi = installer.ReadManifest(pathToZip);
 			}
 			catch (Exception ex)
 			{
@@ -138,13 +141,13 @@ namespace PicPic
 				return;
 			}
 
-			if (!PluginInstaller.IsCompatible(pi))
+			if (!installer.IsCompatible(pi))
 			{
 				ShowError(LangMan.Get("plugin-incompatible"));
 				return;
 			}
 
-			string pluginFolder = Path.Combine(PluginMan.pluginsFolder, pi.name);
+			string pluginFolder = Path.Combine(pluginMan.pluginsFolder, pi.name);
 			string manifestPath = pluginFolder + ".json";
 			bool exists = File.Exists(manifestPath) || Directory.Exists(pluginFolder);
 
@@ -162,7 +165,7 @@ namespace PicPic
 			{
 				if (Directory.Exists(pluginFolder)) Directory.Delete(pluginFolder, true);
 				if (File.Exists(manifestPath)) File.Delete(manifestPath);
-				ZipFile.ExtractToDirectory(pathToZip, PluginMan.pluginsFolder);
+				ZipFile.ExtractToDirectory(pathToZip, pluginMan.pluginsFolder);
 			}
 			catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException)
 			{
@@ -194,7 +197,8 @@ namespace PicPic
 			{
 				listView1.Items[numberInList].Remove();
 
-				string pluginFolder = Path.Combine(PluginMan.pluginsFolder, codenames[numberInList]);
+				PluginMan pluginMan = PluginMan.CreateDefault();
+				string pluginFolder = Path.Combine(pluginMan.pluginsFolder, codenames[numberInList]);
 				string manifestPath = pluginFolder + ".json";
 				if (File.Exists(manifestPath))
 				{

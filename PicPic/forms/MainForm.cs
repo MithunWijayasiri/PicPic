@@ -1983,9 +1983,9 @@ namespace PicPic
 			effectsBtn.DropDownItems.Clear();
 			toolsBtn.DropDownItems.Clear();
 
-			PluginMan.inputType = "bitmap";
+			PluginMan pluginMan = PluginMan.CreateDefault();
 
-			plugins = PluginMan.GetPlugins();
+			plugins = pluginMan.GetPlugins();
 
 			List<PluginMenuItem> toEffects = new List<PluginMenuItem>();
 			List<PluginMenuItem> toTools = new List<PluginMenuItem>();
@@ -1997,7 +1997,8 @@ namespace PicPic
 						plugins[i],
 						plugins[i].functions[j],
 						Properties.Settings.Default.Language,
-						darkMode
+						darkMode,
+						pluginMan
 					);
 					tsmi.Output += Tsmi_Output;
 					tsmi.Click += (s, e) =>

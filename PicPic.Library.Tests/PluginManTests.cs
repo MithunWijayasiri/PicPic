@@ -32,7 +32,8 @@ namespace PicPic.Library.Tests
 				File.WriteAllText(folder.PathOf("wrong-input.json"), Manifest(name: "wrong-input", inputType: "text"));
 				File.WriteAllText(folder.PathOf("mismatch.json"), Manifest(name: "valid"));
 
-				PluginInfo[] plugins = PluginMan.GetPlugins();
+				PluginMan pluginMan = folder.CreatePluginMan();
+				PluginInfo[] plugins = pluginMan.GetPlugins();
 
 				Assert.Single(plugins);
 				Assert.Equal("valid", plugins[0].name);
@@ -44,7 +45,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder(create: false))
 			{
-				Assert.Empty(PluginMan.GetPlugins());
+				Assert.Empty(folder.CreatePluginMan().GetPlugins());
 			}
 		}
 
@@ -74,7 +75,7 @@ namespace PicPic.Library.Tests
 				string iconPath = folder.PathOf("my-plugin", "invert.png");
 				WriteIcon(iconPath);
 
-				using (Image icon = PluginMan.GetPluginIcon("my-plugin", "invert", false))
+				using (Image icon = folder.CreatePluginMan().GetPluginIcon("my-plugin", "invert", false))
 				{
 					Assert.NotNull(icon);
 					File.Delete(iconPath);
@@ -94,7 +95,7 @@ namespace PicPic.Library.Tests
 				WriteIcon(folder.PathOf("my-plugin", "invert.dark.png"), 2);
 				WriteIcon(folder.PathOf("my-plugin", "invert.light.png"), 3);
 
-				using (Image icon = PluginMan.GetPluginIcon("my-plugin", "invert", darkMode))
+				using (Image icon = folder.CreatePluginMan().GetPluginIcon("my-plugin", "invert", darkMode))
 				{
 					Assert.Equal(darkMode ? 2 : 3, icon.Width);
 				}
@@ -108,8 +109,9 @@ namespace PicPic.Library.Tests
 			{
 				WriteIcon(folder.PathOf("my-plugin", "invert.png"));
 
-				using (Image darkIcon = PluginMan.GetPluginIcon("my-plugin", "invert", true))
-				using (Image lightIcon = PluginMan.GetPluginIcon("my-plugin", "invert", false))
+				PluginMan pluginMan = folder.CreatePluginMan();
+				using (Image darkIcon = pluginMan.GetPluginIcon("my-plugin", "invert", true))
+				using (Image lightIcon = pluginMan.GetPluginIcon("my-plugin", "invert", false))
 				{
 					Assert.NotNull(darkIcon);
 					Assert.NotNull(lightIcon);
@@ -122,7 +124,7 @@ namespace PicPic.Library.Tests
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())
 			{
-				Assert.Null(PluginMan.GetPluginIcon("my-plugin", "invert", false));
+				Assert.Null(folder.CreatePluginMan().GetPluginIcon("my-plugin", "invert", false));
 			}
 		}
 	}

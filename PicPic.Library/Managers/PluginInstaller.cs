@@ -5,24 +5,31 @@ using System.Linq;
 
 namespace PicPic.Library
 {
-	public static class PluginInstaller
+	public class PluginInstaller
 	{
+		private readonly PluginMan pluginMan;
+
+		public PluginInstaller(PluginMan pluginMan)
+		{
+			this.pluginMan = pluginMan;
+		}
+
 		/// <summary>True if the path has a <c>.zip</c> extension, case-insensitive.</summary>
 		public static bool IsZip(string pathToZip)
 		{
 			return string.Equals(Path.GetExtension(pathToZip), ".zip", StringComparison.OrdinalIgnoreCase);
 		}
 
-		/// <summary>True if the plugin targets <see cref="PluginMan.apiVer"/>, bitmap input and a <c>csharp</c> or <c>cpp</c> DLL.</summary>
-		public static bool IsCompatible(PluginInfo pi)
+		/// <summary>True if the plugin targets the instance's <see cref="PluginMan.apiVer"/>, bitmap input and a <c>csharp</c> or <c>cpp</c> DLL.</summary>
+		public bool IsCompatible(PluginInfo pi)
 		{
-			return pi.apiVer == PluginMan.apiVer && pi.inputType == "bitmap" && (pi.dllType == "csharp" || pi.dllType == "cpp");
+			return pi.apiVer == pluginMan.apiVer && pi.inputType == "bitmap" && (pi.dllType == "csharp" || pi.dllType == "cpp");
 		}
 
-		/// <summary>Reads the root <c>&lt;name&gt;.json</c> manifest and checks the zip extracts only into <c>&lt;name&gt;/</c> under <see cref="PluginMan.pluginsFolder"/>.</summary>
+		/// <summary>Reads the root <c>&lt;name&gt;.json</c> manifest and checks the zip extracts only into <c>&lt;name&gt;/</c> under the instance's <see cref="PluginMan.pluginsFolder"/>.</summary>
 		/// <exception cref="InvalidDataException">Manifest missing, null or incomplete; invalid name; DLL missing; or an entry outside the plugin folder.</exception>
 		/// <remarks>Malformed JSON throws the parser's own exception.</remarks>
-		public static PluginInfo ReadManifest(string pathToZip)
+		public PluginInfo ReadManifest(string pathToZip)
 		{
 			using (ZipArchive zip = ZipFile.OpenRead(pathToZip))
 			{
@@ -41,7 +48,7 @@ namespace PicPic.Library
 				if (pi == null) throw new InvalidDataException("Manifest is null.");
 				if (string.IsNullOrEmpty(pi.name) || pi.name != Path.GetFileName(pi.name) || pi.name.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0)
 					throw new InvalidDataException("Invalid plugin name.");
-				string root = Path.TrimEndingDirectorySeparator(Path.GetFullPath(PluginMan.pluginsFolder));
+				string root = Path.TrimEndingDirectorySeparator(Path.GetFullPath(pluginMan.pluginsFolder));
 				string folder = Path.GetFullPath(Path.Combine(root, pi.name));
 				if (Path.GetFileName(folder) != pi.name || Path.GetDirectoryName(folder) != root)
 					throw new InvalidDataException("Invalid plugin name.");
