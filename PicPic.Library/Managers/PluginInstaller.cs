@@ -125,9 +125,8 @@ namespace PicPic.Library
 			string pluginFolder = GetPluginFolder(pluginName);
 			string manifestPath = GetManifestPath(pluginName);
 			if (!File.Exists(manifestPath)) return UninstallResult.NotFound;
-			bool manifestMoved = moveToRecycleBin(manifestPath);
-			bool folderMoved = !Directory.Exists(pluginFolder) || moveToRecycleBin(pluginFolder);
-			if (!manifestMoved || !folderMoved) return UninstallResult.Failed;
+			if (!moveToRecycleBin(manifestPath)) return UninstallResult.Failed;
+			if (Directory.Exists(pluginFolder) && !moveToRecycleBin(pluginFolder)) return UninstallResult.Failed;
 			return UninstallResult.Success;
 		}
 	}

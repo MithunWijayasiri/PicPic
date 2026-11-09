@@ -398,6 +398,22 @@ namespace PicPic.Library.Tests
 		}
 
 		[Fact]
+		public void Uninstall_ManifestMoveFails_SkipsFolderMove()
+		{
+			using (TempPluginsFolder folder = new TempPluginsFolder())
+			{
+				Directory.CreateDirectory(folder.PathOf("my-plugin"));
+				File.WriteAllText(folder.PathOf("my-plugin.json"), Manifest());
+				List<string> moved = new List<string>();
+				PluginInstaller installer = new PluginInstaller(folder.CreatePluginMan(), path => { moved.Add(path); return false; });
+
+				Assert.Equal(PluginInstaller.UninstallResult.Failed, installer.Uninstall("my-plugin"));
+				Assert.Single(moved);
+				Assert.Equal(folder.PathOf("my-plugin.json"), moved[0]);
+			}
+		}
+
+		[Fact]
 		public void Uninstall_FolderMoveFails_ReturnsFailed()
 		{
 			using (TempPluginsFolder folder = new TempPluginsFolder())

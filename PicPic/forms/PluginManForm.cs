@@ -190,10 +190,17 @@ namespace PicPic
 
 			if (window == DialogResult.Yes)
 			{
-				listView1.Items[numberInList].Remove();
-
 				PluginMan pluginMan = PluginMan.CreateDefault();
-				PluginInstaller.UninstallResult result = new PluginInstaller(pluginMan).Uninstall(codenames[numberInList]);
+				PluginInstaller.UninstallResult result;
+				try
+				{
+					result = new PluginInstaller(pluginMan).Uninstall(codenames[numberInList]);
+				}
+				catch (InvalidDataException ex)
+				{
+					ShowError(LangMan.Get("plugin-delete-failed") + "\n\n" + ex.Message);
+					return;
+				}
 				if (result == PluginInstaller.UninstallResult.Failed)
 				{
 					DialogMan.ShowInfo(
