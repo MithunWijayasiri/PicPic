@@ -293,8 +293,8 @@
     <value>لا تحفظ</value>
     <comment>Main window</comment>
   </data>
-  <data name="downloading-update" xml:space="preserve">
-    <value>تحميل التحديث...</value>
+  <data name="download" xml:space="preserve">
+    <value>Download</value>
     <comment>Update manager</comment>
   </data>
   <data name="dragged-image" xml:space="preserve">
@@ -436,10 +436,6 @@
   <data name="input" xml:space="preserve">
     <value>الماوس ولوحة المفاتيح</value>
     <comment>Settings</comment>
-  </data>
-  <data name="install-now" xml:space="preserve">
-    <value>تثبيت الآن</value>
-    <comment>Update manager</comment>
   </data>
   <data name="install-plugin" xml:space="preserve">
     <value>Install plugin</value>
@@ -689,10 +685,6 @@
     <value>حجم الطباعة</value>
     <comment>Image info</comment>
   </data>
-  <data name="ready-to-install" xml:space="preserve">
-    <value>جاهز للتركيب</value>
-    <comment>Update manager</comment>
-  </data>
   <data name="reload-file" xml:space="preserve">
     <value>إعادة تحميل الملف</value>
     <comment>Menu</comment>
@@ -920,10 +912,6 @@
   <data name="updates" xml:space="preserve">
     <value>التحديثات</value>
     <comment>About</comment>
-  </data>
-  <data name="updating-picpic" xml:space="preserve">
-    <value>تحديث PicPic</value>
-    <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">
     <value>استخدم إعدادات النظام</value>

@@ -234,10 +234,10 @@
     <value>Не зберігати</value>
     <comment>Головне вікно</comment>
   </data>
-  <data name="downloading-update" xml:space="preserve">
-    <value>Завантаження оновлення...</value>
-    <comment>Менеджер оновлень</comment>
-  </data>
+  <data name="download" xml:space="preserve">
+    <value>Download</value>
+    <comment>Update manager</comment>
+  </data>
   <data name="dragged-image" xml:space="preserve">
     <value>Перетягнуте зображення</value>
     <comment>Рядок стану</comment>
@@ -389,10 +389,6 @@
   <data name="input" xml:space="preserve">
     <value>Миша та клавіатура</value>
     <comment>Налаштування</comment>
-  </data>
-  <data name="install-now" xml:space="preserve">
-    <value>Встановити зараз</value>
-    <comment>Менеджер оновлень</comment>
   </data>
   <data name="landscape" xml:space="preserve">
     <value>Пейзаж</value>
@@ -626,10 +622,6 @@
     <value>Розмір друку</value>
     <comment>Інформація про зображення</comment>
   </data>
-  <data name="ready-to-install" xml:space="preserve">
-    <value>Готово до встановлення</value>
-    <comment>Менеджер оновлень</comment>
-  </data>
   <data name="reload-file" xml:space="preserve">
     <value>Перезавантажити файл</value>
     <comment>Меню</comment>
@@ -854,10 +846,6 @@
     <value>Оновлення</value>
     <comment>Про програму</comment>
   </data>
-  <data name="updating-picpic" xml:space="preserve">
-    <value>Оновлення PicPic</value>
-    <comment>Менеджер оновлень</comment>
-  </data>
   <data name="use-system-setting" xml:space="preserve">
     <value>Використовувати системні налаштування</value>
     <comment>Налаштування</comment>

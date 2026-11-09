@@ -289,8 +289,8 @@
     <value>保存しない</value>
     <comment>Main window</comment>
   </data>
-  <data name="downloading-update" xml:space="preserve">
-    <value>アップデートをダウンロード中...</value>
+  <data name="download" xml:space="preserve">
+    <value>Download</value>
     <comment>Update manager</comment>
   </data>
   <data name="dragged-image" xml:space="preserve">
@@ -432,10 +432,6 @@
   <data name="input" xml:space="preserve">
     <value>マウスとキーボード</value>
     <comment>Settings</comment>
-  </data>
-  <data name="install-now" xml:space="preserve">
-    <value>今すぐインストール</value>
-    <comment>Update manager</comment>
   </data>
   <data name="install-plugin" xml:space="preserve">
     <value>Install plugin</value>
@@ -681,10 +677,6 @@
     <value>印刷サイズ</value>
     <comment>Image info</comment>
   </data>
-  <data name="ready-to-install" xml:space="preserve">
-    <value>インストールする準備ができています</value>
-    <comment>Update manager</comment>
-  </data>
   <data name="reload-file" xml:space="preserve">
     <value>ファイルを再読み込み</value>
     <comment>Menu</comment>
@@ -908,10 +900,6 @@
   <data name="updates" xml:space="preserve">
     <value>更新</value>
     <comment>About</comment>
-  </data>
-  <data name="updating-picpic" xml:space="preserve">
-    <value>PicPicをアップデート中</value>
-    <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">
     <value>システム設定に従う</value>

@@ -8,7 +8,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <WarningsNotAsErrors>SYSLIB0014;CS0618</WarningsNotAsErrors>
+    <WarningsNotAsErrors>CS0618</WarningsNotAsErrors>
   </PropertyGroup>
   <ItemGroup>
     <Compile Update="entities\PluginMenuItem.cs">

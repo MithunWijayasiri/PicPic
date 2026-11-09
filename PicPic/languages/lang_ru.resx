@@ -293,8 +293,8 @@
     <value>Не сохранять</value>
     <comment>Main window</comment>
   </data>
-  <data name="downloading-update" xml:space="preserve">
-    <value>Загрузка обновления...</value>
+  <data name="download" xml:space="preserve">
+    <value>Download</value>
     <comment>Update manager</comment>
   </data>
   <data name="dragged-image" xml:space="preserve">
@@ -452,10 +452,6 @@
   <data name="input" xml:space="preserve">
     <value>Клавиатура и мышь</value>
     <comment>Settings</comment>
-  </data>
-  <data name="install-now" xml:space="preserve">
-    <value>Установить сейчас</value>
-    <comment>Update manager</comment>
   </data>
   <data name="landscape" xml:space="preserve">
     <value>Альбомная</value>
@@ -701,10 +697,6 @@
     <value>Размер печати</value>
     <comment>Image info</comment>
   </data>
-  <data name="ready-to-install" xml:space="preserve">
-    <value>Все готово к установке</value>
-    <comment>Update manager</comment>
-  </data>
   <data name="reload-file" xml:space="preserve">
     <value>Переоткрыть файл</value>
     <comment>Menu</comment>
@@ -932,10 +924,6 @@
   <data name="updates" xml:space="preserve">
     <value>Обновления</value>
     <comment>About</comment>
-  </data>
-  <data name="updating-picpic" xml:space="preserve">
-    <value>Обновление PicPic</value>
-    <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">
     <value>Использовать системную настройку</value>
