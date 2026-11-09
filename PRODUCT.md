@@ -25,7 +25,7 @@ Do not claim performance benchmarks, testimonials, customer counts, or other per
 ## Operating Context
 
 - Distribution: beta builds on GitHub Releases as two zips: a self-contained zip (runs with nothing else installed) and a small framework-dependent zip (requires the .NET 8 Desktop Runtime).
-- The site is a static GitHub Pages site (`site/index.html` with `site/styles.css` and `site/app.js`). Interactive demos on the site are previews only; the real PicPic runs on Windows.
+- The site is a static GitHub Pages site (`site/index.html` with `site/styles.css` and `site/app.js`). Site content is static with no interactive demos; the real PicPic runs on Windows.
 - Plugin context: users install existing community plugins or write plugins using the plugin guide (`docs/plugins.md`). Plugins are scanned from `%LOCALAPPDATA%\PicPic\plugins`.
 
 ## Capabilities and Constraints
@@ -56,7 +56,7 @@ Constraints:
 ## Evidence on Hand
 
 - `README.md` (features, build steps, bug report process, credits).
-- `site/index.html`, `site/styles.css`, `site/app.js` (product copy, interactive viewer and plugin demos, format groups).
+- `site/index.html`, `site/styles.css`, `site/app.js` (product copy, static feature and plugin content, format groups).
 - `docs/plugins.md` (plugin author/user guide).
 - Release evidence: `v0.1.0` and `v0.1.1` prereleases on GitHub Releases (self-contained single-file zip and framework-dependent zip).
 - Absences to respect: no testimonials, no customer or download counts, no benchmark figures, no press coverage, no Code of Conduct or support channel beyond GitHub Issues. Future work must not fabricate these.

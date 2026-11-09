@@ -41,8 +41,7 @@
     const frame = () => {
       current += (target - current) * 0.12;
       heroImg.style.transform = `translateY(${(current * -0.08).toFixed(2)}px)`;
-      if (Math.abs(target - current) > 0.05 || window.scrollY < window.innerHeight * 1.2) {
-        ticking = true;
+      if (Math.abs(target - current) > 0.05) {
         requestAnimationFrame(frame);
       } else {
         ticking = false;
