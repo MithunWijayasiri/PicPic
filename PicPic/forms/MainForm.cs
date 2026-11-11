@@ -2024,8 +2024,7 @@ namespace PicPic
 			if (e.input != null)
 			{
 				directoryLabel.Visible = false;
-				string title = sender.ToString();
-				if (title.Length > 4 && title.Substring(title.Length - 4, 4) == " ...") title = title.Substring(0, title.Length - 4);
+				string title = (sender as PluginMenuItem).PluginTitle;
 				title = string.Format(LangMan.Get("from-format"), title);
 
 				if ((sender as PluginMenuItem).OwnerItem.Name == "effectsBtn")
