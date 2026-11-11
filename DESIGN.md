@@ -123,7 +123,7 @@ A near-monochrome slate-and-bone system with a single amber action, letting phot
 
 ### Neutral
 - **Deep Slate** (#101820): Page ground, amber-ink text on amber fills, scrollbar track.
-- **Raised Slate** (#16212b): Alternating section ground and panel fill.
+- **Raised Slate** (#16212b): Inset panel and card fill on Bone Ground (feature boxes, plugin panel, checklist items).
 - **Slate Lift** (#1c2939): Highest slate step in the scale.
 - **Footer Slate** (#0c1219): Footer ground, one step darker than the page.
 - **Bone** (#f2f0eb): Primary text and headings.
@@ -134,9 +134,9 @@ A near-monochrome slate-and-bone system with a single amber action, letting phot
 - **Amber Ink** (#101820): Text on amber fills; intentionally identical to Deep Slate.
 - **Bone Ground** (#e6e2d4): Uniform ground for all below-hero sections; headings and prose on it use Deep Slate (#101820) ink.
 - **Ink Dim** (#47525f): Secondary text on Bone Ground.
-- **Amber on Light** (#7a6200): The release-heading accent word, hover arrow, and release-note link, darkened from Amber (#ffe14d) for legibility on Bone Ground. All other amber accents sit on dark fills and stay Amber (#ffe14d).
+- **Amber on Light** (#7a6200): The release-heading accent word, hover arrow, release-note link, and focus outlines on Bone Ground, darkened from Amber (#ffe14d) for legibility. All other amber accents sit on dark fills and stay Amber (#ffe14d).
 
-Bone and Dim Bone on Deep Slate meet at least 4.5:1 for body text and 3:1 for large text. On Bone Ground, Deep Slate ink and Ink Dim meet 4.5:1, and Amber on Light meets 3:1 for icon strokes and hover accents.
+Bone and Dim Bone on Deep Slate meet at least 4.5:1 for body text and 3:1 for large text. On Bone Ground, Deep Slate ink and Ink Dim meet 4.5:1, and Amber on Light meets 3:1 for icon strokes, focus outlines, and hover accents.
 
 ### Named Rules
 **The One Amber Rule.** Amber appears only on the primary action and its supporting accents (hover, focus, active, status, icon stroke). Everything else is slate, bone, or hairline.
@@ -166,7 +166,7 @@ A single 1120px wrap with 24px inline padding, sections inset 24px inline with t
 
 ## Elevation & Depth
 
-This system has no glow, no halos, and no ambient shadow vocabulary. Depth is conveyed by translucent backdrop blur on the nav, a bottom-anchored scrim gradient over the hero image for legibility, tonal slate shifts between sections, and hairline borders that carry grouping. The only shadows in the system are offset-plus-blur drops under the primary action and its hover state.
+This system has no glow, no halos, and no ambient shadow vocabulary. Depth is conveyed by translucent backdrop blur on the nav, a bottom-anchored scrim gradient over the hero image for legibility, dark Raised Slate panels inset into the bone ground, and hairline borders that carry grouping. The only shadows in the system are offset-plus-blur drops under the primary action and its hover state.
 
 ### Shadow Vocabulary
 - **Action Rest** (`box-shadow: 0 16px 36px -14px rgba(0, 0, 0, 0.65)`): Primary button at rest.
