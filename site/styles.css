@@ -48,6 +48,19 @@ html {
   scroll-padding-top: calc(var(--nav-h) + 24px);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   font-family: var(--font);
   background: var(--dark-bg);
@@ -426,7 +439,7 @@ button {
   width: 100%;
   height: 100%;
   max-height: 540px;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.18s ease;
   transform-origin: center center;
@@ -1004,6 +1017,9 @@ button {
 }
 
 @media (max-width: 640px) {
+  .badge-beta {
+    display: none;
+  }
   .hero {
     padding: 48px 0 72px;
   }

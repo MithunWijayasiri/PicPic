@@ -137,11 +137,13 @@
     slideshowTimer = null;
     if (hudSlideshow) {
       hudSlideshow.classList.remove("active");
+      hudSlideshow.title = "Start slideshow (Space)";
+      hudSlideshow.setAttribute("aria-label", "Start slideshow (Space)");
       const playIcon = $(".icon-play", hudSlideshow);
       const pauseIcon = $(".icon-pause", hudSlideshow);
       const label = $(".win-hud-label", hudSlideshow);
-      if (playIcon) playIcon.hidden = false;
-      if (pauseIcon) pauseIcon.hidden = true;
+      if (playIcon) playIcon.removeAttribute("hidden");
+      if (pauseIcon) pauseIcon.setAttribute("hidden", "");
       if (label) label.textContent = "Play";
     }
   };
@@ -154,11 +156,13 @@
       slideshowTimer = setInterval(nextImage, 2600);
       if (hudSlideshow) {
         hudSlideshow.classList.add("active");
+        hudSlideshow.title = "Pause slideshow (Space)";
+        hudSlideshow.setAttribute("aria-label", "Pause slideshow (Space)");
         const playIcon = $(".icon-play", hudSlideshow);
         const pauseIcon = $(".icon-pause", hudSlideshow);
         const label = $(".win-hud-label", hudSlideshow);
-        if (playIcon) playIcon.hidden = true;
-        if (pauseIcon) pauseIcon.hidden = false;
+        if (playIcon) playIcon.setAttribute("hidden", "");
+        if (pauseIcon) pauseIcon.removeAttribute("hidden");
         if (label) label.textContent = "Pause";
       }
     }
@@ -176,6 +180,8 @@
   const winCanvas = $(".win-canvas");
   if (winCanvas) {
     winCanvas.addEventListener("keydown", (e) => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+
       if (e.key === "ArrowLeft") {
         e.preventDefault();
         stopSlideshow();
@@ -194,6 +200,7 @@
         e.preventDefault();
         zoomImage(-0.2);
       } else if (e.key === " ") {
+        if (e.target !== winCanvas) return;
         e.preventDefault();
         toggleSlideshow();
       }

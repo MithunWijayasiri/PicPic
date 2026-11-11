@@ -93,7 +93,7 @@ The hero presents an interactive-fidelity Windows 11 App Mockup with a native ti
 - Crisp cool slate light ground (`#f8fafc`) below fold with high-contrast slate ink (`#0f172a`).
 - Bento card grid architecture with subtle hover borders and elevation.
 - Monospace format pills (`JetBrains Mono`) organized by category chips.
-- Vibrant Amber (`#f59e0b`) primary accents; darkened Amber (`#7a6200`) for WCAG AAA accessibility on light ground.
+- Vibrant Amber (`#f59e0b`) primary accents; darkened Amber (`#7a6200`) for WCAG AA accessibility on light ground.
 
 ---
 
@@ -161,8 +161,8 @@ The hero mockup (`.mockup-wrap`, `.mockup-glow`, `.mockup-window`) models a mode
 
 ### Bento Grid (`.bento-grid`)
 - Asymmetric responsive layout combining full-width, two-column (`.bento-col-6`), and single-column feature blocks.
-- Surfaces use `.bento-card` with clean white fill (`#ffffff`) on `.section-light` or `#121b26` on dark sections.
-- Rounded corners at `14px` (`border-radius: 14px`) with 1px border (`#e2e8f0` or `rgba(255, 255, 255, 0.08)`).
+- Surfaces use `.bento-card` with dark surface fill (`#121b26`) and `#ffffff` headings across both light and dark sections.
+- Rounded corners at `18px` (`border-radius: 18px`) with 1px dark hairline border (`rgba(255, 255, 255, 0.08)`).
 - Icon containers (`.bento-icon`): 48px rounded square with subtle amber stroke or tint.
 
 ### Format Chips & Pills (`.formats-box`, `.fmt-pill`)
