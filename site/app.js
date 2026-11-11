@@ -30,17 +30,20 @@
         navLinks.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id));
       });
     }, { rootMargin: "-40% 0px -55% 0px" });
-    ["features", "formats", "plugins", "beta"].forEach((id) => sectionIO.observe(document.getElementById(id)));
+    ["features", "formats", "plugins", "release", "beta"].forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) sectionIO.observe(el);
+    });
   }
 
-  /* Hero drift: damped follow of scroll, settled ease-out */
-  const heroImg = $("#heroImg");
+  /* Hero drift: damped follow of scroll on stage container */
+  const heroStage = $("#heroStage") || $("#heroImg");
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (heroImg && !reduced) {
+  if (heroStage && !reduced) {
     let target = 0, current = 0, ticking = false;
     const frame = () => {
       current += (target - current) * 0.12;
-      heroImg.style.transform = `translateY(${(current * -0.08).toFixed(2)}px)`;
+      heroStage.style.transform = `translateY(${(current * -0.06).toFixed(2)}px)`;
       if (Math.abs(target - current) > 0.05) {
         requestAnimationFrame(frame);
       } else {
@@ -54,5 +57,146 @@
         requestAnimationFrame(frame);
       }
     }, { passive: true });
+  }
+
+  /* Interactive image viewer demo */
+  const demoImages = [
+    {
+      src: "assets/demo-neon-dusk.jpg",
+      alt: "Sample image: mountain lake at dusk with vibrant neon aurora glow",
+      title: "PicPic — demo-neon-dusk.jpg (1536 × 1024)",
+      info: "1536 × 1024 • 2.4 MB • JPEG"
+    },
+    {
+      src: "assets/demo-midnight-avenue.jpg",
+      alt: "Sample image: illuminated rain-slicked city avenue at midnight",
+      title: "PicPic — demo-midnight-avenue.jpg (1024 × 1536)",
+      info: "1024 × 1536 • 1.9 MB • JPEG"
+    },
+    {
+      src: "assets/demo-prism-study.jpg",
+      alt: "Sample image: geometric optical prism refracting vibrant spectrums",
+      title: "PicPic — demo-prism-study.jpg (1024 × 1024)",
+      info: "1024 × 1024 • 1.2 MB • JPEG"
+    }
+  ];
+
+  let currentIndex = 0;
+  let rotationDeg = 0;
+  let zoomScale = 1.0;
+  let slideshowTimer = null;
+
+  const heroImg = $("#heroImg");
+  const demoTitle = $("#demoTitle");
+  const demoInfo = $("#demoInfo");
+  const hudSlideshow = $("#hudSlideshow");
+
+  const applyTransform = () => {
+    if (!heroImg) return;
+    heroImg.style.transform = `rotate(${rotationDeg}deg) scale(${zoomScale})`;
+    if (demoInfo) {
+      const base = demoImages[currentIndex].info;
+      const zoomText = `${Math.round(zoomScale * 100)}%`;
+      const rotText = rotationDeg ? ` • ${rotationDeg}°` : "";
+      demoInfo.textContent = `${base} • ${zoomText}${rotText}`;
+    }
+  };
+
+  const showImage = (index) => {
+    if (!heroImg) return;
+    currentIndex = (index + demoImages.length) % demoImages.length;
+    const item = demoImages[currentIndex];
+    heroImg.style.opacity = "0.6";
+    heroImg.src = item.src;
+    heroImg.alt = item.alt;
+    if (demoTitle) demoTitle.textContent = item.title;
+    rotationDeg = 0;
+    zoomScale = 1.0;
+    applyTransform();
+    setTimeout(() => {
+      heroImg.style.opacity = "1";
+    }, 100);
+  };
+
+  const nextImage = () => showImage(currentIndex + 1);
+  const prevImage = () => showImage(currentIndex - 1);
+
+  const rotateImage = () => {
+    rotationDeg = (rotationDeg + 90) % 360;
+    applyTransform();
+  };
+
+  const zoomImage = (delta) => {
+    zoomScale = Math.min(2.0, Math.max(0.6, Math.round((zoomScale + delta) * 10) / 10));
+    applyTransform();
+  };
+
+  const stopSlideshow = () => {
+    if (!slideshowTimer) return;
+    clearInterval(slideshowTimer);
+    slideshowTimer = null;
+    if (hudSlideshow) {
+      hudSlideshow.classList.remove("active");
+      const playIcon = $(".icon-play", hudSlideshow);
+      const pauseIcon = $(".icon-pause", hudSlideshow);
+      const label = $(".win-hud-label", hudSlideshow);
+      if (playIcon) playIcon.hidden = false;
+      if (pauseIcon) pauseIcon.hidden = true;
+      if (label) label.textContent = "Play";
+    }
+  };
+
+  const toggleSlideshow = () => {
+    if (slideshowTimer) {
+      stopSlideshow();
+    } else {
+      nextImage();
+      slideshowTimer = setInterval(nextImage, 2600);
+      if (hudSlideshow) {
+        hudSlideshow.classList.add("active");
+        const playIcon = $(".icon-play", hudSlideshow);
+        const pauseIcon = $(".icon-pause", hudSlideshow);
+        const label = $(".win-hud-label", hudSlideshow);
+        if (playIcon) playIcon.hidden = true;
+        if (pauseIcon) pauseIcon.hidden = false;
+        if (label) label.textContent = "Pause";
+      }
+    }
+  };
+
+  $("#demoPrev")?.addEventListener("click", () => { stopSlideshow(); prevImage(); });
+  $("#demoNext")?.addEventListener("click", () => { stopSlideshow(); nextImage(); });
+  $("#hudPrev")?.addEventListener("click", () => { stopSlideshow(); prevImage(); });
+  $("#hudNext")?.addEventListener("click", () => { stopSlideshow(); nextImage(); });
+  $("#hudRotate")?.addEventListener("click", rotateImage);
+  $("#hudZoomIn")?.addEventListener("click", () => zoomImage(0.2));
+  $("#hudZoomOut")?.addEventListener("click", () => zoomImage(-0.2));
+  $("#hudSlideshow")?.addEventListener("click", toggleSlideshow);
+
+  const winCanvas = $(".win-canvas");
+  if (winCanvas) {
+    winCanvas.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        stopSlideshow();
+        prevImage();
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        stopSlideshow();
+        nextImage();
+      } else if (e.key === "r" || e.key === "R") {
+        e.preventDefault();
+        rotateImage();
+      } else if (e.key === "+" || e.key === "=") {
+        e.preventDefault();
+        zoomImage(0.2);
+      } else if (e.key === "-" || e.key === "_") {
+        e.preventDefault();
+        zoomImage(-0.2);
+      } else if (e.key === " ") {
+        e.preventDefault();
+        toggleSlideshow();
+      }
+    });
   }
 })();
